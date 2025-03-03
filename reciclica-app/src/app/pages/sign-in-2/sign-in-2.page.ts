@@ -24,7 +24,7 @@ export class SignIn2Page  {
   }
 
   goSignUp() {
-      this.router.navigate(['/create-account-2']);
+      this.router.navigate(['/create-account-1']);
   }
   
 

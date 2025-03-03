@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({  selector: 'app-create-account-1',
   templateUrl: './create-account-1.page.html',
@@ -8,6 +9,14 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class CreateAccount1Page implements OnInit {
-  ngOnInit() {}
+export class CreateAccount1Page {
+  constructor(private router: Router) { }
+ 
+  goCreateAccounVol() {
+      this.router.navigate(['/create-account-2']);
+  }
+
+    goCreateAccounShe() {
+      this.router.navigate(['/create-account-3']);
+  }
 }

@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'create-account-3',
     loadChildren: () => import('./pages/create-account-3/create-account-3.module').then( m => m.CreateAccount3PageModule)
   },
+  {
+    path: 'homepage',
+    loadChildren: () => import('./pages/homepage/homepage.module').then( m => m.HomepagePageModule)
+  },
 
 
 

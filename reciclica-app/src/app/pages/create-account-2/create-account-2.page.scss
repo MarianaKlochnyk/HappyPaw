@@ -1,0 +1,392 @@
+ion-content {
+  --background: #F1F1F1;
+}
+
+.maintitle {
+  width: 293px;
+  color: #324B49;
+  font-size: 34px;
+  font-family: Mulish, sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 98px;
+  margin-left: -5px;
+}
+
+.left-button {
+  display: flex;
+  align-items: center;
+  --background: #AAD5D1;
+  --color: white;
+  --border-radius: 20px;
+  width: 176px;
+  height: 50px;
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  text-transform: none;
+}
+
+.button-icon-g {
+  margin-right: 10px;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.right-button {
+  --background: #F1F1F1;
+  --border-color: #AAD5D1;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 19px;
+  width: 50px;
+  height: 50px;
+}
+
+.center-text {
+  color: #324B49;
+  font-size: 20px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  margin-left: 184px;
+  margin-right: 183px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-container {
+  width: 51px;
+  height: 51px;
+  border: 1px solid #AAD5D1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+}
+
+.icon-container svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: #81B5B0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 206px;
+  color: #324B49;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 1000;
+  line-height: 30px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.description {
+  width: 250px;
+  color: rgba(50, 75, 73, 0.70);
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+  word-wrap: break-word;
+  margin: -5px 0 0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-preview {
+  width: 51px;
+  height: 51px;
+  border: 1px solid #AAD5D1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #F1F1F1;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ion-button.download-button {
+  --background: #AAD5D1;
+  --color: #FFFFFF;
+  --border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 176px;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+}
+
+.download-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: white;
+}
+
+.download-button span {
+  margin-left: 10px;
+}
+
+.input-label {
+  display: block;
+  text-align: left;
+  color: #324B49;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 1000;
+  line-height: 30px;
+  word-wrap: break-word;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.star {
+  color: #AAD5D1;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 1000;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+.check-icon {
+  color: #AAD5D1;
+  font-size: 18px;
+}
+
+@mixin input-place($width, $background: #F1F1F1, $border-color: transparent) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --background: $background;
+  --border-color: $border-color;
+  --margin-left: 20px;
+  margin-right: 20px;
+  width: $width;
+  height: 60px;
+  border: 2px solid #AAD5D1;
+  border-radius: 20px;
+  --border-color: transparent;
+  --border-width: 0px;
+  --inner-border-width: 0px;
+}
+
+.input-place {
+  @include input-place(390px);
+}
+
+.input-place1 {
+  @include input-place(110px);
+}
+
+.input-place2 {
+  @include input-place(183px);
+}
+
+.input-place3 {
+  @include input-place(94px, #AAD5D1);
+}
+
+.input-place4 {
+  @include input-place(276px);
+}
+
+@mixin input-styles($text-align) {
+  text-align: $text-align;
+  color: black;
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  line-height: 17.50px;
+  word-wrap: break-word;
+}
+
+ion-input {
+  text-decoration: none;
+  border: none;
+  /* якщо проблема в бордері */
+  outline: none;
+  /* для фокусу, щоб не було синього підкреслення при фокусі */
+}
+
+.input-place ion-input {
+  @include input-styles(left);
+}
+
+.input-place1 ion-input {
+  @include input-styles(center);
+}
+
+.input-place2 ion-input {
+  @include input-styles(left);
+}
+
+.input-place4 ion-input {
+  @include input-styles(left);
+}
+
+@mixin input-group-styles($gap, $align-items: null) {
+  display: flex;
+  gap: $gap;
+
+  @if $align-items {
+    align-items: $align-items;
+  }
+}
+
+.input-group {
+  @include input-group-styles(10px);
+}
+
+.input-group1 {
+  @include input-group-styles(5px);
+}
+
+.input-group2 {
+  @include input-group-styles(20px);
+}
+
+.input-group5 {
+  @include input-group-styles(143px, center);
+}
+
+.text-ukraine {
+  text-align: left;
+  color: black;
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  margin-left: 10px;
+}
+
+.country-code {
+  position: relative;
+  width: 94px;
+  height: 60px;
+  background: #AAD5D1;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --placeholder-color: white;
+}
+
+.country-code::part(icon) {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.container-changes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.text-changes {
+  width: 206px;
+  height: 33px;
+  color: #AAD5D1;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 1000;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+.icon-changes {
+  margin-right: 5px;
+}
+
+ion-button.continue-button {
+  position: relative;
+  --background: #AAD5D1;
+  --color: 000000;
+  --border-radius: 98px;
+  margin-left: 27px;
+  margin-right: 28px;
+  width: 335px;
+  height: 65px;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  line-height: 33.60px;
+  word-wrap: break-word;
+  text-transform: none;
+}
+
+.account-label {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.text-account {
+  color: rgba(50, 75, 73, 0.70);
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.sign-in-button {
+  color: black;
+  font-size: 14px;
+  font-family: Mulish, sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  text-transform: none;
+  margin-left: -10px;
+}

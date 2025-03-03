@@ -1,13 +1,196 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>create-account-2</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">create-account-2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-card-header>
+    <div>
+      <img src="../assets/logo.png" alt="logo" class="logo-icon">
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <div class="maintitle">
+      Create account as volunteer
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <div class="button-container">
+      <ion-button class="left-button"><img src="../assets/icon3.png" alt="icon" class="button-icon-g">With
+        Google</ion-button>
+      <div class="right-buttons">
+        <ion-button class="right-button"><img src="../assets/icon2.png" alt="icon"
+            class="button-icon"></ion-button>
+        <ion-button class="right-button"><img src="../assets/icon1.png" alt="icon"
+            class="button-icon"></ion-button>
+      </div>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <div class="center-text">
+      Or
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <div class="content">
+      <div class="icon-container">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.75 26.25C23.75 21.4175 19.8325 17.5 15 17.5C10.1675 17.5 6.25 21.4175 6.25 26.25M15 13.75C12.2386 13.75 10 11.5114 10 8.75C10 5.98858 12.2386 3.75 15 3.75C17.7614 3.75 20 5.98858 20 8.75C20 11.5114 17.7614 13.75 15 13.75Z"
+            stroke="#81B5B0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="text-container">
+        <h3 class="title">Volunteer details</h3>
+        <p class="description">Let's get your account up and running</p>
+      </div>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Volunteer photo<span class="star">*</span></label>
+    <div class="input-group5">
+      <div class="photo-preview" id="photoPreview">
+        <input type="file" id="fileInput" accept="image/*" hidden>
+      </div>
+      <ion-button class="download-button">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.5 15.75H13.5M9 2.25V12.75M9 12.75L12.75 9M9 12.75L5.25 9" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <span>Download</span>
+      </ion-button>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Volunteer name<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="Your first name"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Volunteer surname<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="Your last name"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Email address<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="Your cooperative email address"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Date of birth<span class="star">*</span></label>
+    <div class="input-group">
+      <ion-item class="input-place1">
+        <ion-input placeholder="Month" maxlength="2"></ion-input>
+      </ion-item>
+      <ion-item class="input-place1">
+        <ion-input placeholder="Day" maxlength="2"></ion-input>
+      </ion-item>
+      <ion-item class="input-place1">
+        <ion-input placeholder="Year" maxlength="4"></ion-input>
+      </ion-item>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <div class="input-group1">
+      <div class="input-wrapper">
+        <label class="input-label">Country<span class="star">*</span></label>
+        <ion-item class="input-place2">
+          <img src="../assets/ukraine.png" alt="icon" class="button-icon">
+          <span class="text-ukraine">Ukraine</span>
+        </ion-item>
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">City<span class="star">*</span></label>
+        <ion-item class="input-place2">
+          <ion-input placeholder="Your city"></ion-input>
+          <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Address<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="Your address"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Phone number<span class="star">*</span></label>
+    <div class="input-group2">
+      <ion-select class="country-code" placeholder="+380">
+        <ion-select-option value="+380">+380</ion-select-option>
+        <ion-select-option value="+1">+1</ion-select-option>
+        <ion-select-option value="+44">+44</ion-select-option>
+        <ion-select-option value="+49">+49</ion-select-option>
+      </ion-select>
+      <ion-item class="input-place4">
+        <ion-input placeholder="Your phone number" maxlength="9"></ion-input>
+        <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+      </ion-item>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Create a username<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="It must be your name"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Create a password<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="Your password must be at least 8 characters"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="input-label">Confirm password<span class="star">*</span></label>
+    <ion-item class="input-place">
+      <ion-input placeholder="Repeat your password"></ion-input>
+      <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-header>
+    <div class="container-changes">
+      <div class="icon-changes">
+        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.48087 0.500027C5.30821 0.386601 6.18462 1.2473 6.43703 2.43494C6.68943 3.6159 6.2337 4.6701 5.40637 4.79019C4.58604 4.91029 3.70262 4.04959 3.4432 2.86195C3.18378 1.68099 3.65354 0.626797 4.48087 0.500027ZM9.49396 0.500027C10.3283 0.626797 10.791 1.68099 10.5457 2.86195C10.2792 4.04959 9.40281 4.91029 8.57548 4.79019C7.74113 4.6701 7.2854 3.6159 7.54481 2.43494C7.79722 1.2473 8.67363 0.386601 9.49396 0.500027ZM0.729823 3.5692C1.52911 3.24226 2.61586 3.83608 3.18378 4.87026C3.71664 5.92445 3.53435 7.03202 2.74207 7.35896C1.94979 7.68589 0.870049 7.09875 0.316155 6.05122C-0.237738 5.0037 -0.0414214 3.88946 0.729823 3.5692ZM13.3502 3.5692C14.1214 3.88946 14.3177 5.0037 13.7638 6.05122C13.21 7.09875 12.1302 7.68589 11.3379 7.35896C10.5457 7.03202 10.3634 5.92445 10.8962 4.87026C11.4641 3.83608 12.5509 3.24226 13.3502 3.5692ZM12.1793 10.7617C12.2073 11.3889 11.7025 12.0828 11.0995 12.343C9.84452 12.8901 8.35813 11.7559 6.96288 11.7559C5.56763 11.7559 4.06721 12.9368 2.83322 12.343C2.13208 12.0161 1.6483 11.1487 1.73945 10.4281C1.86565 9.43398 3.12068 8.90022 3.86388 8.17296C4.85247 7.23219 5.5536 5.46408 6.96288 5.46408C8.36514 5.46408 9.10834 7.2055 10.0549 8.17296C10.8331 8.98695 12.1302 9.67418 12.1793 10.7617Z"
+            fill="#AAD5D1" />
+        </svg>
+      </div>
+      <span class="text-changes">Changes saved</span>
+    </div>
+  </ion-card-header>
+
+  <ion-card-header>
+    <ion-button class="continue-button">Continue</ion-button>
+  </ion-card-header>
+
+  <ion-card-header>
+    <label class="account-label">
+      <span class="text-account">Already have an account?</span>
+      <ion-button fill="clear" class="sign-in-button">Sign In</ion-button>
+    </label>
+  </ion-card-header>
+
 </ion-content>

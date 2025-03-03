@@ -1,0 +1,421 @@
+/* Заголовок */
+ion-content {
+  --background: #f1f1f1;
+  --overflow: visible;
+}
+
+.tittle{
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+  // margin-top: 33px;
+}
+
+.homepage-conteiner{
+  width: 100%;
+  padding: 14px;
+}
+
+.conteiner{ 
+  display: flex;
+  gap: 200px;
+  width: 100%;
+  padding: 14px;
+}
+
+.logo {
+  width: 58px;
+  height: auto;
+}
+
+/* Іконки справа */
+.header-icon {
+  font-size: 28px;
+  color: #AAD5D1;
+  /* Світло-блакитний колір */
+  margin: 0 8px;
+}
+
+/* Врахування Dynamic Island (вирізу) */
+ion-toolbar {
+  padding: 0 10px;
+}
+
+.white-squere-1,.white-squere-2{
+  width: 350px;
+  height: 180px;
+  background:#FFFFFF;
+  border-radius: 20px;
+  align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-white-squere-1{
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #0C0C0C;
+}
+
+.amount{
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #AAD5D1;
+}
+
+.green{
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  bottom: 10px;
+}
+
+.green-squere{
+  width: 100px;
+  height: 65px;
+  background: #AAD5D1;
+  border-radius: 20px;
+  bottom: 10px;
+}
+
+.text-green-squere{
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #0C0C0C;
+}
+
+.amount-green{
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.white-squere-2{
+  margin-top: 60px;
+}
+
+.text-white-squere-2{
+  font-size: 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: #0C0C0C;
+}
+
+.information-white-squere{
+  font-size: 14px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
+
+.buttons{
+  display: flex;
+  gap: 81px;
+  margin-top: 295px;
+}
+
+.doing-button{
+  width: 60px;
+  height: 60px;
+  --background: #0C0C0C;
+}
+
+.text-button{
+  display: flex;
+  //gap: 75px;
+}
+
+.adopt{
+  margin-left: -10px;
+}
+
+.donate{
+  margin-left: 75px;
+}
+
+.walk{
+  margin-left: 78px;
+}
+
+.animals-green {
+  display: flex;
+  gap: 12px;
+}
+
+.animal-card {
+  position: relative;
+  /* Встановлюємо контекст для абсолютного позиціонування */
+  width: 169px;
+}
+
+.animal-green-squere {
+  width: 169px;
+  height: 89px;
+  background: #AAD5D1;
+  border-radius: 20px;
+  position: relative;
+  /* Робимо відносним, щоб не накладалося */
+  //padding: 10px;
+  z-index: 2;
+  /* Встановлюємо вище білого */
+}
+
+.animal-white-squere {
+  width: 169px;
+  height: 89px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  position: absolute;
+  /* Робимо абсолютним, щоб воно було під зеленим */
+  top: 55px;
+  /* Зсуваємо вниз */
+  left: 0;
+  z-index: 1;
+  padding: 10px;
+}
+
+.name{
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  color: #0C0C0C;
+}
+
+.shelter-name{
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: #0C0C0C;
+}
+
+.address{
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #0C0C0C;
+}
+
+.animal-information{
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  color: #0C0C0C;
+  margin-top: 50px;
+}
+
+.scrollable-container-1 {
+  display: flex;
+    /* Включає flex-контейнер */
+    overflow-x: auto;
+    /* Додає горизонтальну прокрутку */
+    gap: 10px;
+    /* Відступ між елементами */
+    //padding: 10px;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    /* Гладкий ефект прокрутки */
+    -webkit-overflow-scrolling: touch;
+    min-height: 150px;
+    margin-top: 63px;
+}
+
+.scrollable-container-2 {
+  display: flex;
+  /* Включає flex-контейнер */
+  overflow-x: auto;
+  /* Додає горизонтальну прокрутку */
+  //gap: 10px;
+  /* Відступ між елементами */
+  //padding: 10px;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  /* Гладкий ефект прокрутки */
+  -webkit-overflow-scrolling: touch;
+  min-height: 100px;
+  margin-top: 30px;
+}
+
+.fact-green{
+  display: flex;
+  gap: 20px;
+}
+
+.fact-green-squere{
+  width: 320px;
+  height: 100px;
+  background: #AAD5D1;
+  border-radius: 20px;
+}
+
+.fact-lead-information{
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.fact-secondary-information{
+  font-size: 14px;
+  font-family: "Mulish", sans-serif;
+  color: #FFFFFF;
+}
+
+.circle-three {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  //margin-top: 16px;
+  position: relative;
+    z-index: 10;
+  /* або будь-яке інше значення */
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.circle-1 {
+  width: 8px;
+  height: 8px;
+  background: #0C0C0C;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.useful{
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+
+.white-squere-3 {
+  width: 350px;
+  height: 223px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-buttons {
+  display: flex;
+  //gap: 5px;
+  /* Відстань між кнопками */
+}
+
+.social-button {
+  --background: transparent;
+  --box-shadow: none;
+  --border-radius: 15px;
+  width: 60px;
+  /* Розмір кнопки */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  margin-top: -35px;
+  //align-items: center;
+  //padding: -25px;
+}
+
+.mes-but {
+  width: 60px;
+  /* Змінено розмір іконки */
+  height: 60px;
+  object-fit: contain;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: -9px;
+  //padding: 20px;
+}
+
+.info-card {
+  width: 150px;
+  height: 65px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  //padding: 10px;
+
+  transition: 0.3s;
+}
+
+.filled {
+  background: #AAD5D1;
+  color: #FFFFFF;
+}
+
+.outlined {
+  border: 2px solid #324B49;
+  background: white;
+  color: #324B49;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.bottom-nav {
+  background: #FFFFFF;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #EAEAEA;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0C0C0C;
+  background: transparent;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.nav-button ion-icon {
+  width: 22px;
+  height: 22px;
+  color: #0C0C0C;
+  margin-right: 5px;
+}
+
+.nav-button.active {
+  background: #AAD5D1;
+  color: white;
+}
+
+.nav-button.active ion-icon {
+  color: white;
+}
