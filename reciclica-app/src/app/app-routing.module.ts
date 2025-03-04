@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'homepage',
     loadChildren: () => import('./pages/homepage/homepage.module').then( m => m.HomepagePageModule)
   },
+  {
+    path: 'confirm-3',
+    loadChildren: () => import('./pages/confirm-3/confirm-3.module').then( m => m.Confirm3PageModule)
+  },
 
 
 

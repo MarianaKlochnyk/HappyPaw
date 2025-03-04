@@ -3,20 +3,20 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-confirm-2',
-  templateUrl: './confirm-2.page.html',
-  styleUrls: ['./confirm-2.page.scss'],
+  selector: 'app-confirm-3',
+  templateUrl: './confirm-3.page.html',
+  styleUrls: ['./confirm-3.page.scss'],
   imports: [
     IonicModule
   ]
 })
-export class Confirm2Page {
+export class Confirm3Page {
 
   constructor(private router: Router) { }
   
   
-    goConfirm3() {
-      this.router.navigate(['/confirm-3']);
+    goHomepage() {
+      this.router.navigate(['/homepage']);
   }
 
 }

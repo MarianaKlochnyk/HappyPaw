@@ -1,0 +1,98 @@
+ion-content {
+  --background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forgot-password-container {
+  width: 100%;
+  padding: 14px;
+}
+
+.logo {
+  width: 58px;
+  height: auto;
+  //margin-bottom: 15px;
+}
+
+.title {
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #324B49;
+  margin-top: 33px;
+}
+
+.subtitle {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #324b49;
+  margin-top: 4px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.input-field {
+  --background: #aad5d1;
+  --border-radius: 10px;
+  --box-shadow: none;
+  width: 100%;
+  max-width: 58px;
+  --min-height: 58px;
+  margin-top: 116px;
+}
+
+ion-input {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+}
+
+.custom-button {
+  width: 100%;
+  max-width: 335px;
+  height: 65px;
+  font-size: 24px;
+  color: #000;
+  --background: #aad5d1;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signin-text {
+  font-size: 14px;
+  margin-top: 49px;
+  color: #324b49;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signin-link {
+  margin-top: 34px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #000;
+}
