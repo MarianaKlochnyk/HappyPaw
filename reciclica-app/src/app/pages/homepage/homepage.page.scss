@@ -1,4 +1,3 @@
-/* Заголовок */
 ion-content {
   --background: #f1f1f1;
   --overflow: visible;
@@ -9,7 +8,6 @@ ion-content {
   font-weight: 600;
   font-size: 20px;
   color: #000000;
-  // margin-top: 33px;
 }
 
 .homepage-conteiner{
@@ -29,15 +27,12 @@ ion-content {
   height: auto;
 }
 
-/* Іконки справа */
 .header-icon {
   font-size: 28px;
   color: #AAD5D1;
-  /* Світло-блакитний колір */
   margin: 0 8px;
 }
 
-/* Врахування Dynamic Island (вирізу) */
 ion-toolbar {
   padding: 0 10px;
 }
@@ -54,11 +49,26 @@ ion-toolbar {
     transform: translateX(-50%);
 }
 
+.white-squere-1{
+  z-index: 1;
+}
+
+.shpiz {
+  margin-left: 200px;
+  margin-top: -125px;
+  z-index: 2;
+  position: absolute;
+  width: 200px;
+  height: auto;
+}
+
 .text-white-squere-1{
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   font-size: 13px;
   color: #0C0C0C;
+  padding-left: 10px;
+  padding-top: 15px;
 }
 
 .amount{
@@ -66,6 +76,8 @@ ion-toolbar {
   font-weight: 600;
   font-size: 36px;
   color: #AAD5D1;
+  padding-left: 10px;
+  margin-top: -2px;
 }
 
 .green{
@@ -82,7 +94,7 @@ ion-toolbar {
   width: 100px;
   height: 65px;
   background: #AAD5D1;
-  border-radius: 20px;
+  border-radius: 15px;
   bottom: 10px;
 }
 
@@ -91,18 +103,24 @@ ion-toolbar {
   font-weight: 600;
   font-size: 10px;
   color: #0C0C0C;
+  padding-left: 6px;
 }
 
-.amount-green{
+.amount-green,.amount-green-she{
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #FFFFFF;
   text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+  padding-left: 6px;
+}
+
+.amount-green-she{
+  margin-top: -5px;
 }
 
 .white-squere-2{
-  margin-top: 60px;
+  margin-top: 72px;
 }
 
 .text-white-squere-2{
@@ -110,18 +128,22 @@ ion-toolbar {
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   color: #0C0C0C;
+  padding-left: 17px;
+  padding-top: 25px;
 }
 
 .information-white-squere{
   font-size: 14px;
   font-family: "Mulish", sans-serif;
   font-weight: 400;
+  padding-left: 17px;
+  padding-top: 3px;
 }
 
 .buttons{
   display: flex;
   gap: 81px;
-  margin-top: 295px;
+  margin-top: 305px;
 }
 
 .doing-button{
@@ -132,7 +154,6 @@ ion-toolbar {
 
 .text-button{
   display: flex;
-  //gap: 75px;
 }
 
 .adopt{
@@ -154,20 +175,22 @@ ion-toolbar {
 
 .animal-card {
   position: relative;
-  /* Встановлюємо контекст для абсолютного позиціонування */
   width: 169px;
+  margin-top: 30px;
+}
+
+.text-container {
+  position: absolute;
+  z-index: 5;
 }
 
 .animal-green-squere {
+  position: relative;
   width: 169px;
   height: 89px;
   background: #AAD5D1;
   border-radius: 20px;
-  position: relative;
-  /* Робимо відносним, щоб не накладалося */
-  //padding: 10px;
   z-index: 2;
-  /* Встановлюємо вище білого */
 }
 
 .animal-white-squere {
@@ -176,9 +199,7 @@ ion-toolbar {
   background: #FFFFFF;
   border-radius: 20px;
   position: absolute;
-  /* Робимо абсолютним, щоб воно було під зеленим */
   top: 55px;
-  /* Зсуваємо вниз */
   left: 0;
   z-index: 1;
   padding: 10px;
@@ -189,6 +210,8 @@ ion-toolbar {
   font-family: "Mulish", sans-serif;
   font-weight: 800;
   color: #0C0C0C;
+  padding-left: 71px;
+  z-index: 4;
 }
 
 .shelter-name{
@@ -196,6 +219,9 @@ ion-toolbar {
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   color: #0C0C0C;
+  padding-left: 71px;
+  margin-top: -10px;
+  z-index: 15;
 }
 
 .address{
@@ -203,42 +229,51 @@ ion-toolbar {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   color: #0C0C0C;
+  padding-left: 71px;
+  margin-top: -5px;
+  z-index: 5;
 }
 
 .animal-information{
   font-size: 8px;
   font-family: "Mulish", sans-serif;
   color: #0C0C0C;
-  margin-top: 50px;
+  margin-top: 32px;
+  padding-left: 15px;
 }
 
 .scrollable-container-1 {
   display: flex;
-    /* Включає flex-контейнер */
     overflow-x: auto;
-    /* Додає горизонтальну прокрутку */
     gap: 10px;
-    /* Відступ між елементами */
-    //padding: 10px;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    /* Гладкий ефект прокрутки */
     -webkit-overflow-scrolling: touch;
-    min-height: 150px;
-    margin-top: 63px;
+    min-height: 180px;
+    margin-top: 30px;
+}
+
+.cat{
+  position: absolute;
+  z-index: 2;
+  top: -38px;
+  width: 85px;
+  height: auto;
+}
+
+.dogi{
+  position: absolute;
+  z-index: 2;
+  top: -52px;
+  width: 100px;
+  height: auto;
 }
 
 .scrollable-container-2 {
   display: flex;
-  /* Включає flex-контейнер */
   overflow-x: auto;
-  /* Додає горизонтальну прокрутку */
-  //gap: 10px;
-  /* Відступ між елементами */
-  //padding: 10px;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  /* Гладкий ефект прокрутки */
   -webkit-overflow-scrolling: touch;
   min-height: 100px;
   margin-top: 30px;
@@ -261,22 +296,24 @@ ion-toolbar {
   font-family: "Mulish", sans-serif;
   color: #FFFFFF;
   font-weight: 600;
+  padding-left: 11px;
+  padding-top: 10px;
 }
 
 .fact-secondary-information{
   font-size: 14px;
   font-family: "Mulish", sans-serif;
   color: #FFFFFF;
+  padding-left: 11px;
+  margin-top: -8px;
 }
 
 .circle-three {
   display: flex;
   justify-content: center;
   gap: 8px;
-  //margin-top: 16px;
   position: relative;
     z-index: 10;
-  /* або будь-яке інше значення */
 }
 
 .circle {
@@ -315,28 +352,15 @@ ion-toolbar {
 
 .message-buttons {
   display: flex;
-  //gap: 5px;
-  /* Відстань між кнопками */
-}
-
-.social-button {
-  --background: transparent;
-  --box-shadow: none;
-  --border-radius: 15px;
-  width: 60px;
-  /* Розмір кнопки */
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  margin-top: -35px;
-  //align-items: center;
-  //padding: -25px;
+    display: flex;
+      justify-content: center;
+      margin-top: -25px;
+      margin-bottom: 15px;
 }
 
 .mes-but {
-  width: 60px;
-  /* Змінено розмір іконки */
-  height: 60px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
@@ -345,7 +369,6 @@ ion-toolbar {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-top: -9px;
-  //padding: 20px;
 }
 
 .info-card {
@@ -360,8 +383,6 @@ ion-toolbar {
   font-weight: 600;
   font-size: 14px;
   text-align: center;
-  //padding: 10px;
-
   transition: 0.3s;
 }
 
@@ -418,4 +439,57 @@ ion-toolbar {
 
 .nav-button.active ion-icon {
   color: white;
+}
+
+.fotter-white{
+  width: 431px;
+  height: 73px;
+  background: #FFFFFF;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+
+.home{
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  --background: #AAD5D1;
+  margin-left: 16px;
+  margin-top: -30px;
+}
+
+.li-text{
+  font-size: 12px;
+  color: #324B49;
+  font-family: "Mulish", sans-serif;
+}
+
+.li{
+  width: 35px;
+  height: auto;
+  margin-left: 12px;
+}
+
+.li-c {
+  width: 35px;
+  height: auto;
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.li-l{
+  width: 27px;
+  height: auto;
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.li-s {
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.li-m {
+  margin-left: 35px;
+  margin-top: 15px;
 }
