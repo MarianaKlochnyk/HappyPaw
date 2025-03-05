@@ -63,6 +63,14 @@ const routes: Routes = [
     path: 'confirm-3',
     loadChildren: () => import('./pages/confirm-3/confirm-3.module').then( m => m.Confirm3PageModule)
   },
+  {
+    path: 'history-of-donation',
+    loadChildren: () => import('./pages/history-of-donation/history-of-donation.module').then( m => m.HistoryOfDonationPageModule)
+  },
+  {
+    path: 'detailed-info',
+    loadChildren: () => import('./pages/detailed-info/detailed-info.module').then( m => m.DetailedInfoPageModule)
+  },
 
 
 

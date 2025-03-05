@@ -1,0 +1,153 @@
+ion-content {
+  --background: #f1f1f1;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.black-squere {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 430px;
+  height: 670px;
+  background: #000000;
+  border-radius: 25px 25px 0 0;
+}
+
+.photo-white{
+  width: 60px;
+  height: 60px;
+  background: #FFFFFF;
+    position: absolute;
+      margin-top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+}
+
+.lead-text{
+  color: #FFFFFF;
+    font-family: "Mulish", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      position: absolute;
+        margin-top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+.row-text{
+  display: flex;
+  gap: 15px;
+        position: absolute;
+          margin-top: 73px;
+          left: 50%;
+          transform: translateX(-50%);
+                align-items: center;
+}
+
+.detailed-time{
+  width: auto;
+  height: 15px;
+}
+
+.data,.time{
+    color: #FFFFFF;
+      font-family: "Mulish", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+}
+
+.amount{
+  display: flex;
+  color: #FFFFFF;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  position: absolute;
+  margin-top: 117px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.arr-col{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 190px;
+  margin-left: 30px;
+}
+
+.row-1,.row-2,.row-3{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.lead-pay{
+    color: #FFFFFF;
+      font-family: "Mulish", sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+}
+
+.secondary-pay {
+  color: #FFFFFF;
+  font-family: "Mulish", sans-serif;
+  //font-weight: 600;
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.col-1,.col-2{
+  display: flex;
+  flex-direction: column;
+  //gap: 5px;
+}
+
+.pay{
+  width: 35px;
+  height: auto;
+}
+
+.arrow{
+  width: auto;
+  height: 30px;
+}
+
+.row-arrow{
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
+  align-items: center;
+}
+
+.custom-button {
+  width: 100%;
+  max-width: 335px;
+  height: 65px;
+  font-size: 24px;
+  color: #000;
+  --background: #FFFFFF;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 430px;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}

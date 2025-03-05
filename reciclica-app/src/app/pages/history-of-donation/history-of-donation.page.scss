@@ -1,0 +1,241 @@
+ion-content {
+  --background: #f1f1f1;
+  
+}
+
+.history-conteiner {
+  width: 100%;
+  padding: 14px;
+}
+
+.logo {
+  width: 58px;
+  height: auto;
+}
+
+.white-lead{
+  width: 350px;
+  height: 60px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 20px;
+}
+
+.tittle{
+  padding-left: 12px;
+    font-family: "Mulish", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #AAD5D1;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.search-button{
+  height: 30px;
+  width: 30px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #AAD5D1;
+  display: flex;
+    justify-content: center;
+    /* Центрує горизонтально */
+    align-items: center;
+    /* Товщина, стиль і колір */
+}
+
+.search{
+  width: 20px;
+  height: auto;
+    //display: flex;
+      //align-items: center;
+      //justify-content: center;
+      //position: absolute;
+        //left: 50%;
+        //transform: translateX(50%);
+}
+
+.notification{
+  width: 20px;
+  height: auto;
+}
+
+.notification-button {
+  height: 30px;
+  width: 30px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #AAD5D1;
+  display: flex;
+      justify-content: center;
+        /* Центрує горизонтально */
+        align-items: center;
+}
+
+.white-secondary-1,.white-secondary{
+  width: 350px;
+  height: 90px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  //margin-top: 20px;
+}
+
+.white-secondary-1{
+  margin-top: 20px;
+}
+
+.donations{
+  display: grid;
+  gap: 10px;
+}
+
+.green-squere{
+  width: 45px;
+  height: 45px;
+  background: #AAD5D1;
+  border-radius: 10px;
+  margin-left: 17px;
+}
+
+.col-information{
+  display: flex;
+  flex-direction: column;
+}
+
+.shelter{
+      font-family: "Mulish", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #000000;
+        margin-top: 10px;
+}
+
+.row-information{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  //margin-top: -10px;
+}
+
+.data{
+        font-family: "Mulish", sans-serif;
+          font-weight: 300;
+          font-size: 12px;
+          color: #000000;
+          margin-top: -10px;
+
+}
+
+.col-amount{
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-amount{
+  font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-top: -1px;
+}
+
+.button-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 14px;
+  background: #AAD5D1;
+  /* Замінили --background */
+  border-radius: 5px;
+  margin-top: -10px;
+  margin-left: 15px;
+  background-color: rgba(170, 213, 209, 0.5);
+}
+
+.information-status {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #324B49;
+}
+
+ion-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  /* Зменшили зайвий padding */
+  background: #FFFFFF;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  /* Додаємо тінь для кращого вигляду */
+  z-index: 1000;
+  /* Щоб футер залишався поверх всього */
+}
+
+.fotter-white {
+  display: flex;
+  justify-content: space-around;
+  /* Вирівнюємо іконки рівномірно */
+  align-items: center;
+  width: 100%;
+  height: 73px;
+  background: #FFFFFF;
+  margin: 0;
+  /* Виправили зайвий margin */
+  padding: 10px 0;
+}
+
+.home {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  --background: #AAD5D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.li-text {
+  font-size: 12px;
+  color: #324B49;
+  font-family: "Mulish", sans-serif;
+  margin-left: 5px;
+}
+
+.li {
+  width: 35px;
+  height: auto;
+}
+
+.li-c,
+.li-l,
+.li-s,
+.li-m {
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+  /* Додаємо рівномірні відступи між іконками */
+}
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 430px;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}

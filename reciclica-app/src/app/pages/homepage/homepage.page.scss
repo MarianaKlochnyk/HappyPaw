@@ -1,6 +1,14 @@
 ion-content {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    --padding-bottom: 80px;
   --background: #f1f1f1;
   --overflow: visible;
+      //--padding-bottom: 80px;
+      /* Щоб контент не закривав футер */
+    
 }
 
 .tittle{
@@ -441,55 +449,59 @@ ion-toolbar {
   color: white;
 }
 
-.fotter-white{
-  width: 431px;
+ion-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 73px;
+  /* Фіксована висота */
   background: #FFFFFF;
-  margin-left: -40px;
-  margin-top: 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-.home{
+.fotter-white {
+  display: flex;
+  justify-content: space-around;
+  /* Вирівнюємо іконки рівномірно */
+  align-items: center;
+  width: 100%;
+  height: 73px;
+  background: #FFFFFF;
+  margin: 0;
+  /* Виправили зайвий margin */
+  padding: 10px 0;
+}
+
+.home {
   width: 90px;
   height: 40px;
   border-radius: 20px;
   --background: #AAD5D1;
-  margin-left: 16px;
-  margin-top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.li-text{
+.li-text {
   font-size: 12px;
   color: #324B49;
   font-family: "Mulish", sans-serif;
+  margin-left: 5px;
 }
 
-.li{
+.li {
   width: 35px;
   height: auto;
-  margin-left: 12px;
 }
 
-.li-c {
-  width: 35px;
-  height: auto;
-  margin-left: 35px;
-  margin-top: 15px;
-}
-
-.li-l{
-  width: 27px;
-  height: auto;
-  margin-left: 35px;
-  margin-top: 15px;
-}
-
-.li-s {
-  margin-left: 35px;
-  margin-top: 15px;
-}
-
+.li-c,
+.li-l,
+.li-s,
 .li-m {
-  margin-left: 35px;
-  margin-top: 15px;
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+  /* Додаємо рівномірні відступи між іконками */
 }
