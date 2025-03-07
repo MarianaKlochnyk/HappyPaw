@@ -4,15 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HistoryOfDonationPageRoutingModule } from './history-of-donation-routing.module';
+import { ProfilePageRoutingModule } from './profile-routing.module';
+
+import { ProfilePage } from './profile.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HistoryOfDonationPageRoutingModule
+    ProfilePageRoutingModule,
+    ProfilePage
   ],
   declarations: []
 })
-export class HistoryOfDonationPageModule {}
+export class ProfilePageModule {}

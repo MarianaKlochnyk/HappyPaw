@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account-2',
@@ -9,11 +10,17 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class CreateAccount2Page implements OnInit {
+export class CreateAccount2Page {
 
-  constructor() { }
+  constructor(private router: Router) { }
+    
+    
+      goHomepage() {
+        this.router.navigate(['/homepage']);
+    }
 
-  ngOnInit() {
-  }
-
+    goSignIn2() {
+        this.router.navigate(['/sign-in-2']);
+    }
 }
+ 

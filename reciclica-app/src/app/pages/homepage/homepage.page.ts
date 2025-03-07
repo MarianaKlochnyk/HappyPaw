@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -9,11 +10,13 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class HomepagePage implements OnInit {
+export class HomepagePage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(private router: Router) { }
+      
+      
+        goProfile() {
+          this.router.navigate(['/profile']);
+      }
 
 }

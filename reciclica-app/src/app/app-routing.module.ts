@@ -39,7 +39,8 @@ const routes: Routes = [
   {
     path: 'confirm-2',
     loadChildren: () => import('./pages/confirm-2/confirm-2.module').then( m => m.Confirm2PageModule)
-  },  {
+  },
+  {
     path: 'sign-in-1',
     loadChildren: () => import('./pages/sign-in-1/sign-in-1.module').then( m => m.SignIn1PageModule)
   },
@@ -71,8 +72,13 @@ const routes: Routes = [
     path: 'detailed-info',
     loadChildren: () => import('./pages/detailed-info/detailed-info.module').then( m => m.DetailedInfoPageModule)
   },
-
-
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
 
 ];
 

@@ -183,13 +183,13 @@
   </ion-card-header>
 
   <ion-card-header>
-    <ion-button class="continue-button">Continue</ion-button>
+    <ion-button (click)="goHomepage()" class="continue-button">Continue</ion-button>
   </ion-card-header>
 
   <ion-card-header>
     <label class="account-label">
       <span class="text-account">Already have an account?</span>
-      <ion-button fill="clear" class="sign-in-button">Sign In</ion-button>
+      <ion-button (click)="goSignIn2()" fill="clear" class="sign-in-button">Sign In</ion-button>
     </label>
   </ion-card-header>
 
