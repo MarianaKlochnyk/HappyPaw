@@ -87,6 +87,10 @@ const routes: Routes = [
     path: 'usefull-information',
     loadChildren: () => import('./pages/usefull-information/usefull-information.module').then( m => m.UsefullInformationPageModule)
   },
+  {
+    path: 'suportive-service',
+    loadChildren: () => import('./pages/suportive-service/suportive-service.module').then( m => m.SuportiveServicePageModule)
+  },
 
 ];
 

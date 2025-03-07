@@ -33,5 +33,9 @@ export class HomepagePage {
   
   goUsefulInformation() {
           this.router.navigate(['/usefull-information']);
+  }
+  
+  goSuportiveService() {
+          this.router.navigate(['/suportive-service']);
       }
 }
