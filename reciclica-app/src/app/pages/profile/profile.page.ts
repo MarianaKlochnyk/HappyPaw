@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -9,11 +10,16 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class ProfilePage implements OnInit {
+export class ProfilePage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+   goHome() {
+          this.router.navigate(['/home']);
   }
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
+      }
 
 }

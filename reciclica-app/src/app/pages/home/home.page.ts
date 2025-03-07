@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +11,20 @@ import { IonicModule } from '@ionic/angular';
     ]
 })
 export class HomePage {
+  constructor(private router: Router) { }
   // Змінна для відстеження вибраного чипа
   selectedChip: string = '';  // Початково жоден чип не вибраний
 
-  constructor() {}
-
+   goHome() {
+          this.router.navigate(['/home']);
+  }
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
+      }
   // Метод для обробки вибору чипа
   selectChip(chip: string) {
     this.selectedChip = chip;  // Оновлює вибраний чип
   }
 }
+

@@ -3,22 +3,16 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.page.html',
-  styleUrls: ['./homepage.page.scss'],
+  selector: 'app-notification',
+  templateUrl: './notification.page.html',
+  styleUrls: ['./notification.page.scss'],
   imports: [
     IonicModule
   ]
 })
-export class HomepagePage {
+export class NotificationPage  {
 
-  constructor(private router: Router) { }
-      
-      
-        goProfile() {
-          this.router.navigate(['/profile']);
-      }
-
+constructor(private router: Router) { }
    goHome() {
           this.router.navigate(['/home']);
   }
