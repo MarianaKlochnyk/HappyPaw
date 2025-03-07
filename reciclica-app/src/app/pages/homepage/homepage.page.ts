@@ -19,11 +19,19 @@ export class HomepagePage {
           this.router.navigate(['/profile']);
       }
 
-   goHome() {
+  goHome() {
           this.router.navigate(['/home']);
+  }
+  
+   goHomepage() {
+          this.router.navigate(['/homepage']);
   }
   
    goNotification() {
           this.router.navigate(['/notification']);
+  }
+  
+  goUsefulInformation() {
+          this.router.navigate(['/usefull-information']);
       }
 }

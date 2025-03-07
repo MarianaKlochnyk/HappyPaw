@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class NotificationPage  {
 
 constructor(private router: Router) { }
-   goHome() {
-          this.router.navigate(['/home']);
+   goHomepage() {
+          this.router.navigate(['/homepage']);
   }
   
    goNotification() {

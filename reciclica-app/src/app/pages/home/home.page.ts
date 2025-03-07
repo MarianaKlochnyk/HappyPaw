@@ -15,8 +15,8 @@ export class HomePage {
   // Змінна для відстеження вибраного чипа
   selectedChip: string = '';  // Початково жоден чип не вибраний
 
-   goHome() {
-          this.router.navigate(['/home']);
+   goHomepage() {
+          this.router.navigate(['/homepage']);
   }
   
    goNotification() {

@@ -1,0 +1,176 @@
+ion-content {
+  --background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.usefull-information {
+  width: 100%;
+  padding: 14px;
+}
+
+.title{
+      font-size: 32px;
+        font-family: "Mulish", sans-serif;
+        font-weight: 800;
+        color: #AAD5D1;
+}
+
+.subtitle{
+      font-size: 13px;
+        font-family: "Mulish", sans-serif;
+        font-weight: 300;
+        color: #324B49;
+}
+
+.searching{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  //margin-left: 14px;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+ion-searchbar {
+  width: 100%;
+  height: 100%;
+  --background: #f1f1f1;
+  --color: #000000;
+  --placeholder-color: #324B49;
+  font-size: 14px;
+  --border-radius: 20px;
+  --border-width: 0px;
+  /* Прибираємо внутрішню рамку */
+  --icon-color: #AAD5D1;
+  //z-index: 2;
+  position: absolute;
+  padding: 0;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Зменшуємо ширину рамки на 4px (по 2px з кожного боку) */
+  height: 100% ;
+  /* Аналогічно для висоти */
+  border: 1px solid #AAD5D1;
+  border-radius: 20px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.button{
+  width: 41px;
+  height: auto;
+}
+
+.ui{
+  margin-top: 17px;
+  display: grid;
+  gap: 10px;
+}
+
+.pink-ui,.pers-ui,.blue-ui,.purple-ui{
+  width: 350px;
+  height: 160px;
+  background: #F0D2E4;
+  border-radius: 20px;
+}
+
+.pers-ui{
+  background: #F3DBDB;
+}
+
+.blue-ui {
+  background: #B0C2E1;
+}
+
+.purple-ui {
+  background: #F0D2EE;
+  margin-bottom: 50px;
+}
+
+.information{
+        font-size: 24px;
+          font-family: "Mulish", sans-serif;
+          font-weight: 600;
+          color: #FFFFFF;
+          margin: 0px 0;
+          position: absolute;
+          z-index: 11;
+}
+
+.inside{
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.white-arrow{
+  margin-top: 95px;
+  z-index: 11;
+}
+
+.white-arrow-1 {
+  margin-top: 95px;
+}
+
+.york-ui{
+  position: absolute;
+  margin-left: 238px;
+}
+
+.taksa-ui{
+  position: absolute;
+  margin-left: 230px;
+}
+
+.shpiz-ui {
+  position: absolute;
+  margin-left: 215px;
+}
+
+.korgi-ui {
+  position: absolute;
+  margin-left: 189px;
+}
+
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+}
+
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 430px;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}

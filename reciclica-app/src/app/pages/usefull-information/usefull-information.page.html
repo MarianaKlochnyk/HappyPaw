@@ -1,84 +1,49 @@
 <ion-content class="ion-padding">
-  <div class="home-container">
-    <div class="icon">
-      <svg width="43" height="40" viewBox="0 0 90 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M90 45.5815C90 20.905 69.8528 0.900696 45 0.900696C20.1472 0.900696 0 20.905 0 45.5815C0 70.2581 20.1472 90.2624 45 90.2624C69.8528 90.2624 90 70.2581 90 45.5815Z"
-          fill="url(#paint0_linear_49_1118)" />
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M18.2549 73.3158C24.3205 64.9734 34.1976 59.5443 45.3518 59.5443C56.3284 59.5443 66.0682 64.802 72.1563 72.9192C65.1734 79.7582 55.5833 83.9792 45.0003 83.9792C34.6231 83.9792 25.2006 79.9209 18.2549 73.3158ZM60.469 36.8548C60.469 45.5302 53.7008 52.5629 45.3518 52.5629C37.0028 52.5629 30.2346 45.5302 30.2346 36.8548C30.2346 28.1795 37.0028 21.1467 45.3518 21.1467C53.7008 21.1467 60.469 28.1795 60.469 36.8548Z"
-          fill="white" />
-        <defs>
-          <linearGradient id="paint0_linear_49_1118" x1="45" y1="0.900696" x2="45" y2="90.2624"
-            gradientUnits="userSpaceOnUse">
-            <stop stop-color="#AAD5D1" />
-            <stop offset="1" stop-color="#B3E0DB" />
-          </linearGradient>
-        </defs>
-      </svg>
+  <div class="usefull-information">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h1 class="title">Useful information</h1>
+    <p class="subtitle">Here you will find important information about animal <br>care, volunteering, helping shelters and legal aspects.💙🐾</p>
+  
+  <div class="searching">
+    <div class="search-container">
+      <ion-searchbar placeholder="Enter your keyword"></ion-searchbar>
+      <div class="border"></div>
     </div>
-
-    <div class="header-row">
-      <div class="header-col">
-        <p class="title">Hi, Olya 🙌</p>
-        <p class="subtitle">Good morning!</p>
-      </div>
-      <img src="assets/search-home.png" alt="search" class="search">
-    </div>
-    
-  <div class="chip">
-    <ion-chip [outline]="true" [class.selected]="selectedChip === 'All'" (click)="selectChip('All')">All</ion-chip>
-    <ion-chip [outline]="true" [class.selected]="selectedChip === 'Cat'" (click)="selectChip('Cat')">Cat</ion-chip>
-    <ion-chip [outline]="true" [class.selected]="selectedChip === 'Dog'" (click)="selectChip('Dog')">Dog</ion-chip>
-    <ion-chip [outline]="true" [class.selected]="selectedChip === 'Bird'" (click)="selectChip('Bird')">Bird</ion-chip>
-    <ion-chip [outline]="true" [class.selected]="selectedChip === 'Bear'" (click)="selectChip('Bear')">Bear</ion-chip>
+    <img src="assets/button.png" alt="button" class="button">
   </div>
 
-  <div class="pets-scrotable">
-    <div class="animal-card">
-      <div class="blue-round">
-        <img src="assets/doberman.png" alt="dog" class="dog">
-        <img src="assets/arr.png" alt="arrow" class="arrow">
+  <div class="ui">
+    <div class="pink-ui">
+      <img src="assets/york-ui.png" alt="york-ui" class="york-ui">
+      <div class="inside">
+        <p class="information">Animal care <br>and <br>maintenance</p>
+        <img src="assets/white-arrow.png" alt="white-arrow" class="white-arrow">
       </div>
-      <p class="type">Soft Dog ( Gold )</p>
-      <p class="amount">$140.00</p>
     </div>
-
-    <div class="animal-card">
-      <div class="animal-card">
-        <div class="blue-round">
-          <img src="assets/pet-cat.png" alt="dog" class="cat">
-          <img src="assets/arr.png" alt="arrow" class="arrow">
+    <div class="pers-ui">
+        <img src="assets/taksa.png" alt="york-ui" class="taksa-ui">
+        <div class="inside">
+          <p class="information">How can you <br>help shelters?<br></p>
+          <img src="assets/white-arrow.png" alt="white-arrow" class="white-arrow-1">
         </div>
-        <p class="type">Soft Cat ( Gray )</p>
-        <p class="amount">$140.00</p>
-      </div>
+    </div>
+    <div class="blue-ui">
+        <img src="assets/shpiz-ui.png" alt="york-ui" class="shpiz-ui">
+        <div class="inside">
+          <p class="information">Useful resources<br>and<br>educational materials</p>
+          <img src="assets/white-arrow.png" alt="white-arrow" class="white-arrow">
+        </div>
+    </div>
+    <div class="purple-ui">
+        <img src="assets/korgi-ui.png" alt="york-ui" class="korgi-ui">
+        <div class="inside">
+          <p class="information">Legal <br>information<br></p>
+          <img src="assets/white-arrow.png" alt="white-arrow" class="white-arrow-1">
+        </div>
     </div>
   </div>
 
-  <div class="button-see">
-    <div class="logo-button-circle">
-      <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-    </div>
-    <p class="button-text">See more</p>
-  </div>
-
-  <div class="buy-animal">
-    <p class="lead">Expensive Cat</p>
-    <p class="other">See All</p>
-  </div>
-
-  <div class="buy-scrotable">
-    <div class="buy-dog">
-      <p class="buy-text">Familiar Dog <br>Black Color</p>
-      <img src="assets/buy-dog.png" alt="buy-dog-img" class="buy-dog-img">
-    </div>
-    <div class="buy-cat">
-        <p class="buy-text">Familiar Cat <br>Fluffy and nice</p>
-        <img src="assets/buy-cat.png" alt="buy-cat-img" class="buy-cat-img">
-    </div>
-  </div>
-  </div>
+</div>
 </ion-content>
 
 <ion-footer>

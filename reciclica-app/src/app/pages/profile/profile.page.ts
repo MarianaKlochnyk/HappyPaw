@@ -14,8 +14,8 @@ export class ProfilePage {
 
   constructor(private router: Router) { }
 
-   goHome() {
-          this.router.navigate(['/home']);
+   goHomepage() {
+          this.router.navigate(['/homepage']);
   }
   
    goNotification() {
