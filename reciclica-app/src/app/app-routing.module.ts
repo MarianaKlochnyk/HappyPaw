@@ -91,6 +91,10 @@ const routes: Routes = [
     path: 'suportive-service',
     loadChildren: () => import('./pages/suportive-service/suportive-service.module').then( m => m.SuportiveServicePageModule)
   },
+  {
+    path: 'walking-pet',
+    loadChildren: () => import('./pages/walking-pet/walking-pet.module').then( m => m.WalkingPetPageModule)
+  },
 
 ];
 
