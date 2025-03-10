@@ -37,5 +37,17 @@ export class HomepagePage {
   
   goSuportiveService() {
           this.router.navigate(['/suportive-service']);
-      }
+        }
+        
+        goWalkingPet() {
+            this.router.navigate(['/walking-pet']);
+  }
+
+    goFaq() {
+          this.router.navigate(['/faq']);
+  }
+  
+  goDonate() {
+          this.router.navigate(['/donate']);
+    }
 }

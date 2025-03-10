@@ -3,16 +3,16 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-walking-pet',
-  templateUrl: './walking-pet.page.html',
-  styleUrls: ['./walking-pet.page.scss'],
+  selector: 'app-donate',
+  templateUrl: './donate.page.html',
+  styleUrls: ['./donate.page.scss'],
   imports: [
     IonicModule
   ]
 })
-export class WalkingPetPage  {
+export class DonatePage{
 
-    constructor(private router: Router) { }
+      constructor(private router: Router) { }
   
      goHomepage() {
             this.router.navigate(['/homepage']);
@@ -20,10 +20,6 @@ export class WalkingPetPage  {
     
      goNotification() {
             this.router.navigate(['/notification']);
-  }
-  
-    goWalkingPetAnimal() {
-            this.router.navigate(['/walking-pet-animal']);
   }
 
 }

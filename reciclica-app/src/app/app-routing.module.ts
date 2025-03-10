@@ -95,6 +95,26 @@ const routes: Routes = [
     path: 'walking-pet',
     loadChildren: () => import('./pages/walking-pet/walking-pet.module').then( m => m.WalkingPetPageModule)
   },
+  {
+    path: 'walking-pet-animal',
+    loadChildren: () => import('./pages/walking-pet-animal/walking-pet-animal.module').then( m => m.WalkingPetAnimalPageModule)
+  },
+  {
+    path: 'donate',
+    loadChildren: () => import('./pages/donate/donate.module').then( m => m.DonatePageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./pages/faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'donate-for-pet',
+    loadChildren: () => import('./pages/donate-for-pet/donate-for-pet.module').then( m => m.DonateForPetPageModule)
+  },
+  {
+    path: 'donate-for-shelter',
+    loadChildren: () => import('./pages/donate-for-shelter/donate-for-shelter.module').then( m => m.DonateForShelterPageModule)
+  },
 
 ];
 

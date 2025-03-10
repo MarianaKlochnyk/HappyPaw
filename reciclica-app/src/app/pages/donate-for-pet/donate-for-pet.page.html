@@ -1,108 +1,103 @@
-<ion-content class="ion-padding">
-  <div class="walking-pet">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <h1 class="title">Walking a pet</h1>
-    <p class="subtitle">Tailwalking is a handy feature that helps you easily find <br>shelters and take your pets for a walk. Give them joy,<br>
-    communication and activity, and get a lot of positive and <br>warmth in return! Helping is now even easier. 🐾💙</p>
+<ion-content>
 
-    <div class="searching">
-      <div class="search-container">
-        <ion-searchbar placeholder="Enter your keyword"></ion-searchbar>
-        <div class="border"></div>
-      </div>
-      <img src="assets/button.png" alt="button" class="button">
+  <ion-card-header class="header-card">
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="logo" class="logo-icon">
+      <ion-icon name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
-
-    <div class="choice">
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/bredie.png" alt="labrador" class="pet-b">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Bredie</p>
-            <p class="type">Labrador Retriever</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-  
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/stacy.png" alt="labrador" class="pet-s">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Stacy</p>
-            <p class="type">Maltipoo</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tosia.png" alt="labrador" class="pet-t">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tosia</p>
-            <p class="type">Pomeranian</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/matilda.png" alt="labrador" class="pet-m">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Matilda</p>
-            <p class="type">Chinchilla lanigera</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/poosia.png" alt="labrador" class="pet-po">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Poosia</p>
-            <p class="type">Ragdoll</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/jina.png" alt="labrador" class="pet-j">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Jina</p>
-            <p class="type">French buldog</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tobby.png" alt="labrador" class="pet-to">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tobby</p>
-            <p class="type">Pug</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/snowy.png" alt="labrador" class="pet-sn">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Snowy</p>
-            <p class="type">Scotish fold</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
+    <div>
+      <img src="../../../assets/icon/photo1.png" alt="logo" class="pet-photo">
     </div>
-  </div>
-</ion-content>
+  </ion-card-header>
+
+
+  <ion-card class="rescue-card">
+    <ion-card-header>
+      <ion-card-title>URGENT SURGERY FOR <br> LITTLE LILY</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="rescue-details">
+        <div class="rescue-info">
+          <ion-icon name="home-outline"></ion-icon>
+          <span>Forever Friends Rescue</span>
+        </div>
+        <div class="rescue-location">
+          <ion-icon name="location-outline"></ion-icon>
+          <span>Lviv, Ukraine</span>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="rescue-card">
+    <ion-card-header>
+      <ion-card-title>About Lily</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="description-card">
+        <p class="description-text">
+          Lily is a little chinchilla lanigera who was found on the side of the road with an injured leg.
+          She could not walk and was terrified of people.
+          Doctors diagnosed a fracture, and without urgent surgery, the leg would have to be amputated.
+          We want to give Lily a chance to run again and enjoy life!💙🐾
+        </p>
+      </div>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-row class="traits-row">
+        <ion-col size="6" class="left-trait">
+          <div class="trait-container">
+            <span class="trait-title">The amount needed:</span>
+            <div class="trait-box">
+              <ion-icon name="paw"></ion-icon>
+              <span>12 000 UAH</span>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="6" class="right-trait">
+          <div class="trait-container">
+            <span class="trait-title">Current fundraising:</span>
+            <div class="trait-box">
+              <ion-icon name="heart"></ion-icon>
+              <span>5 500 UAH</span>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="rescue-card">
+    <ion-card-content>
+      <div class="raise-details">
+        <div class="raise-info">
+          <ion-icon name="alarm-outline"></ion-icon>
+          <span>6 500 UAH left to raise</span>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="actions-card">
+    <ion-row class="actions-row">
+      <ion-col size="6" class="left-actions">
+        <button class="icon-button">
+          <ion-icon name="call"></ion-icon>
+        </button>
+        <button class="icon-button">
+          <ion-icon name="chatbubble-ellipses"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col size="6" class="right-action">
+        <button class="request-button">
+          <ion-icon name="star-outline"></ion-icon>
+          DONATE
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
 <ion-footer>
   <ion-toolbar>
@@ -161,3 +156,5 @@
     </ion-tabs>
   </ion-toolbar>
 </ion-footer>
+
+</ion-content>

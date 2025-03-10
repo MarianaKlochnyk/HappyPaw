@@ -40,13 +40,13 @@
       </div>
 
       <div class="buttons">
-        <ion-button class="doing-button">
-          <img (click)="goHome()" src="assets/paw.png" alt="Logo" class="paw" />
+        <ion-button (click)="goHome()" class="doing-button">
+          <img src="assets/paw.png" alt="Logo" class="paw" />
         </ion-button>
-        <ion-button class="doing-button">
+        <ion-button (click)="goDonate()" class="doing-button">
           <img src="assets/heart.png" alt="Logo" class="heart" />
         </ion-button>
-        <ion-button class="doing-button">
+        <ion-button (click)="goWalkingPet()" class="doing-button">
           <img src="assets/Dog.png" alt="Logo" class="dog" />
         </ion-button>
       </div>
@@ -67,7 +67,7 @@
                 <p class="shelter-name">Helping Paw shelter</p>
                 <p class="address">Knyahynya Olha Street, 65a</p>
               </div>
-              <div class="button-donate">
+              <div (click)="goDonate()" class="button-donate">
                 <img src="assets/paw.png" alt="paw" class="paw-don">
                 <p class="text-donate">Donate</p>
               </div>
@@ -89,7 +89,7 @@
                 <p class="shelter-name">Helping Paw shelter</p>
                 <p class="address">Knyahynya Olha Street, 65a</p>
               </div>
-              <div class="button-donate">
+              <div (click)="goDonate()" class="button-donate">
                   <img src="assets/paw.png" alt="paw" class="paw-don">
                   <p class="text-donate">Donate</p>
               </div>
@@ -145,7 +145,7 @@
           <img src="assets/u-i.png" alt="Useful information" class="icon">
           <span>Useful information</span>
         </div>
-        <div class="info-card outlined">
+        <div (click)="goFaq()" class="info-card outlined">
           <img src="assets/faq.png" alt="FAQ" class="icon">
           <span>FAQ</span>
         </div>

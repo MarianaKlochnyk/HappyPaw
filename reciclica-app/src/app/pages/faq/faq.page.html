@@ -1,107 +1,90 @@
-<ion-content class="ion-padding">
-  <div class="walking-pet">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <h1 class="title">Walking a pet</h1>
-    <p class="subtitle">Tailwalking is a handy feature that helps you easily find <br>shelters and take your pets for a walk. Give them joy,<br>
-    communication and activity, and get a lot of positive and <br>warmth in return! Helping is now even easier. 🐾💙</p>
+<ion-content>
 
-    <div class="searching">
-      <div class="search-container">
-        <ion-searchbar placeholder="Enter your keyword"></ion-searchbar>
-        <div class="border"></div>
-      </div>
-      <img src="assets/button.png" alt="button" class="button">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo" />
+  </div>
+
+  <div class="title">
+    <h3>FAQ</h3>
+  </div>
+
+  <div class="faq-header">
+    <h2>How can we help you?</h2>
+    <ion-searchbar placeholder="Enter your keyword"></ion-searchbar>
+  </div>
+
+  <div class="scrollable-container">
+    <div class="faq-card">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_274_3820)">
+          <path
+            d="M22 20H2V18H3V11.031C3 6.043 7.03 2 12 2C16.97 2 21 6.043 21 11.031V18H22V20ZM5 18H19V11.031C19 7.148 15.866 4 12 4C8.134 4 5 7.148 5 11.031V18ZM9.5 21H14.5C14.5 21.663 14.2366 22.2989 13.7678 22.7678C13.2989 23.2366 12.663 23.5 12 23.5C11.337 23.5 10.7011 23.2366 10.2322 22.7678C9.76339 22.2989 9.5 21.663 9.5 21Z"
+            fill="#AAD5D1" />
+        </g>
+        <defs>
+          <clipPath id="clip0_274_3820">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <p>Questions about</p>
+      <p class="text">Getting started</p>
     </div>
+    <div class="faq-card">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_274_3815)">
+          <path
+            d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM12 3.311L4.5 7.653V16.347L12 20.689L19.5 16.347V7.653L12 3.311ZM12 16C10.9391 16 9.92172 15.5786 9.17157 14.8284C8.42143 14.0783 8 13.0609 8 12C8 10.9391 8.42143 9.92172 9.17157 9.17157C9.92172 8.42143 10.9391 8 12 8C13.0609 8 14.0783 8.42143 14.8284 9.17157C15.5786 9.92172 16 10.9391 16 12C16 13.0609 15.5786 14.0783 14.8284 14.8284C14.0783 15.5786 13.0609 16 12 16ZM12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14Z"
+            fill="#AAD5D1" />
+        </g>
+        <defs>
+          <clipPath id="clip0_274_3815">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
 
-    <div class="choice">
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/bredie.png" alt="labrador" class="pet-b">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Bredie</p>
-            <p class="type">Labrador Retriever</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-  
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/stacy.png" alt="labrador" class="pet-s">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Stacy</p>
-            <p class="type">Maltipoo</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tosia.png" alt="labrador" class="pet-t">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tosia</p>
-            <p class="type">Pomeranian</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
+      <p>Questions about</p>
+      <p class="text">How to Invest</p>
+    </div>
+    <div class="faq-card">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_274_3810)">
+          <path
+            d="M3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM4 5V19H20V5H4ZM8.5 14H14C14.1326 14 14.2598 13.9473 14.3536 13.8536C14.4473 13.7598 14.5 13.6326 14.5 13.5C14.5 13.3674 14.4473 13.2402 14.3536 13.1464C14.2598 13.0527 14.1326 13 14 13H10C9.33696 13 8.70107 12.7366 8.23223 12.2678C7.76339 11.7989 7.5 11.163 7.5 10.5C7.5 9.83696 7.76339 9.20107 8.23223 8.73223C8.70107 8.26339 9.33696 8 10 8H11V6H13V8H15.5V10H10C9.86739 10 9.74021 10.0527 9.64645 10.1464C9.55268 10.2402 9.5 10.3674 9.5 10.5C9.5 10.6326 9.55268 10.7598 9.64645 10.8536C9.74021 10.9473 9.86739 11 10 11H14C14.663 11 15.2989 11.2634 15.7678 11.7322C16.2366 12.2011 16.5 12.837 16.5 13.5C16.5 14.163 16.2366 14.7989 15.7678 15.2678C15.2989 15.7366 14.663 16 14 16H13V18H11V16H8.5V14Z"
+            fill="#AAD5D1" />
+        </g>
+        <defs>
+          <clipPath id="clip0_274_3810">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
 
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/matilda.png" alt="labrador" class="pet-m">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Matilda</p>
-            <p class="type">Chinchilla lanigera</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/poosia.png" alt="labrador" class="pet-po">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Poosia</p>
-            <p class="type">Ragdoll</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/jina.png" alt="labrador" class="pet-j">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Jina</p>
-            <p class="type">French buldog</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tobby.png" alt="labrador" class="pet-to">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tobby</p>
-            <p class="type">Pug</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/snowy.png" alt="labrador" class="pet-sn">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Snowy</p>
-            <p class="type">Scotish fold</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
+      <p>Questions about</p>
+      <p class="text">Payment Meth…</p>
     </div>
   </div>
+
+  <section class="top-questions">
+    <h2 class="top-questions-title">
+      Top Questions <p class="view-all">View all</p>
+    </h2>
+
+    <div *ngFor="let question of questions; let i = index" class="top-questions-item" [class.open]="question.isOpen">
+      <div class="top-questions-header">
+        <span class="top-questions-number">{{ (i + 1) | number:'2.0' }}</span>
+        <button class="top-questions-toggle" (click)="toggleAnswer(i)">
+          <span [ngClass]="{'rotate': question.isOpen}">+</span>
+        </button>
+      </div>
+      <h3 class="top-questions-question">{{ question.text }}</h3>
+      <div class="top-questions-answer" *ngIf="question.isOpen">
+        <p>{{ question.answer }}</p>
+      </div>
+    </div>
+  </section>
 </ion-content>
 
 <ion-footer>

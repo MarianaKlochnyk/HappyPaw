@@ -1,0 +1,310 @@
+ion-content {
+  --background: #f1f1f1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 85px;
+  /* Ширина */
+  height: auto;
+  /* Авто висота, щоб не спотворювати */
+}
+
+.title h3 {
+  font-weight: 800;
+  text-align: left;
+  padding-left: 20px;
+  color: #aad5d1;
+}
+
+.faq-header h2 {
+  font-weight: 800;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: -9px;
+  color: #aad5d1;
+}
+
+.faq-header ion-searchbar {
+  max-width: 90%;
+  /* Максимальна ширина 90% від батьківського елемента */
+  margin: 0 auto;
+  /* Центрує елемент по горизонталі */
+  border: 1px solid #aad5d1;
+  /* Лінія навколо поля пошуку */
+  border-radius: 25px;
+  /* Закруглені кути */
+  padding: 10px 15px;
+  /* Відступи всередині пошукового поля */
+  background-color: transparent !important;
+  /* Прозорий фон */
+  box-shadow: none !important;
+  /* Видалити тінь */
+  --ion-background-color: transparent !important;
+  /* Додатковий параметр */
+  display: flex;
+
+  /* Стилі для тексту всередині поля пошуку */
+  ::ng-deep .searchbar-input {
+    text-align: left;
+    color: #333;
+    /* Колір тексту */
+  }
+
+  /* Стилі для placeholder */
+  ::ng-deep .searchbar-input-placeholder {
+    color: #aaa;
+    /* Колір placeholder */
+  }
+
+
+  /* Лінія фокусу (коли поле активне) */
+  &:focus-within {
+    border-color: #56b0b6;
+    /* Колір лінії при фокусі */
+  }
+}
+
+.scrollable-container {
+  display: flex;
+  overflow-x: auto;
+  /* Горизонтальне прокручування */
+  max-width: 100%;
+  /* Максимальна ширина, можна змінити на 90% або іншу */
+  padding: 10px 15px;
+  /* Відступи всередині контейнера */
+  background-color: transparent !important;
+  /* Прозорий фон */
+  -webkit-overflow-scrolling: touch;
+  /* Для кращого досвіду на мобільних пристроях */
+}
+
+.faq-card {
+  position: relative;
+  margin-right: 15px;
+  /* Відстань між картками */
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid;
+  /* Лінія для кожної картки */
+  border-radius: 10px;
+  background-color: transparent;
+  text-align: left;
+  border: 1px solid #aad5d1;
+  max-width: 45%;
+
+  .text {
+    //font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    letter-spacing: 0.2px;
+    padding: 0;
+    color: #AAD5D1;
+  }
+}
+
+/* Якщо картки останні у рядку - прибираємо правий маргін */
+.faq-card:last-child {
+  margin-right: 0;
+}
+
+.faq-card svg {
+  width: 24px;
+  /* Змінює ширину іконки */
+  height: 24px;
+  /* Змінює висоту іконки */
+  fill: #aad5d1;
+  /* Колір іконки */
+}
+
+.faq-card p {
+  font-size: 14px;
+  font-weight: 200;
+  color: #616161;
+  margin: 0;
+  padding-top: 10px;
+  letter-spacing: 0.25px;
+}
+
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+  .faq-card {
+    flex: 0 0 80%;
+    /* Картки займають 80% ширини на малих екранах */
+    margin-right: 10px;
+  }
+}
+
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+}
+
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 430px;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}
+
+
+.top-questions {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.top-questions-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+
+  .view-all {
+    font-size: 0.7em;
+    color: #AAD5D1;
+    text-decoration: none;
+  }
+}
+
+.top-questions-item {
+  background: black;
+  color: white;
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+
+  &.open {
+    .top-questions-answer {
+      display: block;
+    }
+  }
+}
+
+.top-questions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-questions-number {
+  font-size: 2em;
+  font-weight: 800;
+  color: #AAD5D1;
+}
+
+.top-questions-question {
+  font-size: 1.5em;
+  font-weight: 800;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.top-questions-toggle {
+  width: 37px;
+  height: 37px;
+  background: white;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+}
+
+.top-questions-toggle {
+  width: 37px;
+  height: 37px;
+  background: white;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  position: relative;
+}
+
+.top-questions-toggle {
+  width: 37px;
+  height: 37px;
+  background: white;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  position: relative;
+}
+
+.top-questions-toggle span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  font-weight: 350;
+  line-height: 1;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: -1.6px;
+  /* Піднімаємо вгору */
+}
+
+.rotate {
+  transform: rotate(45deg);
+  left: 1.5px;
+  /* Трохи зміщуємо вліво */
+}
+
+.top-questions-answer {
+  display: none;
+  text-align: left;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.top-questions-item:last-child {
+  margin-bottom: 65px;
+  /* або більше, якщо потрібно */
+}

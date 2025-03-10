@@ -3,14 +3,14 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-walking-pet',
-  templateUrl: './walking-pet.page.html',
-  styleUrls: ['./walking-pet.page.scss'],
+  selector: 'app-walking-pet-animal',
+  templateUrl: './walking-pet-animal.page.html',
+  styleUrls: ['./walking-pet-animal.page.scss'],
   imports: [
     IonicModule
   ]
 })
-export class WalkingPetPage  {
+export class WalkingPetAnimalPage {
 
     constructor(private router: Router) { }
   
@@ -22,8 +22,8 @@ export class WalkingPetPage  {
             this.router.navigate(['/notification']);
   }
   
-    goWalkingPetAnimal() {
-            this.router.navigate(['/walking-pet-animal']);
+    goWalkingPet() {
+            this.router.navigate(['/walking-pet']);
   }
 
 }

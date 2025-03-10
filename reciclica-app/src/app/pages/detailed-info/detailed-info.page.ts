@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detailed-info',
@@ -9,11 +10,20 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class DetailedInfoPage implements OnInit {
+export class DetailedInfoPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+   constructor(private router: Router) { }
+    
+       goHomepage() {
+              this.router.navigate(['/homepage']);
+      }
+      
+       goNotification() {
+              this.router.navigate(['/notification']);
+    }
+    
+      goHistoryOfDonation() {
+              this.router.navigate(['/history-of-donation']);
+    }
 
 }

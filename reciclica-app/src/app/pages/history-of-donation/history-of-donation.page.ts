@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-history-of-donation',
@@ -9,11 +10,19 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class HistoryOfDonationPage implements OnInit {
+export class HistoryOfDonationPage  {
+    constructor(private router: Router) { }
 
-  constructor() { }
+    goDetailedInfo() {
+              this.router.navigate(['/detailed-info']);
+  }
 
-  ngOnInit() {
+     goHomepage() {
+          this.router.navigate(['/homepage']);
+  }
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
   }
 
 }

@@ -5,6 +5,21 @@ ion-content {
       align-items: center;
 }
 
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-icon {
+  font-size: 28px;
+  color: #000000;
+  margin-top: 20px;
+}
+
 .black-squere {
   position: absolute;
   bottom: 0;

@@ -1,0 +1,114 @@
+ion-content {
+  --background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.donate {
+  width: 100%;
+  padding: 14px;
+}
+
+.whites{
+  display: grid;
+  gap: 10px;
+}
+
+.white-title{
+  width: 374px;
+  height: 140px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.icons{
+  display: flex;
+  gap: 7px;
+}
+
+.search,.filter{
+  width: auto;
+  height: 30px;
+}
+
+.title-button{
+  //position: absolute;
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  margin-left: 17px;
+  margin-top: 15px;
+  //justify-content: center;
+}
+
+.title {
+  font-size: 32px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  color: #AAD5D1;
+  margin: 0px 0;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  color: #324B49;
+  margin-left: 15px;
+}
+
+.white-donation{
+    width: 374px;
+      height: 265px;
+      background: #FFFFFF;
+      border-radius: 20px;
+      //margin-top: 20px;
+}
+
+.white-buttons{
+      width: 374px;
+        height: 125px;
+        background: #FFFFFF;
+        border-radius: 20px;
+}
+
+.donate-title{
+    font-size: 16px;
+      font-family: "Mulish", sans-serif;
+      font-weight: 600;
+      color: #AAD5D1;
+      margin: 0px 0;
+}
+
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+}
+
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 430px;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}

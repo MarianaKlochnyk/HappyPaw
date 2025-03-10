@@ -1,49 +1,115 @@
-<ion-content class="ion-padding">
-  <div class="detailed-info">
+<ion-content>
+
+  <ion-card-header class="header-card">
     <div class="logo-container">
       <img src="assets/logo.png" alt="logo" class="logo-icon">
-      <ion-icon (click)="goHistoryOfDonation()" name="arrow-back-outline" class="header-icon"></ion-icon>
+      <ion-icon (click)="goWalkingPet()" name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
-
-    <div class="black-squere">
-      <div class="photo-white"></div>
-      <p class="lead-text">Furry Friends Rescue</p>
-      <div class="row-text">
-        <img src="assets/detailed-time.png" alt="detailed-time" class="detailed-time">
-        <p class="data">24 May 2025</p>
-        <p class="time">18:45 PM</p>
-      </div>
-      <p class="amount">₴ 5000.00</p>
-
-      <div class="arr-col">
-        <div class="row-1">
-          <img src="assets/card.png" alt="card" class="pay">
-          <div class="col-1">
-            <p class="lead-pay">Method of payment</p>
-            <p class="secondary-pay">Apple pay</p>
-          </div>
-        </div>
-        <div class="row-2">
-          <img src="assets/description.png" alt="card" class="pay">
-          <div class="col-2">
-            <p class="lead-pay">Description</p>
-            <p class="secondary-pay">food</p>
-          </div>
-        </div>
-        <div class="row-arrow">
-          <div class="row-3">
-            <img src="assets/review.png" alt="card" class="pay">
-            <p class="lead-pay">Review the receipt</p>
-          </div>
-          <img src="assets/arrow.png" alt="arrow" class="arrow">
-        </div>
-        <ion-button expand="full" shape="round" class="custom-button">
-          Submit
-        </ion-button>
-      </div>
+    <div>
+      <img src="assets/stacy.png" alt="logo" class="pet-photo">
     </div>
-  </div>
-</ion-content>
+  </ion-card-header>
+
+
+  <ion-card class="rescue-card">
+    <ion-card-header>
+      <ion-card-title>Stacy</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="rescue-details">
+        <div class="rescue-info">
+          <ion-icon name="home-outline"></ion-icon>
+          <span>Furry Friends Rescue</span>
+        </div>
+        <div class="rescue-location">
+          <ion-icon name="location-outline"></ion-icon>
+          <span>Lviv, Ukraine</span>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="rescue-card">
+    <ion-card-header>
+      <ion-card-title>About Stacy</ion-card-title>
+    </ion-card-header>
+
+    <ion-card class="info-card">
+      <ion-row>
+        <ion-col size="4" class="left-info">
+          <div class="info-box">
+            <div class="mint-box"></div>
+            <div class="text-box">
+              <p class="label">Breed</p>
+              <p class="value">Maltipoo</p>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="center-info">
+          <div class="info-box">
+            <div class="mint-box"></div>
+            <div class="text-box">
+              <p class="label">Age</p>
+              <p class="value">2 month</p>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="4" class="right-info">
+          <div class="info-box">
+            <div class="mint-box"></div>
+            <div class="text-box">
+              <p class="label">Weight</p>
+              <p class="value">1 kg</p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card class="description-card">
+      <p class="description-text">
+        Stacy is an energetic and gentle dog who dreams of long walks and new friends. She is very inquisitive, loves to
+        run, play and adores affection.
+        He quickly becomes attached to people and will be happy to keep you company in the park or on a cosy walk. If
+        you are looking for a cheerful and loyal friend for outdoor activities, Stacy is the one for you! 🐶💕
+      </p>
+    </ion-card>
+
+    <ion-row class="traits-row">
+      <ion-col size="6" class="left-trait">
+        <div class="trait-box">
+          <ion-icon name="paw"></ion-icon>
+          <span>very active</span>
+        </div>
+      </ion-col>
+      <ion-col size="6" class="right-trait">
+        <div class="trait-box">
+          <ion-icon name="heart"></ion-icon>
+          <span>very friendly</span>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-card class="actions-card">
+    <ion-row class="actions-row">
+      <ion-col size="6" class="left-actions">
+        <button class="icon-button">
+          <ion-icon name="call"></ion-icon>
+        </button>
+        <button class="icon-button">
+          <ion-icon name="chatbubble-ellipses"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col size="6" class="right-action">
+        <button class="request-button">
+          <ion-icon name="star-outline"></ion-icon>
+          Request a walk
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
   <ion-footer>
     <ion-toolbar>
@@ -59,7 +125,7 @@
                 fill="currentColor" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button tab="location">
             <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -70,7 +136,7 @@
                 fill="currentColor" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button tab="stats">
             <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -81,7 +147,7 @@
                 fill="currentColor" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button tab="feedback">
             <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -89,7 +155,7 @@
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button (click)="goNotification()" tab="notifications">
             <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -101,3 +167,5 @@
       </ion-tabs>
     </ion-toolbar>
   </ion-footer>
+
+</ion-content>
