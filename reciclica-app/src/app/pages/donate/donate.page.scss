@@ -3,7 +3,9 @@ ion-content {
   display: flex;
   justify-content: center;
   align-items: center;
+
   --overflow: visible;
+
 }
 
 .donate {
@@ -157,6 +159,7 @@ ion-content {
 
 .button-view,
 .button-view-shelter {
+
   background: transparent;
   display: flex;
   align-items: center;
@@ -165,6 +168,7 @@ ion-content {
   width: 64px;
   height: 20px;
   border: 2px solid #FFFFFF;
+
   margin-top: 0px 0;
   margin-left: 20px;
   margin-top: 92px;

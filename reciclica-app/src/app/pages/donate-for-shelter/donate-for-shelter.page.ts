@@ -25,5 +25,4 @@ export class DonateForShelterPage  {
     goDonate() {
              this.router.navigate(['/donate']);
    }
-
 }
