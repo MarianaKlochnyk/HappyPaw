@@ -20,6 +20,10 @@ export class DonateForShelterPage  {
      
       goNotification() {
              this.router.navigate(['/notification']);
+  }
+  
+    goDonate() {
+             this.router.navigate(['/donate']);
    }
 
 }

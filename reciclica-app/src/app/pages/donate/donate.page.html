@@ -14,19 +14,111 @@
           specific animal or <br>a category
           you want to support. Together we can do <br>more!💙🐾</p>
       </div>
-      
+
       <div class="white-donation">
         <p class="donate-title">Donations for specific animals</p>
+        <div class="specific-animals">
+          <div (click)="goDonateAnimal()" class="specific-animals-category">
+            <img src="assets/matilda.png" alt="matilda" class="cat">
+            <p class="lead">URGENT SURGERY FOR <br>LITTLE LILY</p>
+            <p class="secondary">The amount needed: <br>12 000 UAH</p>
+            <div class="button-view">
+              <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
+              <p class="text-button">View info</p>
+            </div>
+            <p class="amount">6 500 UAH left</p>
+          </div>
+          <div (click)="goDonateAnimal()" class="specific-animals-category">
+            <img src="assets/donate-dog.png" alt="donate-dog" class="dog">
+            <p class="lead">LITTLE BONNIE IN THE <br>MEANTIME NEEDS HELP</p>
+            <p class="secondary">The amount needed: <br>4 500 UAH</p>
+            <div class="button-view">
+              <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
+              <p class="text-button">View info</p>
+            </div>
+            <p class="amount">2 400 UAH left</p>
+          </div>
+        </div>
       </div>
+
       <div class="white-buttons">
         <p class="donate-title">Donations by category</p>
+        <div class="button-needs">
+          <div class="need-conteiner">
+            <div class="need">
+              <img src="assets/food.png" alt="needing" class="needing">
+            </div>
+            <p class="text-need">Feed and food</p>
+          </div>
+          <div class="need-conteiner">
+            <div class="need">
+              <img src="assets/shelter.png" alt="needing" class="needing">
+            </div>
+            <p class="text-need">Sheltering</p>
+          </div>
+          <div class="need-conteiner">
+            <div class="need">
+              <img src="assets/health.png" alt="needing" class="needing">
+            </div>
+            <p class="text-need">Medical fees</p>
+          </div>
+          <div class="need-conteiner">
+            <div class="need">
+              <img src="assets/toy.png" alt="needing" class="needing">
+            </div>
+            <p class="text-need">Toys & care</p>
+          </div>
+          <div class="need-conteiner">
+            <div class="need">
+              <img src="assets/vaccination.png" alt="needing" class="needing">
+            </div>
+            <p class="text-need">Vaccination</p>
+          </div>
+          <div class="need-conteiner">
+            <div class="need">
+              <img src="assets/sterilisation.png" alt="needing" class="needing">
+            </div>
+            <p class="text-need">Sterilisation</p>
+          </div>
+        </div>
       </div>
-      <div class="white-donation">
+
+      <div class="white-donation-shelter">
         <p class="donate-title">Donations for shelters</p>
+        <div class="specific-shelters">
+          <div (click)="goDonateShelter()" class="specific-shelters-category">
+            <img src="assets/sheltor1.png" alt="shelter" class="shelter">
+            <div class="darkness-shelter">
+              <div class="text-info">
+                <p class="lead-shelter">FOOD FOR 50 CATS <br>IN THE ‘Love & Care’ SHELTER</p>
+                <p class="secondary-shelter">We need for a month: <br>150 kg of food = 15 000 UAH</p>
+                <div class="button-view-shelter">
+                  <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
+                  <p class="text-button">View info</p>
+                </div>
+                <p class="amount">6 900 UAH left</p>
+              </div>
+            </div>
+          </div>
+          <div (click)="goDonateShelter()" class="specific-shelters-category">
+            <img src="assets/shelter2.png" alt="shelter" class="shelter">
+            <div class="darkness-shelter">
+              <div class="text-info">
+                <p class="lead-shelter">FOOD FOR 50 CATS <br>IN THE ‘Love & Care’ SHELTER</p>
+                <p class="secondary-shelter">We need for a month: <br>150 kg of food = 15 000 UAH</p>
+                <div class="button-view-shelter">
+                  <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
+                  <p class="text-button">View info</p>
+                </div>
+                <p class="amount">6 900 UAH left</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
-    
+
   </div>
 </ion-content>
 
