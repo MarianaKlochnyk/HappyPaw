@@ -4,6 +4,8 @@ ion-content {
   justify-content: center;
   align-items: center;
 
+  --overflow: visible;
+
 }
 
 .donate {
@@ -11,12 +13,12 @@ ion-content {
   padding: 14px;
 }
 
-.whites{
+.whites {
   display: grid;
   gap: 10px;
 }
 
-.white-title{
+.white-title {
   width: 374px;
   height: 140px;
   background: #FFFFFF;
@@ -24,17 +26,18 @@ ion-content {
   margin-top: 20px;
 }
 
-.icons{
+.icons {
   display: flex;
   gap: 7px;
 }
 
-.search,.filter{
+.search,
+.filter {
   width: auto;
   height: 30px;
 }
 
-.title-button{
+.title-button {
   //position: absolute;
   display: flex;
   gap: 120px;
@@ -60,27 +63,235 @@ ion-content {
   margin-left: 15px;
 }
 
-.white-donation{
-    width: 374px;
-      height: 265px;
-      background: #FFFFFF;
-      border-radius: 20px;
-      //margin-top: 20px;
+.white-donation,
+.white-donation-shelter {
+  width: 374px;
+  height: 265px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  //margin-top: 20px;
 }
 
-.white-buttons{
-      width: 374px;
-        height: 125px;
-        background: #FFFFFF;
-        border-radius: 20px;
+.white-donation-shelter {
+  height: 288px;
+  margin-bottom: 50px;
 }
 
-.donate-title{
-    font-size: 16px;
-      font-family: "Mulish", sans-serif;
-      font-weight: 600;
-      color: #AAD5D1;
-      margin: 0px 0;
+.cat,.dog{
+  position: absolute;
+  width: 80px;
+  height: auto;
+  margin-left: 90px;
+  margin-top: 53px;
+}
+
+.dog{
+  width: 95px;
+  height: auto;
+  margin-top: 40px;
+  margin-left: 88px;
+}
+
+.specific-animals {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+  margin: 0px 0;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.specific-animals-category {
+  flex: 0 0 170px;
+  //width: 170px;
+  height: 200px;
+  background: #000000;
+  border-radius: 25px;
+}
+
+.lead {
+  font-size: 10px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.lead-shelter {
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0px 0;
+  margin-top: 9px;
+  margin-left: 15px;
+}
+
+.text-info {
+  position: absolute;
+}
+
+.secondary {
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  //font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 0px 0;
+  margin-left: 20px;
+  margin-top: 9px;
+}
+
+.secondary-shelter {
+  font-size: 6px;
+  font-family: "Mulish", sans-serif;
+  //font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 0px 0;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.button-view,
+.button-view-shelter {
+
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  border-radius: 15px;
+  width: 64px;
+  height: 20px;
+  border: 2px solid #FFFFFF;
+
+  margin-top: 0px 0;
+  margin-left: 20px;
+  margin-top: 92px;
+  /* Исправлено */
+}
+
+.button-view-shelter {
+  margin-top: 27px;
+  margin-left: 15px;
+  /* Исправлено */
+}
+
+.logo-button {
+  margin-left: 8px;
+  width: 8px;
+  height: auto;
+}
+
+.text-button {
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.amount {
+  font-size: 6px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin: 0px 0;
+  margin-left: 114px;
+}
+
+.white-buttons {
+  width: 374px;
+  height: 125px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.specific-shelters {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+  margin: 0px 0;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.specific-shelters-category {
+  flex: 0 0 170px;
+  //width: 170px;
+  height: 223px;
+  background: #000000;
+  border-radius: 25px;
+}
+
+.darkness-shelter {
+  width: 170px;
+  height: 103px;
+  border-radius: 25px;
+  background: #000000;
+  margin-top: 120px;
+  z-index: 3;
+  position: relative;
+}
+
+.shelter {
+  position: absolute;
+  z-index: 1;
+}
+
+.donate-title {
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  color: #AAD5D1;
+  margin: 0px 0;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.button-needs {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.need-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-need {
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+  //font-weight: 600;
+  color: #000000;
+}
+
+.need {
+  width: 40px;
+  height: 40px;
+  background: #000000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.needing{
+  position: absolute;
 }
 
 ion-footer {

@@ -22,4 +22,11 @@ export class DonatePage{
             this.router.navigate(['/notification']);
   }
 
+   goDonateAnimal() {
+            this.router.navigate(['/donate-for-pet']);
+  }
+
+  goDonateShelter() {
+            this.router.navigate(['/donate-for-shelter']);
+  }
 }
