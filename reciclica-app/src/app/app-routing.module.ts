@@ -115,6 +115,10 @@ const routes: Routes = [
     path: 'donate-for-shelter',
     loadChildren: () => import('./pages/donate-for-shelter/donate-for-shelter.module').then( m => m.DonateForShelterPageModule)
   },
+  {
+    path: 'adopted-pet',
+    loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)
+  },
 
 ];
 
