@@ -120,7 +120,6 @@ const routes: Routes = [
     path: 'adopted-pet',
     loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)
   },
-
 ];
 
 @NgModule({
