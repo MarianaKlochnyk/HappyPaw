@@ -75,7 +75,8 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
-  },  {
+  },
+  {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
@@ -131,7 +132,6 @@ const routes: Routes = [
     path: 'make-donate-1',
     loadChildren: () => import('./pages/make-donate-1/make-donate-1.module').then( m => m.MakeDonate1PageModule)
   },
-
 ];
 
 @NgModule({
