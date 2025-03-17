@@ -9,6 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'splash-screen',
+
     loadChildren: () =>
       import('./pages/splash-screen/splash-screen.module').then(
         (m) => m.SplashScreenPageModule
@@ -189,14 +190,22 @@ const routes: Routes = [
         (m) => m.DonateForShelterPageModule
       ),
   },
-
+    
   {
-    path: 'payment',
-    loadChildren: () =>
-      import('./pages/payment/payment.module').then((m) => m.PaymentPageModule),
-  },  {
-    path: 'adoption',
-    loadChildren: () => import('./pages/adoption/adoption.module').then( m => m.AdoptionPageModule)
+    path: 'adopted-pet',
+    loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)
+  },
+  {
+    path: 'statistics',
+    loadChildren: () => import('./pages/statistics/statistics.module').then( m => m.StatisticsPageModule)
+  },
+  {
+    path: 'payment-1',
+    loadChildren: () => import('./pages/payment-1/payment-1.module').then( m => m.Payment1PageModule)
+  },
+  {
+    path: 'make-donate-1',
+    loadChildren: () => import('./pages/make-donate-1/make-donate-1.module').then( m => m.MakeDonate1PageModule)
   },
   {
     path: 'addnewcard',
@@ -212,3 +221,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
