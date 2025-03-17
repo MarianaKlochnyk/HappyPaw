@@ -1,0 +1,80 @@
+.dog-profile {
+  --background: #f1f1f1; /* Бірюзовий фон */
+  text-align: center;
+  position: relative;
+}
+
+.top-background {
+  width: 600px;
+  height: 450px;
+  background-color: #c8e4e19f; /* Бірюзовий колір */
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+
+  position: absolute;
+  top: 0;
+  left: -80px;
+}
+
+.info-container {
+  background: white;
+  border-radius: 130px; /* Заокруглені краї */
+  padding: 30px;
+  width: 100%; /* Робимо ширшим */
+  max-width: 500px; /* Обмежуємо максимальну ширину */
+  min-height: 700px; /* Робимо вікно довшим вниз */
+  margin: 350px auto 0; /* Піднімаємо контейнер */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+// .icon-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 20px;
+//   position: absolute;
+//   top: 400px; /* Піднімаємо вище */
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 100%;
+// }
+
+// .icon-box {
+//   position: relative;
+//   width: 120px; /* Змінюй за потребою */
+//   height: 120px; /* Змінюй за потребою */
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+//   clip-path: polygon(
+//     15% 0%,
+//     85% 0%,
+//     100% 15%,
+//     100% 85%,
+//     85% 100%,
+//     15% 100%,
+//     0% 85%,
+//     0% 15%
+//   ); /* Обрізаємо кути */
+//   border: 2px dashed black; /* Пунктирна рамка */
+//   padding: 20px;
+// }
+
+// .icon-box.center {
+//   background-color: rgba(211, 211, 211, 0.464);
+//   border: none;
+//   border-radius: 25px;
+//   width: 100px;
+//   height: 100px;
+// }
+
+// .icon {
+//   width: 30px;
+//   height: 30px;
+// }
+.icons-friend {
+  width: 200px;
+  height: auto;
+  padding-top: -40px;
+}
