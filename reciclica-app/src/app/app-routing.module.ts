@@ -115,6 +115,22 @@ const routes: Routes = [
     path: 'donate-for-shelter',
     loadChildren: () => import('./pages/donate-for-shelter/donate-for-shelter.module').then( m => m.DonateForShelterPageModule)
   },
+  {
+    path: 'adopted-pet',
+    loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)
+  },
+  {
+    path: 'statistics',
+    loadChildren: () => import('./pages/statistics/statistics.module').then( m => m.StatisticsPageModule)
+  },
+  {
+    path: 'payment-1',
+    loadChildren: () => import('./pages/payment-1/payment-1.module').then( m => m.Payment1PageModule)
+  },
+  {
+    path: 'make-donate-1',
+    loadChildren: () => import('./pages/make-donate-1/make-donate-1.module').then( m => m.MakeDonate1PageModule)
+  },
 
 ];
 
