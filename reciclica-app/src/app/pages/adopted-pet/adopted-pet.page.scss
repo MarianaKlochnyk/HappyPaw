@@ -11,7 +11,7 @@ ion-content {
   //padding: 14px;
 }
 
-.header-icon {
+.header-icon{
   position: absolute;
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@ ion-content {
   z-index: 1;
 }
 
-.dog {
+.dog{
   position: absolute;
   width: 330px;
   height: auto;
@@ -55,21 +55,21 @@ ion-content {
   z-index: 3;
 }
 
-.white-icon {
+.white-icon{
   position: absolute;
   width: 430px;
   height: 585px;
   background: #ffffff;
   bottom: 0px;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
+  border-top-left-radius:20%;
+  border-top-right-radius:20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 5;
 }
 
-.icon-box {
+.icon-box{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -78,8 +78,7 @@ ion-content {
   margin-top: 20px;
 }
 
-.icon-box-left,
-.icon-box-right {
+.icon-box-left,.icon-box-right{
   width: 75px;
   height: 95px;
   border: 2px dashed #000000;
@@ -88,15 +87,16 @@ ion-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+
+  background:#ffffff;
   gap: 5px;
 }
 
-.icon-box-right {
+.icon-box-right{
   border-radius: 0 40px 0 40px;
 }
 
-.icon-box-center {
+.icon-box-center{
   width: 113px;
   height: 132px;
   background: #F1F1F1;
@@ -108,122 +108,119 @@ ion-content {
   gap: 11px;
 }
 
-.text-icon,
-.text-icon-center {
+.text-icon,.text-icon-center{
   color: #000000;
-  font-family: "Mulish", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  text-decoration: none;
-  margin: 0px 0;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0px 0;
 }
 
-.text-icon-center {
+.text-icon-center{
   font-weight: 800px;
   font-size: 24px;
 }
 
-.friendly-paw {
+.friendly-paw{
   width: 28px;
   height: auto;
   margin-left: 6px;
 }
 
-.vocal {
+.vocal{
   width: 22px;
   height: auto;
   margin-left: 1px;
 }
 
-.neat {
+.neat{
   width: 72px;
   height: auto;
 }
 
-.column-information {
+.column-information{
+
   display: flex;
   flex-direction: column;
   margin-top: 16px;
   gap: 4px;
 }
 
-.row-information-1,
-.row-information-2 {
+.row-information-1,.row-information-2{
   display: flex;
   align-items: center;
   gap: 174px;
 }
 
-.row-information-2 {
+.row-information-2{
   gap: 174px;
 }
 
-.lead,
-.text {
+.lead,.text{
   color: #000000;
-  font-family: "Mulish", sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  margin: 0px 0;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0px 0;
 }
 
-.text {
+.text{
   font-size: 14px;
   font-weight: 400;
 }
 
-.info {
+.info{
   color: #000000;
   font-family: "Mulish", sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
 
-.tick {
+.tick{
   width: auto;
   height: 43px;
 }
 
-.row-1 {
+.row-1{
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
 }
 
-.point {
+.point{
   width: 5px;
   height: 5px;
 }
 
-.white-info {
+.white-info{
   width: 350px;
-  height: 189px;
-  border: 2px dashed #b6b3b3;
-  border-radius: 20px;
-  background: #ffffff;
-  gap: 5px;
-  margin-top: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 189px;
+    border: 2px dashed #b6b3b3;
+    border-radius: 20px;
+    background: #ffffff;
+    gap: 5px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.buttons {
+.buttons{
   display: flex;
   flex-direction: row;
   gap: 61px;
   margin-top: 30px;
 }
 
-.row-but {
+.row-but{
   display: flex;
   flex-direction: row;
   gap: 18px;
 }
 
-.phone,
-.message {
+.phone,.message{
   width: 51px;
   height: 52px;
   border-radius: 50%;
@@ -233,7 +230,7 @@ ion-content {
   justify-content: center;
 }
 
-.add-card {
+.add-card{
   width: 168px;
   height: 52px;
   border-radius: 25px;
@@ -250,12 +247,12 @@ ion-content {
   height: auto;
 }
 
-.add-paw {
+.add-paw{
   width: 42px;
   height: auto;
 }
 
-.text-add {
+.text-add{
   color: #000000;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
