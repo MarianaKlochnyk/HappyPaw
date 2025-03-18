@@ -21,4 +21,8 @@ export class SuportiveServicePage {
           this.router.navigate(['/notification']);
   }
 
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
 }
