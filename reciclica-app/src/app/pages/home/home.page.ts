@@ -22,6 +22,9 @@ export class HomePage {
    goNotification() {
           this.router.navigate(['/notification']);
   }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
   
   goAdoptePet() {
           this.router.navigate(['/adopted-pet']);

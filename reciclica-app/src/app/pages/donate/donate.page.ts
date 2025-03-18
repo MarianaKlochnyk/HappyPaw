@@ -21,6 +21,9 @@ export class DonatePage{
      goNotification() {
             this.router.navigate(['/notification']);
   }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
 
    goDonateAnimal() {
             this.router.navigate(['/donate-for-pet']);

@@ -29,6 +29,9 @@ export class HomepagePage {
   
    goNotification() {
           this.router.navigate(['/notification']);
+        }
+          goStatistic() {
+            this.router.navigate(['/statistics']);
   }
   
   goUsefulInformation() {
