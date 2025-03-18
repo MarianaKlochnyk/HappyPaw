@@ -22,6 +22,10 @@ export class ProfilePage {
           this.router.navigate(['/notification']);
       }
 
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+  
   goHistoryOfDonation() {
               this.router.navigate(['/history-of-donation']);
   }
