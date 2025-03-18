@@ -1,134 +1,105 @@
-<ion-content class="ion-padding">
-  <div class="donate">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
-    <div class="whites">
-      <div class="white-title">
-        <div class="title-button">
-          <h1 class="title">Donation</h1>
-          <div class="icons">
-            <img src="assets/search-donate.png" alt="search" class="search">
-            <img src="assets/donate-filter.png" alt="filter" class="filter">
-          </div>
-        </div>
-        <p class="subtitle">Every donation is a step towards a better life for <br>homeless animals. Choose a shelter, a
-          specific animal or <br>a category
-          you want to support. Together we can do <br>more!💙🐾</p>
+<ion-content [fullscreen]="true">
+
+  <ion-card class="logo-card" style="margin-left: -0px;">
+    <ion-card-header>
+      <div>
+        <img src="assets/logo.png" alt="logo" class="logo-icon">
       </div>
+    </ion-card-header>
+  </ion-card>
 
-      <div class="white-donation">
-        <p class="donate-title">Donations for specific animals</p>
-        <div class="specific-animals">
-          <div (click)="goDonateAnimal()" class="specific-animals-category">
-            <img src="assets/matilda.png" alt="matilda" class="cat">
-            <p class="lead">URGENT SURGERY FOR <br>LITTLE LILY</p>
-            <p class="secondary">The amount needed: <br>12 000 UAH</p>
-            <div class="button-view">
-              <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-              <p class="text-button">View info</p>
-            </div>
-            <p class="amount">6 500 UAH left</p>
-          </div>
-          <div (click)="goDonateAnimal()" class="specific-animals-category">
+  <ion-card class="payment-card" style="margin-left: 16px;">
+    <ion-card-header>
+      <h2 class="title">Payment methods</h2>
+      <p class="info">You can choose payment methods in advance to make it easier and faster to make donations, as well
+        as add, change, and delete them if necessary.</p>
+    </ion-card-header>
+  </ion-card>
 
-            <img src="assets/donate-dog.png" alt="donate-dog" class="dog">
-            <p class="lead">LITTLE BONNIE IN THE <br>MEANTIME NEEDS HELP</p>
-            <p class="secondary">The amount needed: <br>4 500 UAH</p>
-            <div class="button-view">
-              <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-              <p class="text-button">View info</p>
-            </div>
-            <p class="amount">2 400 UAH left</p>
-          </div>
+  <ion-card class="wallets-container" style="margin-left: 16px;">
+    <ion-card-header>
+      <h2 class="subtitle">Electronic wallets</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="wallets">
+        <div class="wallet">
+          <img src="assets/icon/apple pay.svg" alt="Apple Pay">
+          <span class="paw"><ion-icon name="paw"></ion-icon></span>
+        </div>
+        <div class="wallet">
+          <img src="assets/icon/google pay.svg" alt="Google Pay">
+          <span class="paw"><ion-icon name="paw"></ion-icon></span>
+        </div>
+        <div class="wallet">
+          <img src="assets/icon/paypal.svg" alt="PayPal">
         </div>
       </div>
+    </ion-card-content>
+  </ion-card>
 
-      <div class="white-buttons">
-        <p class="donate-title">Donations by category</p>
-        <div class="button-needs">
-          <div class="need-conteiner">
-
-            <div class="need">
-              <img src="assets/food.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Feed and food</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/shelter.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Sheltering</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/health.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Medical fees</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/toy.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Toys & care</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/vaccination.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Vaccination</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/sterilisation.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Sterilisation</p>
-          </div>
+  <ion-card class="cards-container" style="margin-left: 16px;">
+    <ion-card-header>
+      <h2 class="subtitle">Credit and Debit Cards</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="card-item">
+        <div class="card-logo">
+          <img src="assets/icon/mastercard.svg" alt="Mastercard">
         </div>
+        <div class="card-info first-card">
+          <span>Privat24</span>
+          <span>**** **** **** 8395</span>
+        </div>
+        <ion-icon name="checkmark-circle-outline" class="selected"></ion-icon>
       </div>
 
-      <div class="white-donation-shelter">
-        <p class="donate-title">Donations for shelters</p>
-        <div class="specific-shelters">
-          <div (click)="goDonateShelter()" class="specific-shelters-category">
-            <img src="assets/sheltor1.png" alt="shelter" class="shelter">
-            <div class="darkness-shelter">
-              <div class="text-info">
-                <p class="lead-shelter">FOOD FOR 50 CATS <br>IN THE ‘Love & Care’ SHELTER</p>
-                <p class="secondary-shelter">We need for a month: <br>150 kg of food = 15 000 UAH</p>
-                <div class="button-view-shelter">
-                  <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-                  <p class="text-button">View info</p>
-                </div>
-                <p class="amount">6 900 UAH left</p>
-              </div>
-            </div>
-          </div>
-          <div (click)="goDonateShelter()" class="specific-shelters-category">
-            <img src="assets/shelter2.png" alt="shelter" class="shelter">
-            <div class="darkness-shelter">
-              <div class="text-info">
-                <p class="lead-shelter">FOOD FOR 50 CATS <br>IN THE ‘Love & Care’ SHELTER</p>
-                <p class="secondary-shelter">We need for a month: <br>150 kg of food = 15 000 UAH</p>
-                <div class="button-view-shelter">
-                  <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-                  <p class="text-button">View info</p>
-                </div>
-                <p class="amount">6 900 UAH left</p>
-              </div>
-            </div>
-          </div>
+      <div class="card-item">
+        <div class="card-logo">
+          <img src="assets/icon/visa.svg" alt="VISA">
         </div>
+        <div class="card-info second-card">
+          <span>Monobank</span>
+          <span>**** **** **** 8395</span>
+        </div>
+        <ion-icon name="radio-button-off" class="not-selected"></ion-icon>
       </div>
 
-    </div>
+      <div class="add-card">
+        <div class="button">
+          <ion-icon name="add-outline"></ion-icon>
+        </div>
+        <span>Add New Card</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
 
-  </div>
+  <ion-card class="cryptocurrencies-container" style="margin-left: 16px;">
+    <ion-card-header>
+      <h2 class="subtitle">Cryptocurrencies</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="cryptocurrencies">
+        <div class="cryptocurrence">
+          <img src="assets/icon/Bitcoin Coin.svg" alt="Bitcoin Coin">
+          <span class="checkmark"><ion-icon name="checkmark-outline"></ion-icon></span>
+        </div>
+        <div class="cryptocurrence">
+          <img src="assets/icon/Ethereum Coin.svg" alt="Ethereum Coin">
+        </div>
+        <div class="cryptocurrence">
+          <img src="assets/icon/BNB Chain.svg" alt="BNB Chain">
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button (click)="goHomepage()" tab="home">
+        <ion-tab-button tab="home">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M11.3861 1.21065C11.7472 0.929784 12.2528 0.929784 12.6139 1.21065L21.6139 8.21065C21.8575 8.4001 22 8.69141 22 9V20C22 20.7957 21.6839 21.5587 21.1213 22.1213C20.5587 22.6839 19.7957 23 19 23H5C4.20435 23 3.44129 22.6839 2.87868 22.1213C2.31607 21.5587 2 20.7957 2 20V9C2 8.69141 2.14247 8.4001 2.38606 8.21065L11.3861 1.21065ZM4 9.48908V20C4 20.2652 4.10536 20.5196 4.29289 20.7071C4.48043 20.8946 4.73478 21 5 21H19C19.2652 21 19.5196 20.8946 19.7071 20.7071C19.8946 20.5196 20 20.2652 20 20V9.48908L12 3.26686L4 9.48908Z"
@@ -152,7 +123,6 @@
 
         <ion-tab-button tab="stats">
           <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M31.5414 10.43C31.7623 10.9362 31.5311 11.5256 31.0249 11.7465C29.6775 12.3345 28.4946 13.2436 27.5797 14.3943C26.6648 15.5451 26.0457 16.9024 25.7766 18.3477C25.5075 19.7929 25.5965 21.2821 26.0358 22.6851C26.4752 24.088 27.2515 25.3619 28.297 26.3955C29.3424 27.4291 30.6252 28.1908 32.033 28.6141C33.4409 29.0374 34.931 29.1094 36.3731 28.8238C37.8152 28.5382 39.1653 27.9036 40.3056 26.9757C41.4458 26.0477 42.3413 24.8545 42.9139 23.5005C43.129 22.9918 43.7157 22.7538 44.2244 22.9689C44.7331 23.184 44.9711 23.7708 44.756 24.2794C44.0562 25.9344 42.9616 27.3927 41.568 28.5269C40.1744 29.6611 38.5242 30.4366 36.7616 30.7857C34.9991 31.1348 33.1778 31.0468 31.4571 30.5294C29.7364 30.012 28.1686 29.081 26.8909 27.8178C25.6131 26.5545 24.6643 24.9975 24.1273 23.2828C23.5903 21.5681 23.4815 19.748 23.8104 17.9815C24.1394 16.2151 24.896 14.5561 26.0142 13.1497C27.1324 11.7432 28.5781 10.6321 30.225 9.91343C30.7311 9.69254 31.3206 9.92382 31.5414 10.43Z"
               fill="currentColor" />
@@ -170,7 +140,7 @@
           </svg>
         </ion-tab-button>
 
-        <ion-tab-button (click)="goNotification()" tab="notifications">
+        <ion-tab-button tab="notifications">
           <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M37.125 25V26C37.125 27.6569 35.7819 29 34.125 29C32.4681 29 31.125 27.6569 31.125 26V25.0001M37.125 25L31.125 25.0001M37.125 25H41.125C41.6773 25 42.125 24.5523 42.125 24V23.4141C42.125 23.1489 42.0195 22.8946 41.832 22.707L41.3213 22.1963C41.1956 22.0706 41.125 21.9 41.125 21.7222V18C41.125 17.8236 41.1186 17.6485 41.1055 17.4761M31.125 25.0001L27.125 25.0001C26.5727 25.0001 26.125 24.5521 26.125 23.9998V23.4141C26.125 23.1489 26.2304 22.8949 26.418 22.7073L26.9287 22.1958C27.0544 22.0701 27.125 21.9002 27.125 21.7224V18C27.125 14.134 30.259 11 34.125 11C34.8366 11 35.5234 11.1062 36.1704 11.3036M41.1055 17.4761C42.3118 16.7873 43.125 15.4886 43.125 14C43.125 11.7909 41.3341 10 39.125 10C37.9548 10 36.9019 10.5025 36.1704 11.3036M41.1055 17.4761C40.5216 17.8095 39.8455 18 39.125 18C36.9159 18 35.125 16.2091 35.125 14C35.125 12.9611 35.5211 12.0147 36.1704 11.3036M41.1055 17.4761C41.1055 17.4761 41.1055 17.4761 41.1055 17.4761ZM36.1704 11.3036C36.1709 11.3037 36.1714 11.3039 36.1718 11.304"
@@ -180,3 +150,4 @@
       </ion-tab-bar>
     </ion-tabs>
   </ion-toolbar>
+</ion-footer>
