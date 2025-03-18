@@ -22,7 +22,10 @@ export class UsefullInformationPage {
     
      goNotification() {
             this.router.navigate(['/notification']);
-        }
+  }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
     // Метод для обробки вибору чипа
     selectChip(chip: string) {
       this.selectedChip = chip;  // Оновлює вибраний чип
