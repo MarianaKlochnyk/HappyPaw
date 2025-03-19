@@ -19,9 +19,5 @@ constructor(private router: Router) { }
   
    goNotification() {
           this.router.navigate(['/notification']);
-  }
-  
-    goStatistic() {
-            this.router.navigate(['/statistics']);
-  }
+      }
 }

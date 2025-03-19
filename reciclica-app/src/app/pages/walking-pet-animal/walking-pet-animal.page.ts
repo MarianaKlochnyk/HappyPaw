@@ -21,10 +21,6 @@ export class WalkingPetAnimalPage {
      goNotification() {
             this.router.navigate(['/notification']);
   }
-
-    goStatistic() {
-            this.router.navigate(['/statistics']);
-  }
   
     goWalkingPet() {
             this.router.navigate(['/walking-pet']);
