@@ -20,10 +20,7 @@ export class DetailedInfoPage {
       
        goNotification() {
               this.router.navigate(['/notification']);
-  }
-    goStatistic() {
-            this.router.navigate(['/statistics']);
-  }
+    }
     
       goHistoryOfDonation() {
               this.router.navigate(['/history-of-donation']);

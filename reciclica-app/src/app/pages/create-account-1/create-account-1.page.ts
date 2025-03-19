@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
-
 @Component({  selector: 'app-create-account-1',
   templateUrl: './create-account-1.page.html',
   styleUrls: ['./create-account-1.page.scss'],
@@ -19,6 +18,5 @@ export class CreateAccount1Page {
 
     goCreateAccounShe() {
       this.router.navigate(['/create-account-3']);
-
   }
 }

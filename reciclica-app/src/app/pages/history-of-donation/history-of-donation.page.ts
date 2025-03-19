@@ -24,8 +24,5 @@ export class HistoryOfDonationPage  {
    goNotification() {
           this.router.navigate(['/notification']);
   }
-    goStatistic() {
-            this.router.navigate(['/statistics']);
-  }
 
 }

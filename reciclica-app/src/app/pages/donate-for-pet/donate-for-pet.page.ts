@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
@@ -22,12 +21,7 @@ export class DonateForPetPage {
      goNotification() {
             this.router.navigate(['/notification']);
   }
-
-      goDonate() {
-             this.router.navigate(['/donate']);
-   }
-
-   goStatistic() {
-    this.router.navigate(['/statistics']);
-}
+  goDonate() {
+            this.router.navigate(['/donate']);
+  }
 }
