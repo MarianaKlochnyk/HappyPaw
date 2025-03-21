@@ -24,6 +24,10 @@ export class DetailedInfoPage {
     goStatistic() {
             this.router.navigate(['/statistics']);
   }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
     
       goHistoryOfDonation() {
               this.router.navigate(['/history-of-donation']);
