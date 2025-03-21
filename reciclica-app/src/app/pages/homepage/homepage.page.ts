@@ -33,6 +33,10 @@ export class HomepagePage {
           goStatistic() {
             this.router.navigate(['/statistics']);
   }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
   
   goUsefulInformation() {
           this.router.navigate(['/usefull-information']);

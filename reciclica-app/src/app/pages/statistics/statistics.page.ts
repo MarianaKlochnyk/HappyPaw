@@ -26,4 +26,8 @@ export class StatisticsPage  {
           this.router.navigate(['/notification']);
   }
 
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
 }

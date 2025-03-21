@@ -30,4 +30,8 @@ export class WalkingPetAnimalPage {
             this.router.navigate(['/walking-pet']);
   }
 
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
 }

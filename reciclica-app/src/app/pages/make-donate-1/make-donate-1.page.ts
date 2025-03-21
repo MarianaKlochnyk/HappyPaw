@@ -25,4 +25,8 @@ export class MakeDonate1Page  {
             this.router.navigate(['/statistics']);
   }
 
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
 }

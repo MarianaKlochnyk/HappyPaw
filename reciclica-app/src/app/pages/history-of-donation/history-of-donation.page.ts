@@ -28,4 +28,8 @@ export class HistoryOfDonationPage  {
             this.router.navigate(['/statistics']);
   }
 
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
 }
