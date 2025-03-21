@@ -24,4 +24,7 @@ constructor(private router: Router) { }
     goStatistic() {
             this.router.navigate(['/statistics']);
   }
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
 }
