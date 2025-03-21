@@ -28,6 +28,10 @@ export class LocationPage implements  AfterViewInit {
     
       goStatistic() {
               this.router.navigate(['/statistics']);
+  }
+  
+  goLocation() {
+              this.router.navigate(['/location']);
     }
 
   async ngAfterViewInit() {

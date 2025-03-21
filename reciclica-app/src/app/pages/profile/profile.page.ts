@@ -29,4 +29,12 @@ export class ProfilePage {
   goHistoryOfDonation() {
               this.router.navigate(['/history-of-donation']);
   }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+  }
+  
+  goPayment() {
+              this.router.navigate(['/payment-1']);
+    }
 }

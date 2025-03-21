@@ -25,4 +25,8 @@ export class SuportiveServicePage {
             this.router.navigate(['/statistics']);
   }
 
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
 }

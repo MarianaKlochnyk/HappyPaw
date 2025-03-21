@@ -25,6 +25,10 @@ export class HomePage {
     goStatistic() {
             this.router.navigate(['/statistics']);
   }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
   
   goAdoptePet() {
           this.router.navigate(['/adopted-pet']);
