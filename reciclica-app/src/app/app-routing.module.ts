@@ -210,7 +210,11 @@ const routes: Routes = [
   {
     path: 'addnewcard',
     loadChildren: () => import('./pages/addnewcard/addnewcard.module').then( m => m.AddnewcardPageModule)
+  },  {
+    path: 'location',
+    loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
   },
+
 
 ];
 
