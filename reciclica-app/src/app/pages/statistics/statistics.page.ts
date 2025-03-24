@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
     IonicModule
   ]
 })
+
 export class StatisticsPage  {
 
   constructor(private router: Router) { }

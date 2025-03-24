@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
     IonicModule
   ]
 })
+
 export class Payment1Page {
 
   constructor(private router: Router) { }
@@ -32,6 +33,7 @@ export class Payment1Page {
 
   goLocation() {
               this.router.navigate(['/location']);
+
   }
 
 }
