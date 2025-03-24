@@ -85,6 +85,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
   },
   {
+    path: 'filter',
+    loadChildren: () => import('./pages/filter/filter.module').then( m => m.FilterPageModule)
+  },
+  {
     path: 'usefull-information',
     loadChildren: () => import('./pages/usefull-information/usefull-information.module').then( m => m.UsefullInformationPageModule)
   },
@@ -116,6 +120,15 @@ const routes: Routes = [
     path: 'donate-for-shelter',
     loadChildren: () => import('./pages/donate-for-shelter/donate-for-shelter.module').then( m => m.DonateForShelterPageModule)
   },
+  {
+    path: 'filter',
+    loadChildren: () => import('./pages/filter/filter.module').then( m => m.FilterPageModule)
+  },
+  {
+    path: 'filter-2',
+    loadChildren: () => import('./pages/filter-2/filter-2.module').then( m => m.Filter2PageModule)
+  },
+
 ];
 
 @NgModule({

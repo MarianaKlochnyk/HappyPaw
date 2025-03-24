@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-notification',
@@ -20,4 +21,5 @@ constructor(private router: Router) { }
    goNotification() {
           this.router.navigate(['/notification']);
       }
+
 }
