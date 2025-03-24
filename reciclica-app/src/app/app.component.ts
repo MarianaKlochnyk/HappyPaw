@@ -1,31 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { SupabaseService } from '/Users/mac/Downloads/HappyPow/reciclica-app/src/app/services/supabase.service';
-
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: 'app.component.html',
-//   styleUrls: ['app.component.scss'],
-// })
-// export class AppComponent implements OnInit {
-//   todos: any[] = [];
-
-//   constructor(private supabaseService: SupabaseService) {}
-
-//   // Викликається при ініціалізації компонента
-//   async ngOnInit() {
-//     await this.loadTodos();
-//   }
-
-//   // Метод для завантаження todos
-//   async loadTodos() {
-//     const { data, error } = await this.supabaseService.getTodos();
-//     if (error) {
-//       console.error('Error fetching todos:', error);
-//     } else {
-//       this.todos = data; // Присвоєння отриманих даних в масив todos
-//     }
-//   }
-// }
 import { Component, OnInit } from '@angular/core';
 import { SupabaseService } from './services/supabase.service';
 

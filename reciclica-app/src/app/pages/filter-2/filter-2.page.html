@@ -1,0 +1,86 @@
+<ion-content class="filters-page">
+  <ion-card-content>
+
+    <div class="header">
+      <h3>Filters</h3>
+      <ion-buttons slot="end">
+        <ion-button (click)="clearFilters()">Clear</ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="filter-section">
+      <h3>Period</h3>
+      <div class="filter-buttons">
+        <ion-button fill="outline" 
+                    [ngClass]="{'selected': selectedPeriods.includes('today')}"
+                    (click)="togglePeriod('today')">Today</ion-button>
+    
+        <ion-button fill="outline" 
+                    [ngClass]="{'selected': selectedPeriods.includes('week')}"
+                    (click)="togglePeriod('week')">This week</ion-button>
+    
+        <ion-button fill="outline" 
+                    [ngClass]="{'selected': selectedPeriods.includes('month')}"
+                    (click)="togglePeriod('month')">This month</ion-button>
+      </div>
+      <div class="filter-buttons">
+        <ion-button fill="outline" 
+                    [ngClass]="{'selected': selectedPeriods.includes('prevMonth')}"
+                    (click)="togglePeriod('prevMonth')">Previous month</ion-button>
+    
+        <ion-button fill="outline" 
+                    [ngClass]="{'selected': selectedPeriods.includes('year')}"
+                    (click)="togglePeriod('year')">This year</ion-button>
+      </div>
+    </div>            
+
+    <div class="line"></div>
+
+    <div class="filter-section-select">
+      <h3>Select period</h3>
+      <div class="date-range">
+        <div class="date-picker">
+          <div class="date-input">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-datetime-button datetime="start-date"></ion-datetime-button>
+          </div>
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="start-date" presentation="date" [max]="today" [value]="startDate"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+        </div>
+        <span> - </span>
+        <div class="date-picker">
+          <div class="date-input">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-datetime-button datetime="end-date"></ion-datetime-button>
+          </div>
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="end-date" presentation="date" [max]="today" [value]="endDate"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+        </div>
+      </div>
+    </div>
+    
+    <div class="line"></div>
+
+    <div class="filter-section">
+      <h3>Status</h3>
+      <ion-segment [value]="selectedStatus" (ionChange)="updateStatus($event)">
+        <ion-segment-button value="confirmed">
+          <ion-label>Confirmed</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="canceled">
+          <ion-label>Canceled</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <ion-button class="show-results">Show results (3261)</ion-button>
+  </ion-card-content>
+</ion-content>

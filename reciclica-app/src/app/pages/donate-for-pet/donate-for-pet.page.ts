@@ -24,4 +24,12 @@ export class DonateForPetPage {
   goDonate() {
             this.router.navigate(['/donate']);
   }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
 }

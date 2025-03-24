@@ -25,4 +25,16 @@ export class ProfilePage {
   goHistoryOfDonation() {
               this.router.navigate(['/history-of-donation']);
   }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+
+  goLocation() {
+              this.router.navigate(['/location']);
+  }
+  
+  goPayment() {
+              this.router.navigate(['/payment-1']);
+    }
 }

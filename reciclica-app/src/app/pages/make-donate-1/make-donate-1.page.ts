@@ -10,11 +10,24 @@ import { Router } from '@angular/router';
     IonicModule
   ]
 })
-export class MakeDonate1Page implements OnInit {
 
-  constructor() { }
+export class MakeDonate1Page  {
 
-  ngOnInit() {
+  constructor(private router: Router) { }
+  
+   goHomepage() {
+          this.router.navigate(['/homepage']);
   }
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
+  }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
 
 }

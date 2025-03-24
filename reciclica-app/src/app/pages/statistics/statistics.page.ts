@@ -10,11 +10,25 @@ import { Router } from '@angular/router';
     IonicModule
   ]
 })
-export class StatisticsPage implements OnInit {
 
-  constructor() { }
+export class StatisticsPage  {
 
-  ngOnInit() {
+  constructor(private router: Router) { }
+
+    goStatistic() {
+            this.router.navigate(['/statistics']);
   }
+
+  goHomepage() {
+          this.router.navigate(['/homepage']);
+  }
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
 
 }

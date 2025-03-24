@@ -30,6 +30,14 @@ export class HomepagePage {
    goNotification() {
           this.router.navigate(['/notification']);
   }
+        
+          goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
   
   goUsefulInformation() {
           this.router.navigate(['/usefull-information']);

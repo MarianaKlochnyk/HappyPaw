@@ -21,6 +21,18 @@ export class HomePage {
   
    goNotification() {
           this.router.navigate(['/notification']);
+
+  }
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+  
+  goAdoptePet() {
+          this.router.navigate(['/adopted-pet']);
       }
   // Метод для обробки вибору чипа
   selectChip(chip: string) {

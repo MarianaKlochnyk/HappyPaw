@@ -85,6 +85,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
   },
   {
+    path: 'filter',
+    loadChildren: () => import('./pages/filter/filter.module').then( m => m.FilterPageModule)
+  },
+  {
+    path: 'filter-2',
+    loadChildren: () => import('./pages/filter-2/filter-2.module').then( m => m.Filter2PageModule)
+  },  
+  {
     path: 'usefull-information',
     loadChildren: () => import('./pages/usefull-information/usefull-information.module').then( m => m.UsefullInformationPageModule)
   },
@@ -132,6 +140,15 @@ const routes: Routes = [
     path: 'make-donate-1',
     loadChildren: () => import('./pages/make-donate-1/make-donate-1.module').then( m => m.MakeDonate1PageModule)
   },
+  {
+    path: 'addnewcard',
+    loadChildren: () => import('./pages/addnewcard/addnewcard.module').then( m => m.AddnewcardPageModule)
+  },
+  {
+    path: 'location',
+    loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
+  },
+
 ];
 
 @NgModule({
@@ -141,3 +158,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
+
