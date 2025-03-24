@@ -18,5 +18,6 @@ export class CreateAccount1Page {
 
     goCreateAccounShe() {
       this.router.navigate(['/create-account-3']);
+
   }
 }

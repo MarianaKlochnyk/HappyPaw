@@ -1,0 +1,55 @@
+<ion-content class="ion-padding">
+  <div class="logo">
+    <img src="assets/logoPaw.jpeg" alt="Logo" />
+  </div>
+  <ion-toolbar style="--background: #f1f1f1">
+    <ion-title class="custom-title">Add New Card</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-content class="ion-padding">
+    <form>
+      <div class="field">
+        <label class="custom-label-1" for="input1">Card Number</label>
+
+        <ion-item>
+          <ion-input placeholder="Enter 12 digit card number"></ion-input>
+          <ion-icon slot="end" name="camera-outline"></ion-icon>
+        </ion-item>
+      </div>
+
+      <div class="expiration-cvv">
+        <div class="field">
+          <label class="custom-label-2" for="input2">Expiration date</label>
+          <ion-item>
+            <div class="date-container">
+              <ion-select placeholder="Month"></ion-select>
+              <ion-select placeholder="Year"></ion-select>
+            </div>
+          </ion-item>
+        </div>
+
+        <div class="field">
+          <label class="custom-label-3" for="input3">CVV Code</label>
+          <ion-item>
+            <ion-input placeholder="CVV" type="password"></ion-input>
+            <ion-icon slot="end" name="eye-off-outline"></ion-icon>
+          </ion-item>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="custom-label-4" for="input4">Card Holder Name</label>
+        <ion-item>
+          <ion-input placeholder="Name on Card"></ion-input>
+        </ion-item>
+      </div>
+
+      <ion-button expand="full" class="submit-btn">Submit</ion-button>
+    </form>
+  </ion-content>
+</ion-content>

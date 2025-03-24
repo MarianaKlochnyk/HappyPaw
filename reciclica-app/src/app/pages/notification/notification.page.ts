@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+<<<<<<< HEAD
 import { ActivatedRoute } from '@angular/router';
+=======
+>>>>>>> 418ab6ef69966d90070be303c13b3065eef4a023
 
 @Component({
   selector: 'app-notification',
@@ -20,6 +23,17 @@ constructor(private router: Router) { }
   
    goNotification() {
           this.router.navigate(['/notification']);
+<<<<<<< HEAD
       }
 
+=======
+  }
+  
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+>>>>>>> 418ab6ef69966d90070be303c13b3065eef4a023
 }

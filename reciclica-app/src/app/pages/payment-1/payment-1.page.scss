@@ -1,0 +1,259 @@
+ion-content {
+  --background: #F1F1F1;
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  --padding-start: 6px;
+  --padding-end: 6px;
+}
+
+.logo-card {
+  background: transparent;
+  box-shadow: none;
+}
+
+.payment-card {
+  width: 390px;
+  height: 120px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: none;
+
+  .title {
+    color: #AAD5D1;
+    font-size: 24px;
+    font-family: Mulish, sans-serif;
+    font-weight: 900;
+    line-height: 24px;
+    word-wrap: break-word;
+    margin: 0;
+  }
+
+  .info {
+    color: #324B49;
+    font-size: 13px;
+    font-family: Mulish, sans-serif;
+    font-weight: 500;
+    line-height: 15px;
+    word-wrap: break-word;
+    margin-top: 20px;
+  }
+}
+
+
+.wallets-container {
+  width: 390px;
+  height: 130px;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: none;
+}
+
+.subtitle {
+  color: #324B49;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.wallets {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+}
+
+.wallet {
+  width: 90px;
+  height: 50px;
+  background: #AAD5D1;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.wallet img {
+  height: 24px;
+}
+
+.paw {
+  position: absolute;
+  width: 20px;
+  height: 24px;
+  background: #AAD5D1;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  bottom: -10px;
+  right: 0px;
+  text-align: center;
+}
+
+.paw ion-icon {
+  color: white;
+  margin-bottom: -5px;
+}
+
+
+.cards-container {
+  width: 390px;
+  height: 200px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px #AAD5D1 solid;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.card-logo img {
+  margin-top: 8px;
+}
+
+.card-info {
+  color: #324B49;
+  font-size: 11px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 4px;
+
+  &.first-card {
+    gap: 51px;
+    margin-left: -75px;
+  }
+
+  &.second-card {
+    gap: 40px;
+    margin-left: -75px;
+  }
+}
+
+.selected {
+  color: #AAD5D1;
+  margin-bottom: 2px;
+}
+
+.not-selected {
+  color: #AAD5D1;
+  margin-bottom: 2px;
+}
+
+.add-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #324B49;
+  font-size: 11px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  background: #AAD5D1;
+  color: white;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.add-card span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.cryptocurrencies-container {
+  width: 390px;
+  height: 130px;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: none;
+}
+
+.cryptocurrencies {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+}
+
+.cryptocurrence {
+  width: 90px;
+  height: 50px;
+  border: 1px #AAD5D1 solid;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cryptocurrence img {
+  height: 24px;
+}
+
+.checkmark {
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+}
+
+.checkmark ion-icon {
+  color: #AAD5D1;
+}
+
+
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 100%;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}

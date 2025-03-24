@@ -21,9 +21,23 @@ export class WalkingPetPage  {
      goNotification() {
             this.router.navigate(['/notification']);
   }
+<<<<<<< HEAD
+=======
+
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+>>>>>>> 418ab6ef69966d90070be303c13b3065eef4a023
   
     goWalkingPetAnimal() {
             this.router.navigate(['/walking-pet-animal']);
   }
 
+<<<<<<< HEAD
+=======
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
+
+>>>>>>> 418ab6ef69966d90070be303c13b3065eef4a023
 }
