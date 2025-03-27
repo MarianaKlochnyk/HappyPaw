@@ -453,6 +453,8 @@ ion-content {
         .progress-fill {
           height: 100%;
           background: #AAD5D1;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
         }
       }
 
