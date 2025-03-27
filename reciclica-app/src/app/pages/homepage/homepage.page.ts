@@ -56,5 +56,9 @@ export class HomepagePage {
   
   goDonate() {
           this.router.navigate(['/donate']);
+  }
+  
+  goMakeDonate() {
+          this.router.navigate(['/make-donate-1']);
     }
 }
