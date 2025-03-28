@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account-3',
@@ -9,11 +10,15 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class CreateAccount3Page implements OnInit {
+export class CreateAccount3Page {
 
-  constructor() { }
+  constructor(private router: Router) { }
+goConfirm3() {
+      this.router.navigate(['/confirm-3']);
+  }
 
-  ngOnInit() {
+  goSignIn3() {
+      this.router.navigate(['/sign-in-3']);
   }
 
 }
