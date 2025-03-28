@@ -176,8 +176,7 @@ ion-button.download-button {
   font-weight: 1000;
   line-height: 30px;
   word-wrap: break-word;
-  margin-left: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .star {
@@ -209,6 +208,7 @@ ion-button.download-button {
   --border-color: transparent;
   --border-width: 0px;
   --inner-border-width: 0px;
+  margin-bottom: -10px;
 }
 
 .input-place {
