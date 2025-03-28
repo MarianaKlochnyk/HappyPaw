@@ -14,92 +14,17 @@
     </div>
 
     <div class="choice">
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/bredie.png" alt="labrador" class="pet-b">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Bredie</p>
-            <p class="type">Labrador Retriever</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-  
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/stacy.png" alt="labrador" class="pet-s">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Stacy</p>
-            <p class="type">Maltipoo</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tosia.png" alt="labrador" class="pet-t">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tosia</p>
-            <p class="type">Pomeranian</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/matilda.png" alt="labrador" class="pet-m">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Matilda</p>
-            <p class="type">Chinchilla lanigera</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/poosia.png" alt="labrador" class="pet-po">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Poosia</p>
-            <p class="type">Ragdoll</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/jina.png" alt="labrador" class="pet-j">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Jina</p>
-            <p class="type">French buldog</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tobby.png" alt="labrador" class="pet-to">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tobby</p>
-            <p class="type">Pug</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/snowy.png" alt="labrador" class="pet-sn">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Snowy</p>
-            <p class="type">Scotish fold</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
+          <div *ngFor="let animal of animals; let i = index" 
+          (click)="goWalkingPetAnimal(animal.animal_id)" 
+          class="animal-card">
+       <img [src]="animal.file_path" alt="{{ animal.name }}" class="pet">
+       <img src="assets/hard.png" alt="hard-button" class="hard-button">
+       <div class="white">
+         <p class="name-p">{{ animal.name }}</p>
+         <p class="type">{{ animal.breed || 'Unknown Breed' }}</p>
+       </div>
+       <div [ngClass]="i % 4 === 0 ? 'purple' : (i % 4 === 1 ? 'pink' : (i % 4 === 2 ? 'blue' : 'o-purple'))"></div>
+     </div>
     </div>
   </div>
 </ion-content>
