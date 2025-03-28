@@ -1,19 +1,22 @@
 ion-content {
   --background: #F1F1F1;
-  --padding-top: 16px;
-  --padding-bottom: 16px;
-  --padding-start: 16px;
-  --padding-end: 16px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-start: 10px;
+  --padding-end: 10px;
 }
+
 
 .logo-card {
   background: transparent;
   box-shadow: none;
+  margin: 0;
 }
 
 .stat-card {
   background: transparent;
   box-shadow: none;
+  margin: 0;
 
   .date {
     color: black;
@@ -41,6 +44,7 @@ ion-content {
   display: flex;
   --background: transparent;
   box-shadow: none;
+  margin: 0;
 }
 
 .container-number-one {
@@ -241,14 +245,12 @@ ion-content {
   .title-bigger {
     font-size: 6px;
     font-weight: 400;
-    margin-top: 5px;
-    margin-bottom: 0px;
   }
 
   .item2-bigger {
     font-size: 10px;
     font-weight: 1000;
-    margin: 0;
+    margin-top: -10px;
 
     &.time {
       color: #AAD5D1;
@@ -362,12 +364,13 @@ ion-content {
 .container-main-second {
   background: transparent;
   box-shadow: none;
+  margin: 0;
 }
 
 .container-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 140px;
 }
 
 .title-second {
@@ -391,6 +394,7 @@ ion-content {
   position: relative;
   background: transparent;
   box-shadow: none;
+  margin: 0;
 
   .section-title {
     color: #AAD5D1;
@@ -412,7 +416,7 @@ ion-content {
       color: #fff;
       padding: 12px;
       border-radius: 25px;
-      width: 100%;
+      width: 360px;
       display: flex;
       flex-direction: column;
       gap: 8px;
