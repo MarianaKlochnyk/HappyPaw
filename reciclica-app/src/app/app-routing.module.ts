@@ -214,6 +214,10 @@ const routes: Routes = [
     path: 'location',
     loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
   },
+  {
+    path: 'sign-in-3',
+    loadChildren: () => import('./pages/sign-in-3/sign-in-3.module').then( m => m.SignIn3PageModule)
+  },
 
 
 ];

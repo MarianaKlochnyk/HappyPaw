@@ -21,6 +21,10 @@ export class CreateAccount2Page {
 
     goSignIn2() {
         this.router.navigate(['/sign-in-2']);
-    }
+  }
+  
+  goConfirm3() {
+      this.router.navigate(['/confirm-3']);
+  }
 }
  

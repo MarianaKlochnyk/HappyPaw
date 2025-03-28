@@ -15,8 +15,8 @@ export class SignIn2Page  {
     constructor(private router: Router) { }
   
   
-    goConfirm1() {
-      this.router.navigate(['/confirm-1']);
+    goConfirm3() {
+      this.router.navigate(['/confirm-3']);
   }
   
    goForgotPassword1() {
@@ -27,5 +27,8 @@ export class SignIn2Page  {
       this.router.navigate(['/create-account-1']);
   }
   
+  goCreateAccounVol() {
+    this.router.navigate(['/create-account-2']);
+  }
 
 }
