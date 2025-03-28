@@ -1,0 +1,47 @@
+<ion-content class="ion-padding">
+  <div class="forgot-password-container">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h2 class="title">Sign in as shelter</h2>
+
+    <div class="button">
+      <ion-button class="google-button">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Google
+      </ion-button>
+
+      <ion-button color="facebook" shape="round" class="facebook-button">
+        <ion-icon slot="start" name="logo-facebook" class="f_t"></ion-icon>
+      </ion-button>
+
+      <ion-button color="twitter" shape="round" class="twitter-button">
+        <ion-icon slot="start" name="logo-twitter" class="f_t"></ion-icon>
+      </ion-button>
+    </div>
+
+    <p class="subtitle">Or</p>
+
+    <ion-item class="input-field">
+      <ion-input placeholder="Username"></ion-input>
+      <ion-icon name="checkmark-circle" slot="end" class="check-icon"></ion-icon>
+    </ion-item>
+
+    <ion-item class="input-conteiner">
+      <ion-input type="password" placeholder="Enter password"></ion-input>
+      <span (click)="goForgotPassword1()" class="forgot-text">Forgot?</span>
+    </ion-item>
+
+    <label class="custom-checkbox">
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      Remember me
+    </label>
+
+    <ion-button (click)="goConfirm3()" expand="full" shape="round" class="custom-button">
+      Continue
+    </ion-button>
+
+    <p class="signin-text">
+      New User? <span (click)="goCreateAccounShe()" class="signin-link">Sign Up</span>
+    </p>
+  </div>
+</ion-content>

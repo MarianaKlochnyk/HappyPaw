@@ -18,6 +18,10 @@ export class SignIn1Page {
   goToSignIn2() {
     this.router.navigate(['/sign-in-2']);
   }
+
+    goToSignIn3() {
+    this.router.navigate(['/sign-in-3']);
+  }
   
 
 }
