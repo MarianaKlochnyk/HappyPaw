@@ -6,24 +6,25 @@
       <ion-icon (click)="goWalkingPet()" name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
     <div>
-      <img src="assets/stacy.png" alt="logo" class="pet-photo">
+      <img [src]="animal?.file_path" alt="logo" class="pet-photo">
     </div>
   </ion-card-header>
 
 
   <ion-card class="rescue-card">
     <ion-card-header>
-      <ion-card-title>Stacy</ion-card-title>
+      <ion-card-title>{{ animal?.name }}</ion-card-title> 
     </ion-card-header>
     <ion-card-content>
       <div class="rescue-details">
         <div class="rescue-info">
           <ion-icon name="home-outline"></ion-icon>
-          <span>Furry Friends Rescue</span>
+          <span>{{ shelter?.shelter_name || 'Unknown Shelter' }}</span>
         </div>
-        <div class="rescue-location">
+        <div class="rescue-loca
+        tion">
           <ion-icon name="location-outline"></ion-icon>
-          <span>Lviv, Ukraine</span>
+          <span>{{ shelter?.city|| 'Unknown City' }}, {{ shelter?.country || 'Unknown country' }}</span>
         </div>
       </div>
     </ion-card-content>
@@ -31,7 +32,7 @@
 
   <ion-card class="rescue-card">
     <ion-card-header>
-      <ion-card-title>About Stacy</ion-card-title>
+      <ion-card-title>About {{ animal?.name }}</ion-card-title>
     </ion-card-header>
 
     <ion-card class="info-card">
@@ -41,7 +42,7 @@
             <div class="mint-box"></div>
             <div class="text-box">
               <p class="label">Breed</p>
-              <p class="value">Maltipoo</p>
+              <p class="value">{{ breed || 'Unknown Breed' }}</p>
             </div>
           </div>
         </ion-col>
@@ -50,7 +51,7 @@
             <div class="mint-box"></div>
             <div class="text-box">
               <p class="label">Age</p>
-              <p class="value">2 month</p>
+              <p class="value">{{ animal?.age || 'Unknown Age' }}</p>
             </div>
           </div>
         </ion-col>
@@ -59,7 +60,7 @@
             <div class="mint-box"></div>
             <div class="text-box">
               <p class="label">Weight</p>
-              <p class="value">1 kg</p>
+              <p class="value">{{ animal?.weight || 'Unknown Weight' }} kg</p>
             </div>
           </div>
         </ion-col>
@@ -67,12 +68,7 @@
     </ion-card>
 
     <ion-card class="description-card">
-      <p class="description-text">
-        Stacy is an energetic and gentle dog who dreams of long walks and new friends. She is very inquisitive, loves to
-        run, play and adores affection.
-        He quickly becomes attached to people and will be happy to keep you company in the park or on a cosy walk. If
-        you are looking for a cheerful and loyal friend for outdoor activities, Stacy is the one for you! 🐶💕
-      </p>
+      <p class="description-text">{{ animal?.health_status || 'Unknown Health Status' }}</p>
     </ion-card>
 
     <ion-row class="traits-row">
