@@ -2,29 +2,32 @@
   <div class="walking-pet">
     <img src="assets/logo.png" alt="Logo" class="logo" />
     <h1 class="title">Walking a pet</h1>
-    <p class="subtitle">Tailwalking is a handy feature that helps you easily find <br>shelters and take your pets for a walk. Give them joy,<br>
-    communication and activity, and get a lot of positive and <br>warmth in return! Helping is now even easier. 🐾💙</p>
+    <p class="subtitle">Tailwalking is a handy feature that helps you easily find shelters and take your pets for a walk. Give them joy, communication and activity, and get a lot of positive and warmth in return! Helping is now even easier. 🐾💙</p>
 
     <div class="searching">
       <div class="search-container">
-        <ion-searchbar placeholder="Enter your keyword"></ion-searchbar>
+        <ion-searchbar 
+          [(ngModel)]="searchQuery" 
+          (ionInput)="filterAnimals()" 
+          placeholder="Enter your keyword">
+        </ion-searchbar>
         <div class="border"></div>
       </div>
       <img src="assets/button.png" alt="button" class="button">
     </div>
 
     <div class="choice">
-          <div *ngFor="let animal of animals; let i = index" 
-          (click)="goWalkingPetAnimal(animal.animal_id)" 
-          class="animal-card">
-       <img [src]="animal.file_path" alt="{{ animal.name }}" class="pet">
-       <img src="assets/hard.png" alt="hard-button" class="hard-button">
-       <div class="white">
-         <p class="name-p">{{ animal.name }}</p>
-         <p class="type">{{ animal.breed || 'Unknown Breed' }}</p>
-       </div>
-       <div [ngClass]="i % 4 === 0 ? 'purple' : (i % 4 === 1 ? 'pink' : (i % 4 === 2 ? 'blue' : 'o-purple'))"></div>
-     </div>
+      <div *ngFor="let animal of filteredAnimals; let i = index" 
+        (click)="goWalkingPetAnimal(animal.animal_id)" 
+        class="animal-card">
+        <img [src]="animal.file_path" alt="{{ animal.name }}" class="pet">
+        <img src="assets/hard.png" alt="hard-button" class="hard-button">
+        <div class="white">
+          <p class="name-p">{{ animal.name }}</p>
+          <p class="type">{{ animal.breed || 'Unknown Breed' }}</p>
+        </div>
+        <div [ngClass]="i % 4 === 0 ? 'purple' : (i % 4 === 1 ? 'pink' : (i % 4 === 2 ? 'blue' : 'o-purple'))"></div>
+      </div>
     </div>
   </div>
 </ion-content>
