@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { WalkingPetAnimalPageRoutingModule } from './walking-pet-animal-routing.module';
 
 import { WalkingPetAnimalPage } from './walking-pet-animal.page';
+import { SupabaseService } from 'src/service/supabase.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { WalkingPetAnimalPage } from './walking-pet-animal.page';
     WalkingPetAnimalPageRoutingModule,
     WalkingPetAnimalPage
   ],
+  providers: [SupabaseService],
   declarations: []
 })
 export class WalkingPetAnimalPageModule {}

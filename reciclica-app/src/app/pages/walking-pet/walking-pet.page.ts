@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';  // Додайте це
 import { Router } from '@angular/router';
 import { SupabaseService } from 'src/service/supabase.service';
 
@@ -12,12 +13,14 @@ import { SupabaseService } from 'src/service/supabase.service';
   imports: [
     CommonModule,
     IonicModule,
+    FormsModule,  // Додайте FormsModule сюди
   ]
 })
 export class WalkingPetPage implements OnInit {
   animals: any[] = [];
-  breeds: any[]=[];
-  supabase: any;
+  filteredAnimals: any[] = [];
+  breeds: any[] = [];
+  searchQuery: string = '';
 
   constructor(
     private supabaseService: SupabaseService,
@@ -35,49 +38,39 @@ export class WalkingPetPage implements OnInit {
       console.error('Error fetching animals:', animalsError);
       return;
     }
-  
-    // Тепер для кожної тварини робимо запит, щоб отримати породу за breed_id
+
     const updatedAnimals = await Promise.all(animals.map(async (animal) => {
       const breedData = await this.supabaseService.getBreedById(animal.breed_id);
-  
+
       if (!breedData) {
         console.error('Error fetching breed for animal:', animal);
         return {
           ...animal,
-          breed: 'Unknown Breed', // Якщо порода не знайдена, ставимо "Unknown Breed"
+          breed: 'Unknown Breed',
         };
       }
-  
+
       return {
         ...animal,
-        breed: breedData.breed || 'Unknown Breed', // Додаємо породу або "Unknown Breed"
+        breed: breedData.breed || 'Unknown Breed',
       };
     }));
-  
-  
+
     this.animals = updatedAnimals;
+    this.filteredAnimals = updatedAnimals;
   }
 
-  // Метод для отримання породи за breed_id
-async getBreedById(breed_id: number) {
-  const { data, error } = await this.supabase
-    .from('breeds')
-    .select('breed')
-    .eq('id', breed_id) // Знаходимо породу за breed_id
-    .single(); // Маємо тільки один запис
-
-  if (error) {
-    console.error('Error fetching breed data:', error);
-    return null; // Якщо помилка, повертаємо null
+  filterAnimals() {
+    this.filteredAnimals = this.animals.filter(animal => {
+      const nameMatches = animal.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+      const breedMatches = animal.breed.toLowerCase().includes(this.searchQuery.toLowerCase());
+      return nameMatches || breedMatches;
+    });
   }
 
-  return data;
-}
-
-
-goWalkingPetAnimal(animalId: any) {
-  this.router.navigate(['/walking-pet-animal']);
-}
+  goWalkingPetAnimal(animalId: string) {
+    this.router.navigate(['/walking-pet-animal', animalId]);
+  }
 
   goHomepage() {
     this.router.navigate(['/home']);
@@ -95,4 +88,3 @@ goWalkingPetAnimal(animalId: any) {
     this.router.navigate(['/notifications']);
   }
 }
-   
