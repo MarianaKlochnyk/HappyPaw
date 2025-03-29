@@ -115,7 +115,11 @@ const routes: Routes = [
   {
     path: 'donate-for-shelter',
     loadChildren: () => import('./pages/donate-for-shelter/donate-for-shelter.module').then( m => m.DonateForShelterPageModule)
+  },  {
+    path: 'filter-1',
+    loadChildren: () => import('./pages/filter-1/filter-1.module').then( m => m.Filter1PageModule)
   },
+
 ];
 
 @NgModule({
