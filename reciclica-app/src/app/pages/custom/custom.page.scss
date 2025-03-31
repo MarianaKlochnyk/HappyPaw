@@ -1,0 +1,136 @@
+ion-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.Background {
+  width: 435px;
+
+  height: auto;
+
+  margin-top: 0px;
+}
+.custom-modal {
+  --background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal-container {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  border-radius: 44px 44px 0 0;
+  padding: 20px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 22px;
+  background: #fff;
+  margin-left: -135px;
+}
+
+ion-input {
+  border: none;
+  outline: none;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payment-button {
+  background: #aad5d1;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 15px;
+  bottom: 10px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+}
+
+ion-toolbar {
+  --background: white !important;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+ion-buttons {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ion-button {
+  --color: black;
+  --background: transparent;
+}
+.modal-content {
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+.custom-input ion-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #aad5d1;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.custom-input ion-label {
+  font-size: 18px;
+
+  color: black;
+  margin-left: 5px;
+}
+.custom-input {
+  margin-bottom: 20px;
+}
+.custom-input ion-input {
+  font-size: 10px;
+  color: black;
+  --padding-start: 12px;
+}
