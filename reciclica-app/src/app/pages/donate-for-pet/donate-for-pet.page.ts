@@ -32,5 +32,9 @@ export class DonateForPetPage {
 
       goDonate() {
              this.router.navigate(['/donate']);
-   }
+  }
+    goMakeDonate() {
+             this.router.navigate(['/make-donate-1']);
+  }
+  
 }

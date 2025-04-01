@@ -27,6 +27,14 @@ export class MakeDonate1Page  {
 
   goLocation() {
               this.router.navigate(['/location']);
-    }
+  }
+  
+  goCustom() {
+             this.router.navigate(['/custom']);
+  }
+
+  goPayment1() {
+             this.router.navigate(['/custom']);
+  }
 
 }
