@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true" class="background-overlay">
+  <div class="background-wrapper">
+    <img src="assets/Custom.jpg" alt="Background" class="background-image" />
+  </div>
+  <ion-card class="payment-container" style="margin-left: 16px">
+    <ion-card-header>
+      <h2 class="subtitle">Choose payment methods</h2>
+      <ion-icon name="close" class="close-button"></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="payment-methods">
+        <div class="card-item">
+          <div class="card-logo">
+            <img src="assets/icon/mastercard.svg" alt="Mastercard" />
+          </div>
+          <div class="card-info first-card">
+            <span>Privat24</span>
+            <span>**** **** **** 8395</span>
+          </div>
+          <ion-icon name="checkmark-circle-outline" class="selected"></ion-icon>
+        </div>
+
+        <div class="card-item">
+          <div class="card-logo">
+            <img src="assets/icon/visa.svg" alt="VISA" />
+          </div>
+          <div class="card-info second-card">
+            <span>Monobank</span>
+            <span>**** **** **** 8395</span>
+          </div>
+          <ion-icon name="radio-button-off" class="not-selected"></ion-icon>
+        </div>
+
+        <div class="add-card">
+          <div class="button">
+            <ion-icon name="add-outline"></ion-icon>
+          </div>
+          <span>Add New Card</span>
+        </div>
+      </div>
+
+      <div class="or-text">OR</div>
+
+      <ion-card class="cryptocurrencies-container" style="margin-left: 16px">
+        <ion-card-header> </ion-card-header>
+        <ion-card-content>
+          <div class="cryptocurrencies">
+            <div class="cryptocurrence">
+              <img src="assets/icon/apple pay.svg" alt="Bitcoin Coin" />
+            </div>
+            <div class="cryptocurrence">
+              <img src="assets/icon/google pay.svg" alt="Ethereum Coin" />
+            </div>
+            <div class="cryptocurrence">
+              <img src="assets/icon/Bitcoin Coin.svg" alt="Bitcoin Coin" />
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <div class="modal-footer">
+        <ion-button expand="full" class="donate-button">DONATE</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
