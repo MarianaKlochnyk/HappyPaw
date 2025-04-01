@@ -104,7 +104,9 @@ export class DonatePage implements OnInit {
     }
   
     const updatedAnimals = await Promise.all(animals.map(async (animal) => {
+
       const breedData = await this.supabaseService.getBreedById(animal.breed_id);
+      
       const urgentNeed = needsData.find((need: { animal_id: any; priority_id: string }) => 
         need.animal_id === animal.animal_id && need.priority_id === 'ef0df210-4bed-49f8-95ad-6c848586cef3'
       );
