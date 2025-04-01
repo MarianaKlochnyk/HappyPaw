@@ -11,7 +11,7 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class Filter1Page implements OnInit {
+export class FiltersPage implements OnInit {
   constructor() { }
   ngOnInit() {
   }
