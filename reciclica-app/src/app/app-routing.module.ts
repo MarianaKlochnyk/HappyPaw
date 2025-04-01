@@ -160,7 +160,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'walking-pet-animal',
+    path: 'walking-pet-animal/:animal_id',
     loadChildren: () =>
       import('./pages/walking-pet-animal/walking-pet-animal.module').then(
         (m) => m.WalkingPetAnimalPageModule
@@ -210,7 +210,8 @@ const routes: Routes = [
   {
     path: 'addnewcard',
     loadChildren: () => import('./pages/addnewcard/addnewcard.module').then( m => m.AddnewcardPageModule)
-  },  {
+  },
+  {
     path: 'payment-m',
     loadChildren: () => import('./pages/payment-m/payment-m.module').then( m => m.PaymentMPageModule)
   },
@@ -222,8 +223,14 @@ const routes: Routes = [
     path: 'payment1',
     loadChildren: () => import('./pages/payment1/payment1.module').then( m => m.Payment1PageModule)
   },
-
-
+  {
+    path: 'location',
+    loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
+  },
+  {
+    path: 'filters',
+    loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
+  },
 ];
 
 @NgModule({

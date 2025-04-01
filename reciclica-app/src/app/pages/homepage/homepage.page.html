@@ -9,162 +9,182 @@
         <ion-icon name="settings-outline" class="header-icon"></ion-icon>
       </ion-buttons>
     </div>
-
-    <p class="tittle">Welcome to our platform, <br>Solomiia</p>
-    <img src="assets/pet-shpiz.png" alt="shpiz" class="shpiz">
-    <div class="white-squere-1">
-      <p class="text-white-squere-1">Volunteers on the platform</p>
-      <p class="amount">145 625</p>
-
-      <div class="green">
-        <div class="green-squere">
-          <div class="information-green-squere">
-            <p class="text-green-squere">Shelters on the platform</p>
-            <p class="amount-green-she">1 625</p>
-          </div>
-        </div>
-
-        <div class="green-squere">
-          <p class="text-green-squere">Rescued animals</p>
-          <p class="amount-green">28 625</p>
-        </div>
-        <div class="green-squere">
-          <p class="text-green-squere">Donations</p>
-          <p class="amount-green">1 245 625</p>
-        </div>
-     </div>
     
-      <div class="white-squere-2">
-        <p class="text-white-squere-2">Mission of the day</p>
-        <p class="information-white-squere">Raise $50,000 to buy food for <br>animals for the shelter called <br>Sincere Heart</p>
-      </div>
+    <p class="tittle">Welcome to our platform, <br>Solomiia</p>
 
-      <div class="buttons">
-        <ion-button (click)="goHome()" class="doing-button">
-          <img src="assets/paw.png" alt="Logo" class="paw" />
-        </ion-button>
-        <ion-button (click)="goDonate()" class="doing-button">
-          <img src="assets/heart.png" alt="Logo" class="heart" />
-        </ion-button>
-        <ion-button (click)="goWalkingPet()" class="doing-button">
-          <img src="assets/Dog.png" alt="Logo" class="dog" />
-        </ion-button>
-      </div>
-
-      <div class="text-button">
-        <p class="adopt">Adopt a pet</p>
-        <p class="donate">Donate</p>
-        <p class="walk">Walk a pet</p>
-      </div>
-
-      <div class="scrollable-container-1">
-        <div class="animals-green">
-          <div class="animal-card">
-            <div class="animal-green-squere">
-              <img src="assets/pet-cat.png" alt="cat" class="cat">
-              <div class="text-container">
-                <p class="name">Matilda</p>
-                <p class="shelter-name">Helping Paw shelter</p>
-                <p class="address">Knyahynya Olha Street, 65a</p>
-              </div>
-              <div (click)="goDonate()" class="button-donate">
-                <img src="assets/paw.png" alt="paw" class="paw-don">
-                <p class="text-donate">Donate</p>
-              </div>
-              
-            </div>
-            <div class="animal-white-squere">
-              <p class="animal-information">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign for
-                $2000<br> is underway</p>
-            </div>
-            
+    <div class="whites">
+      <div class="white-1">
+        <img src="assets/pet-shpiz.png" alt="pet-shpiz" class="pet-shpiz">
+        <p class="lead-white-info">Volunteers on the platform</p>
+        <p class="lead-white-amount">145 625</p>
+        <div class="green-row">
+          <div class="green">
+            <p class="secondary-white-info">Shelters on the platform</p>
+            <p class="secondary-white-amount">1 625</p>
           </div>
-          
-
-          <div class="animal-card">
-            <div class="animal-green-squere">
-              <img src="assets/pet-doberman.png" alt="dog" class="dogi">
-              <div class="text-container">
-                <p class="name">Graff</p>
-                <p class="shelter-name">Helping Paw shelter</p>
-                <p class="address">Knyahynya Olha Street, 65a</p>
-              </div>
-              <div (click)="goDonate()" class="button-donate">
-                  <img src="assets/paw.png" alt="paw" class="paw-don">
-                  <p class="text-donate">Donate</p>
-              </div>
-
-            </div>
-            <div class="animal-white-squere">
-              <p class="animal-information">The dog needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign for
-                $2000 <br>is underway</p>
-            </div>
+          <div class="green-">
+            <p class="secondary-white-info">Rescued animals</p>
+            <p class="secondary-white-amount">28 625</p>
           </div>
-
-        </div>
-      </div>
-
-      <div class="scrollable-container-2">
-        <div class="fact-green">
-          <div class="fact-card">
-            <div class="fact-green-squere">
-              <p class="fact-lead-information">Rescue and care: a chance for a new <br>life!</p>
-              <p class="fact-secondary-information">Every animal deserves love and protection. <br>Rescuing a stray or injured pet is
-                not only...</p>
-            </div>
-          </div>
-          
-          <div class="fact-card">
-            <div class="fact-green-squere">
-                <p class="fact-lead-information">Rescue and care: a chance for a new <br>life!</p>
-                <p class="fact-secondary-information">Every animal deserves love and protection. <br>Rescuing a stray or injured pet is
-                  not only...</p>
-            </div>
+          <div class="green-">
+            <p class="secondary-white-info">Donations</p>
+            <p class="secondary-white-amount">1 245 625</p>
           </div>
         </div>
       </div>
+      
+      <div class="white-2">
+          <div class="progress-ring">
+            <svg width="100" height="100">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#62d3f5" />
+                  <stop offset="100%" stop-color="#b48cff" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <circle class="background-circle" cx="50" cy="50" r="40"></circle>
+              <circle class="progress-circle" cx="50" cy="50" r="40"></circle>
+              <text x="50" y="55" text-anchor="middle" class="progress-text">68%</text>
+            </svg>
+          </div>
 
-      <div class="circle-three">
-        <div class="circle-1"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+        <p class="lead-white-2">Mission of the day</p>
+        <p class="secondary-white-2">Raise $50,000 to buy food for <br>animals for the shelter called <br>Sincere Heart</p>
       </div>
+    </div>
 
-    <p class="useful">Useful buttons</p>
-    <div class="white-squere-3">
-      <div class="message-buttons">
-                  <img src="assets/Instagram.png" alt="Instagram" class="mes-but">
-                            <img src="assets/Facebook.png" alt="Facebook" class="mes-but">
-                                      <img src="assets/Twitter.png" alt="Twitter" class="mes-but">
-                                                <img src="assets/Telegram.png" alt="Telegram" class="mes-but">
-        
+    <div class="doing-buttons">
+      <div class="button-lead">
+        <div (click)="goHome()" class="button">
+          <img src="assets/paw.png" alt="paw" class="paw-button">
+        </div>
+        <p>Adopt a pet</p>
       </div>
-
-      <div class="info-grid">
-        <div (click)="goUsefulInformation()" class="info-card filled">
-          <img src="assets/u-i.png" alt="Useful information" class="icon">
-          <span>Useful information</span>
+      <div class="button-lead">
+        <div (click)="goDonate()" class="button">
+          <img src="assets/heart.png" alt="paw" class="heart-button">
         </div>
-        <div (click)="goFaq()" class="info-card outlined">
-          <img src="assets/faq.png" alt="FAQ" class="icon">
-          <span>FAQ</span>
-        </div>
-        <div (click)="goSuportiveService()" class="info-card outlined">
-          <img src="assets/com.png" alt="Supportive service" class="icon">
-          <span>Supportive service</span>
-        </div>
-        <div class="info-card filled">
-          <img src="assets/text.png" alt="List of shelters" class="icon">
-          <span>List of shelters</span>
-        </div>
+        <p>Donate</p>
       </div>
-
-
+      <div class="button-lead">
+        <div (click)="goWalkingPet()" class="button">
+          <img src="assets/Dog.png" alt="paw" class="dog-button">
+        </div>
+        <p>Walk a pet</p>
+      </div>
     </div>
 
 
+    <div class="helping-pet">
 
-  </div>
+      <div class="helping-pet-conteiner">
+        <img src="assets/pet-cat.png" alt="pet-cat" class="pet-cat">
+        <div class="green-helping-pet">
+          <p class="helping-pet-name">Matilda</p>
+          <p class="helping-pet-shelter">Helping Paw shelter</p>
+          <p class="helping-pet-address">Knyahynya Olha Street, <br>65a</p>
+          <div class="campaign-percantage">75%</div>
+          <div class="campaign-percantage-1">1500$</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%;"></div>
+            <div class="progress-dots"></div>
+          </div>
+          <div class="button-donate">
+            <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
+            <p (click)="goMakeDonate()" class="info-button-donate">Donate</p>
+          </div>
+        </div>
+        <div class="white-helping-pet">
+          <p class="helping-pet-info">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign for $2000 <br>is underway</p>
+        </div>
+      </div>
+      <div class="helping-pet-conteiner">
+        <img src="assets/pet-doberman.png" alt="pet-doberman" class="pet-doberman">
+        <div class="green-helping-pet">
+          <p class="helping-pet-name">Graff</p>
+          <p class="helping-pet-shelter">Helping Paw shelter</p>
+          <p class="helping-pet-address">Knyahynya Olha Street, <br>65a</p>
+          <div class="campaign-percantage">75%</div>
+          <div class="campaign-percantage-1">1500$</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%;"></div>
+            <div class="progress-dots"></div>
+          </div>
+          <div class="button-donate">
+            <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
+            <p (click)="goMakeDonate()" class="info-button-donate">Donate</p>
+          </div>
+        </div>
+        <div class="white-helping-pet">
+          <p class="helping-pet-info">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign
+            for $2000 <br>is underway</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rescue">
+      <div class="rescue-conteiner">
+        <div class="rescue-text">
+          <p class="infornation-rescue-l">Rescue and care: a chance for a new <br>life!</p>
+          <p class="infornation-rescue-s">Every animal deserves love and protection. <br>Rescuing a stray or injured pet is
+            not only...</p>
+        </div>
+      </div>
+      <div class="rescue-conteiner">
+        <div class="rescue-text">
+          <p class="infornation-rescue-l">Rescue and care: a chance for a new <br>life!</p>
+          <p class="infornation-rescue-s">Every animal deserves love and protection. <br>Rescuing a stray or injured pet
+            is
+            not only...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle">
+      <div class="circle-conteiner"></div>
+      <div class="circle-conteiner-1"></div>
+      <div class="circle-conteiner-1"></div>
+    </div>
+
+    <p class="u-b">Useful buttons</p>
+    <div class="all-use">
+      <div class="use-buttons">
+        <div class="s-m-button">
+          <img src="assets/Instagram.png" alt="instagram">
+          <img src="assets/Facebook.png" alt="instagram">
+          <img src="assets/Twitter.png" alt="instagram">
+          <img src="assets/Telegram.png" alt="instagram">
+        </div>
+        <div class="u-i-f">
+          <div (click)="goUsefulInformation()" class="button-u-i">
+            <img src="assets/u-i.png" alt="u-i" class="u-i-us-png">
+            <p class="white-text-ui">Useful information</p>
+          </div>
+          <div (click)="goFaq()"class="button-faq">
+            <img src="assets/faq.png" alt="u-i" class="u-i-faq-png">
+            <p class="dark-text-ui">FAQ</p>
+          </div>
+        </div>
+        <div class="s-s-l">
+          <div (click)="goSuportiveService()" class="button-s-s">
+            <img src="assets/com.png" alt="u-i" class="u-i-ss-png">
+            <p class="dark-text-ui">Supportive service</p>
+          </div>
+          <div class="button-l">
+            <img src="assets/text.png" alt="u-i" class="u-i-l-png">
+            <p class="white-text-ui">List of Shelters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   
 </ion-content>
@@ -183,7 +203,7 @@
           </svg>
         </ion-tab-button>
 
-        <ion-tab-button tab="location">
+        <ion-tab-button (click)="goLocation()" tab="location">
           <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M33.875 10.4C31.9856 10.4 30.1605 11.189 28.805 12.6149C27.4475 14.0429 26.6749 15.9921 26.6749 18.0365C26.6749 21.0129 28.5185 23.9184 30.5667 26.1926C31.5696 27.3063 32.5762 28.2185 33.3331 28.8524C33.5335 29.0203 33.7157 29.1682 33.875 29.2945C34.0343 29.1682 34.2165 29.0203 34.4169 28.8524C35.1737 28.2185 36.1803 27.3063 37.1833 26.1926C39.2315 23.9184 41.0751 21.0129 41.0751 18.0365C41.0751 15.9921 40.3025 14.0429 38.945 12.6149C37.5895 11.189 35.7644 10.4 33.875 10.4ZM33.875 30.8002C33.186 31.7827 33.1857 31.7825 33.1853 31.7823L33.1823 31.7801L33.1756 31.7754L33.1533 31.7595C33.1344 31.746 33.1078 31.7269 33.074 31.7023C33.0064 31.653 32.9097 31.5815 32.7881 31.4892C32.5451 31.3045 32.2019 31.0357 31.7919 30.6923C30.9737 30.0069 29.8803 29.0168 28.7832 27.7987C26.6313 25.4092 24.2749 21.9328 24.2749 18.0365C24.2749 15.3937 25.2723 12.8477 27.0655 10.9614C28.8606 9.07297 31.3087 8 33.875 8C36.4413 8 38.8893 9.07297 40.6845 10.9614C42.4776 12.8477 43.4751 15.3937 43.4751 18.0365C43.4751 21.9328 41.1186 25.4092 38.9667 27.7987C37.8697 29.0168 36.7763 30.0069 35.9581 30.6923C35.5481 31.0357 35.2049 31.3045 34.9619 31.4892C34.8403 31.5815 34.7436 31.653 34.676 31.7023C34.6421 31.7269 34.6155 31.746 34.5967 31.7595L34.5744 31.7754L34.5677 31.7801L34.5654 31.7817C34.5651 31.7819 34.564 31.7827 33.875 30.8002ZM33.875 30.8002L34.564 31.7827C34.1504 32.0727 33.5989 32.0723 33.1853 31.7823L33.875 30.8002Z"
@@ -194,7 +214,7 @@
           </svg>
         </ion-tab-button>
 
-        <ion-tab-button tab="stats">
+        <ion-tab-button (click)="goStatistic()" tab="stats">
           <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 
             <path fill-rule="evenodd" clip-rule="evenodd"

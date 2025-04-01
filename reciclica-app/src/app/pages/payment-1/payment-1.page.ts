@@ -10,11 +10,28 @@ import { Router } from '@angular/router';
     IonicModule
   ]
 })
-export class Payment1Page implements OnInit {
+export class Payment1Page {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+   goAddCard() {
+          this.router.navigate(['/addnewcard']);
+  }
+
+  goHomepage() {
+          this.router.navigate(['/homepage']);
+  }
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
+      }
+
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
   }
 
 }

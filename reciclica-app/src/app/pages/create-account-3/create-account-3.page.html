@@ -48,6 +48,7 @@
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Shelter logo<span class="star">*</span></label>
     <div class="input-group5">
       <div class="photo-preview" id="photoPreview">
@@ -61,22 +62,27 @@
         <span>Download</span>
       </ion-button>
     </div>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Shelter name<span class="star">*</span></label>
     <ion-item class="input-place">
       <ion-input placeholder="Your official name"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Shelter cooperative email address<span class="star">*</span></label>
     <ion-item class="input-place">
       <ion-input placeholder="Your cooperative email address"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
@@ -99,14 +105,17 @@
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Shelter address<span class="star">*</span></label>
     <ion-item class="input-place">
       <ion-input placeholder="Your address"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Shelter phone number<span class="star">*</span></label>
     <div class="input-group2">
       <ion-select class="country-code" placeholder="+380">
@@ -120,30 +129,37 @@
         <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
       </ion-item>
     </div>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Create a username<span class="star">*</span></label>
     <ion-item class="input-place">
       <ion-input placeholder="It must be your official shelter name"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Create a password<span class="star">*</span></label>
     <ion-item class="input-place">
       <ion-input placeholder="Your password must be at least 8 characters"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
+    <div>
     <label class="input-label">Confirm password<span class="star">*</span></label>
     <ion-item class="input-place">
       <ion-input placeholder="Repeat your password"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
+    </div>
   </ion-card-header>
 
   <ion-card-header>
@@ -160,13 +176,13 @@
   </ion-card-header>
 
   <ion-card-header>
-    <ion-button class="continue-button">Continue</ion-button>
+    <ion-button (click)="goConfirm3()" class="continue-button">Continue</ion-button>
   </ion-card-header>
 
   <ion-card-header>
     <label class="account-label">
       <span class="text-account">Already have an account?</span>
-      <ion-button fill="clear" class="sign-in-button">Sign In</ion-button>
+      <ion-button (click)="goSignIn3()" fill="clear" class="sign-in-button">Sign In</ion-button>
     </label>
   </ion-card-header>
 

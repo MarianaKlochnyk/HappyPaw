@@ -1,0 +1,143 @@
+.map-container {
+  position: relative;
+  /* ключове! */
+  height: 100%;
+}
+
+.white-menu {
+  width: 430px;
+  height: 450px;
+  background: #FFFFFF;
+  position: absolute;
+  z-index: 5;
+  bottom: 0px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash{
+  width: 57px;
+  height: 8px;
+  background: #9B9B9B;
+  border-radius: 10px;
+  margin-top: 17px;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 58px;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+
+.lead-inf{
+  color: #929292;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  margin: 0px 0;
+  //font-weight: 1000;
+}
+
+.secondary-inf {
+  color: #151513;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  //font-weight: 1000;
+  margin: 0px 0;
+}
+
+.v-line{
+  width: 1px;
+  height: 53px;
+  background: #DADADA;
+}
+
+.g-line{
+  width: 368px;
+  height: 1px;
+  background: #DADADA;
+  margin-top: 27px;
+}
+
+.button{
+  width: 368px;
+  height: 64px;
+  background: #B3E0DB;
+  border-radius: 20px;
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button-png{
+  width: 24px;
+  height: auto;
+}
+
+.but-info{
+  color: #151513;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 600;
+}
+
+.button-cancel {
+  width: 368px;
+  height: 64px;
+  background: #EDEDED;
+  border-radius: 20px;
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 27px;
+}
+
+.but-cancel-info{
+  color: #929292;
+  font-size: 16px;
+  font-family: Mulish, sans-serif;
+  font-weight: 600;
+}
+
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+ion-tab-bar {
+  --background: white;
+  --border: none;
+  width: 430px;
+
+  ion-tab-button {
+    color: #324B49;
+    --color-selected: #AAD5D1;
+  }
+}

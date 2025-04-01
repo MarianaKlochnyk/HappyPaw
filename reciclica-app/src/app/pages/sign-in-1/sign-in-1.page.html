@@ -1,19 +1,39 @@
 <ion-content class="ion-padding">
   <div class="logo">
     <img src="assets/logo.png" alt="Logo" />
-    <img src="assets/small paws.jpg" alt="small-paws" class="small-paws" />
   </div>
 
-  <h2 class="title">Sign in account</h2>
-  <p class="subtitle">Sign in your personal account</p>
+  <p class="title">Welcome to Happy Paw!</p>
+  <p class="subtitle">Join our community that helps those in need.</p>
 
-  <ion-button (click)="goToSignIn2()" expand="full" shape="round" class="custom-button volunteer-button">
-    Volunteer
-  </ion-button>
+  <div class="col-but">
+    <div class="row-but">
+      <div (click)="goToSignIn2()" class="button">
+        <p class="button-text">Volunteer</p>
+      </div>
+      <ion-icon class="arr" name="arrow-back-outline"></ion-icon>
+      <div class="col-information">
+        <ion-icon class="person" name="person-outline"></ion-icon>
+        <p class="information">Do you want to <br>help and change <br>the world for the <br>better?</p>
+      </div>
+    </div>
 
-  <ion-button expand="full" shape="round" class="custom-button shelter-button">
-    Shelter
-  </ion-button>
+    <div class="row-but">
+      <div class="col-information">
+        <ion-icon class="person" name="business"></ion-icon>
+        <p class="information">Do you represent a <br>shelter and look <br>for help & support <br>from volunteers?</p>
+      </div>
+      <ion-icon class="arr"name="arrow-forward-outline"></ion-icon>
+      <div (click)="goToSignIn3()" class="button">
+        <p class="button-text">Shelter</p>
+      </div>
+    </div>
+  </div>
 
-  <div class="paw-tracks"></div>
+  <div class="icons-row">
+    <img src="assets/Iconos.png" alt="">
+    <img src="assets/Iconos.png" alt="">
+  </div>
+
+  <p class="bottom-information">Good deeds change the world and save lives!</p>
 </ion-content>
