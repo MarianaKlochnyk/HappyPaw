@@ -20,6 +20,7 @@
         <div class="specific-animals">
           <div *ngFor="let animal of animals" (click)="goDonateAnimal()" class="specific-animals-category">
             <img [src]="animal.file_path" alt="{{ animal.name }}" class="animal-image">
+
             <p class="lead">{{ getAnimalNeed(animal.animal_id)?.short_description ?? 'N/A' }} FOR <br>LITTLE {{ animal.name }}</p>
             <p class="secondary">
               The amount needed: <br> 
@@ -27,6 +28,7 @@
             </p>
             <div class="progress-ring">
               <svg width="70" height="70" viewBox="0 0 70 70">
+
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stop-color="#62d3f5" />
@@ -86,6 +88,7 @@
             <div class="darkness-shelter">
               <div class="text-info">
                 <p class="lead-shelter">
+
                   {{ getShelterNeed(shelter.shelter_id)?.short_description ?? 'N/A' }} <br>IN THE {{ shelter.shelter_name }}
                 </p>
                 <p class="secondary-shelter">
@@ -99,14 +102,17 @@
                   <div class="progress-fill"
                        [style.width]="(getShelterNeed(shelter.shelter_id)?.campaign_percentage ?? 0) + '%'">
                   </div>
+
                 </div>
                 <div class="button-view-shelter">
                   <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
                   <p class="text-button">View info</p>
                 </div>
+
                 <p class="amount">
                   {{ getShelterNeed(shelter.shelter_id)?.amount_left ?? 'N/A' }} UAH left
                 </p>
+
               </div>
             </div>
           </div>
