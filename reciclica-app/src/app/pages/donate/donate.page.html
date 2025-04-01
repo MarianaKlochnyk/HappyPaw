@@ -18,67 +18,50 @@
       <div class="white-donation">
         <p class="donate-title">Donations for specific animals</p>
         <div class="specific-animals">
-          <div (click)="goDonateAnimal()" class="specific-animals-category">
-            <img src="assets/matilda.png" alt="matilda" class="cat">
-            <p class="lead">URGENT SURGERY FOR <br>LITTLE LILY</p>
-            <p class="secondary">The amount needed: <br>12 000 UAH</p>
-          <div class="progress-ring">
-            <svg width="100" height="100">
-              <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#62d3f5" />
-                  <stop offset="100%" stop-color="#b48cff" />
-                </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <circle class="background-circle" cx="35" cy="35" r="25"></circle>
-              <circle class="progress-circle" cx="35" cy="35" r="25"></circle>
-              <text x="35" y="36" text-anchor="middle" dominant-baseline="middle" class="progress-text">45%</text>
-            </svg>
-          </div>
+          <div *ngFor="let animal of animals" (click)="goDonateAnimal()" class="specific-animals-category">
+            <img [src]="animal.file_path" alt="{{ animal.name }}" class="animal-image">
+            <p class="lead">{{ getAnimalNeed(animal.animal_id)?.short_description ?? 'N/A' }} FOR <br>LITTLE {{ animal.name }}</p>
+            <p class="secondary">
+              The amount needed: <br> 
+              {{ getAnimalNeed(animal.animal_id)?.amount ?? 'N/A' }} UAH
+            </p>
+            <div class="progress-ring">
+              <svg width="70" height="70" viewBox="0 0 70 70">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#62d3f5" />
+                    <stop offset="100%" stop-color="#b48cff" />
+                  </linearGradient>
+                </defs>
+            
+                <!-- Фонова лінія -->
+                <circle class="background-circle" cx="35" cy="35" r="25" stroke="#eee" stroke-width="5" fill="none"></circle>
+            
+                <!-- Динамічний прогрес -->
+                <circle cx="35" cy="35" r="25"
+                  stroke="url(#gradient)"
+                  stroke-width="5"
+                  fill="none"
+                  transform="rotate(-90 35 35)"
+                  stroke-linecap="round"
+                  [attr.stroke-dasharray]="getStrokeDasharray(25)"
+                  [attr.stroke-dashoffset]="getStrokeDashoffset(getAnimalNeed(animal.animal_id)?.campaign_percentage)">
+                </circle>
+            
+                <!-- Відсоток у центрі -->
+                <text x="35" y="40" text-anchor="middle" font-size="12" fill="#333" class="progress-text"> 
+                  {{ getAnimalNeed(animal.animal_id)?.campaign_percentage ?? 0 }}%
+                </text>
+              </svg>
+            </div>
 
             <div class="button-view">
               <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
               <p class="text-button">View info</p>
             </div>
-            <p class="amount">6 500 UAH left</p>
-          </div>
-          <div (click)="goDonateAnimal()" class="specific-animals-category">
-
-            <img src="assets/donate-dog.png" alt="donate-dog" class="dog">
-            <p class="lead">LITTLE BONNIE IN THE <br>MEANTIME NEEDS HELP</p>
-            <p class="secondary">The amount needed: <br>4 500 UAH</p>
-          <div class="progress-ring">
-            <svg width="100" height="100">
-              <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#62d3f5" />
-                  <stop offset="100%" stop-color="#b48cff" />
-                </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <circle class="background-circle" cx="35" cy="35" r="25"></circle>
-              <circle class="progress-circle-1" cx="35" cy="35" r="25"></circle>
-              <text x="35" y="36" text-anchor="middle" dominant-baseline="middle" class="progress-text">48%</text>
-            </svg>
-          </div>
-            <div class="button-view">
-              <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-              <p class="text-button">View info</p>
-            </div>
-            <p class="amount">2 400 UAH left</p>
+            <p class="amount">
+              {{ getAnimalNeed(animal.animal_id)?.amount_left ?? 'N/A' }} UAH left
+            </p>
           </div>
         </div>
       </div>
@@ -86,42 +69,11 @@
       <div class="white-buttons">
         <p class="donate-title">Donations by category</p>
         <div class="button-needs">
-          <div class="need-conteiner">
-
+          <div class="need-conteiner" *ngFor="let category of categories">
             <div class="need">
-              <img src="assets/food.png" alt="needing" class="needing">
+              <img [src]="category.file_path" alt="{{ category.name }}" class="needing">
             </div>
-            <p class="text-need">Feed and food</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/shelter.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Sheltering</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/health.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Medical fees</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/toy.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Toys & care</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/vaccination.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Vaccination</p>
-          </div>
-          <div class="need-conteiner">
-            <div class="need">
-              <img src="assets/sterilisation.png" alt="needing" class="needing">
-            </div>
-            <p class="text-need">Sterilisation</p>
+            <p class="text-need">{{ category.category }}</p>
           </div>
         </div>
       </div>
@@ -129,42 +81,32 @@
       <div class="white-donation-shelter">
         <p class="donate-title">Donations for shelters</p>
         <div class="specific-shelters">
-          <div (click)="goDonateShelter()" class="specific-shelters-category">
-            <img src="assets/sheltor1.png" alt="shelter" class="shelter">
+          <div *ngFor="let shelter of shelters" (click)="goDonateShelter()" class="specific-shelters-category">
+            <img [src]="shelter.file_path" alt="{{ shelter.shelter_name }}" class="shelter">
             <div class="darkness-shelter">
               <div class="text-info">
-                <p class="lead-shelter">FOOD FOR 50 CATS <br>IN THE ‘Love & Care’ SHELTER</p>
-                <p class="secondary-shelter">We need for a month: <br>150 kg of food = 15 000 UAH</p>
-                <div class="campaign-percantage">75%</div>
+                <p class="lead-shelter">
+                  {{ getShelterNeed(shelter.shelter_id)?.short_description ?? 'N/A' }} <br>IN THE {{ shelter.shelter_name }}
+                </p>
+                <p class="secondary-shelter">
+                  The amount needed: <br> 
+                  {{ getShelterNeed(shelter.shelter_id)?.amount ?? 'N/A' }} UAH
+                </p>
+                <div class="campaign-percantage">
+                  {{ getShelterNeed(shelter.shelter_id)?.campaign_percentage ?? 0 }}%
+                </div>
                 <div class="progress-bar">
-                  <div class="progress-fill" style="width: 75%;"></div>
-                  <div class="progress-dots"></div>
+                  <div class="progress-fill"
+                       [style.width]="(getShelterNeed(shelter.shelter_id)?.campaign_percentage ?? 0) + '%'">
+                  </div>
                 </div>
                 <div class="button-view-shelter">
                   <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
                   <p class="text-button">View info</p>
                 </div>
-                <p class="amount">6 900 UAH left</p>
-              </div>
-            </div>
-          </div>
-          <div (click)="goDonateShelter()" class="specific-shelters-category">
-            <img src="assets/shelter2.png" alt="shelter" class="shelter">
-            <div class="darkness-shelter">
-              <div class="text-info">
-                <p class="lead-shelter">FOOD FOR 50 CATS <br>IN THE ‘Love & Care’ SHELTER</p>
-                <p class="secondary-shelter">We need for a month: <br>150 kg of food = 15 000 UAH</p>
-                <div class="campaign-percantage">50%</div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 50%;"></div>
-                  <div class="progress-dots"></div>
-                </div>
-
-                <div class="button-view-shelter">
-                  <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-                  <p class="text-button">View info</p>
-                </div>
-                <p class="amount">6 900 UAH left</p>
+                <p class="amount">
+                  {{ getShelterNeed(shelter.shelter_id)?.amount_left ?? 'N/A' }} UAH left
+                </p>
               </div>
             </div>
           </div>
