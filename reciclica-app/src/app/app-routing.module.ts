@@ -116,6 +116,10 @@ const routes: Routes = [
     path: 'donate-for-shelter',
     loadChildren: () => import('./pages/donate-for-shelter/donate-for-shelter.module').then( m => m.DonateForShelterPageModule)
   },
+  {
+    path: 'shelter-info-location',
+    loadChildren: () => import('./pages/shelter-info-location/shelter-info-location.module').then( m => m.ShelterInfoLocationPageModule)
+  },
 ];
 
 @NgModule({
