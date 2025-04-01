@@ -20,6 +20,14 @@ export class FaqPage {
    goNotification() {
           this.router.navigate(['/notification']);
   }
+
+    goStatistic() {
+            this.router.navigate(['/statistics']);
+  }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
   questions = [
     {
       text: 'Can I communicate with shelters directly?',

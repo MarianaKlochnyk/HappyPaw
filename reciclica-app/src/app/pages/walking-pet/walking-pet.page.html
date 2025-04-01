@@ -2,103 +2,31 @@
   <div class="walking-pet">
     <img src="assets/logo.png" alt="Logo" class="logo" />
     <h1 class="title">Walking a pet</h1>
-    <p class="subtitle">Tailwalking is a handy feature that helps you easily find <br>shelters and take your pets for a walk. Give them joy,<br>
-    communication and activity, and get a lot of positive and <br>warmth in return! Helping is now even easier. 🐾💙</p>
+    <p class="subtitle">Tailwalking is a handy feature that helps you easily find shelters and take your pets for a walk. Give them joy, communication and activity, and get a lot of positive and warmth in return! Helping is now even easier. 🐾💙</p>
 
     <div class="searching">
       <div class="search-container">
-        <ion-searchbar placeholder="Enter your keyword"></ion-searchbar>
+        <ion-searchbar 
+          [(ngModel)]="searchQuery" 
+          (ionInput)="filterAnimals()" 
+          placeholder="Enter your keyword">
+        </ion-searchbar>
         <div class="border"></div>
       </div>
       <img src="assets/button.png" alt="button" class="button">
     </div>
 
     <div class="choice">
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/bredie.png" alt="labrador" class="pet-b">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Bredie</p>
-            <p class="type">Labrador Retriever</p>
-          </div>
-          <div class="purple"></div>
+      <div *ngFor="let animal of filteredAnimals; let i = index" 
+        (click)="goWalkingPetAnimal(animal.animal_id)" 
+        class="animal-card">
+        <img [src]="animal.file_path" alt="{{ animal.name }}" class="pet">
+        <img src="assets/hard.png" alt="hard-button" class="hard-button">
+        <div class="white">
+          <p class="name-p">{{ animal.name }}</p>
+          <p class="type">{{ animal.breed || 'Unknown Breed' }}</p>
         </div>
-  
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/stacy.png" alt="labrador" class="pet-s">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Stacy</p>
-            <p class="type">Maltipoo</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tosia.png" alt="labrador" class="pet-t">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tosia</p>
-            <p class="type">Pomeranian</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/matilda.png" alt="labrador" class="pet-m">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Matilda</p>
-            <p class="type">Chinchilla lanigera</p>
-          </div>
-          <div class="blue"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/poosia.png" alt="labrador" class="pet-po">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-p">Poosia</p>
-            <p class="type">Ragdoll</p>
-          </div>
-          <div class="purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/jina.png" alt="labrador" class="pet-j">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-pi">Jina</p>
-            <p class="type">French buldog</p>
-          </div>
-          <div class="pink"></div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/tobby.png" alt="labrador" class="pet-to">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-o-p">Tobby</p>
-            <p class="type">Pug</p>
-          </div>
-          <div class="o-purple"></div>
-        </div>
-      
-        <div (click)="goWalkingPetAnimal()" class="one">
-          <img src="assets/snowy.png" alt="labrador" class="pet-sn">
-          <img src="assets/hard.png" alt="hard-button" class="hard-button">
-          <div class="white">
-            <p class="name-blue">Snowy</p>
-            <p class="type">Scotish fold</p>
-          </div>
-          <div class="blue"></div>
-        </div>
+        <div [ngClass]="i % 4 === 0 ? 'purple' : (i % 4 === 1 ? 'pink' : (i % 4 === 2 ? 'blue' : 'o-purple'))"></div>
       </div>
     </div>
   </div>
@@ -119,7 +47,7 @@
           </svg>
         </ion-tab-button>
 
-        <ion-tab-button tab="location">
+        <ion-tab-button (click)="goLocation()" tab="location">
           <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M33.875 10.4C31.9856 10.4 30.1605 11.189 28.805 12.6149C27.4475 14.0429 26.6749 15.9921 26.6749 18.0365C26.6749 21.0129 28.5185 23.9184 30.5667 26.1926C31.5696 27.3063 32.5762 28.2185 33.3331 28.8524C33.5335 29.0203 33.7157 29.1682 33.875 29.2945C34.0343 29.1682 34.2165 29.0203 34.4169 28.8524C35.1737 28.2185 36.1803 27.3063 37.1833 26.1926C39.2315 23.9184 41.0751 21.0129 41.0751 18.0365C41.0751 15.9921 40.3025 14.0429 38.945 12.6149C37.5895 11.189 35.7644 10.4 33.875 10.4ZM33.875 30.8002C33.186 31.7827 33.1857 31.7825 33.1853 31.7823L33.1823 31.7801L33.1756 31.7754L33.1533 31.7595C33.1344 31.746 33.1078 31.7269 33.074 31.7023C33.0064 31.653 32.9097 31.5815 32.7881 31.4892C32.5451 31.3045 32.2019 31.0357 31.7919 30.6923C30.9737 30.0069 29.8803 29.0168 28.7832 27.7987C26.6313 25.4092 24.2749 21.9328 24.2749 18.0365C24.2749 15.3937 25.2723 12.8477 27.0655 10.9614C28.8606 9.07297 31.3087 8 33.875 8C36.4413 8 38.8893 9.07297 40.6845 10.9614C42.4776 12.8477 43.4751 15.3937 43.4751 18.0365C43.4751 21.9328 41.1186 25.4092 38.9667 27.7987C37.8697 29.0168 36.7763 30.0069 35.9581 30.6923C35.5481 31.0357 35.2049 31.3045 34.9619 31.4892C34.8403 31.5815 34.7436 31.653 34.676 31.7023C34.6421 31.7269 34.6155 31.746 34.5967 31.7595L34.5744 31.7754L34.5677 31.7801L34.5654 31.7817C34.5651 31.7819 34.564 31.7827 33.875 30.8002ZM33.875 30.8002L34.564 31.7827C34.1504 32.0727 33.5989 32.0723 33.1853 31.7823L33.875 30.8002Z"
@@ -130,7 +58,7 @@
           </svg>
         </ion-tab-button>
 
-        <ion-tab-button tab="stats">
+        <ion-tab-button (click)="goStatistic()" tab="stats">
           <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 
             <path fill-rule="evenodd" clip-rule="evenodd"

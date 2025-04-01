@@ -41,16 +41,11 @@ ion-content {
 }
 
 .choice{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
   margin-top: 30px;
   margin-bottom: 50px;
-}
-
-.row{
-  display: flex;
-  gap: 30px;
 }
 
 .purple,.pink,.o-purple,.blue{
@@ -114,37 +109,14 @@ ion-content {
   opacity: 0.5;
 }
 
-.pet-b,.pet-s,.pet-t,.pet-m,.pet-po,.pet-j,.pet-to,.pet-sn{
+.animal-card{
+  display: flex;
+  justify-content: center;
+}
+
+.pet{
   position: absolute;
-  margin-left: 30px;
-}
-
-.pet-s{
-  margin-left: 20px;
-}
-
-.pet-t{
-  margin-left: 5px;
-}
-
-.pet-m{
-  margin-left: 23px;
-}
-
-.pet-po{
-  margin-left: 37px;
-}
-
-.pet-j{
-  margin-left: 35px;
-}
-
-.pet-to{
-  margin-left: 7px;
-}
-
-.pet-sn{
-  margin-left: 10px;
+  //margin-left: 20px;
 }
 
 .hard-button{

@@ -29,7 +29,14 @@ export class HomepagePage {
   
    goNotification() {
           this.router.navigate(['/notification']);
+        }
+          goStatistic() {
+            this.router.navigate(['/statistics']);
   }
+
+  goLocation() {
+              this.router.navigate(['/location']);
+    }
   
   goUsefulInformation() {
           this.router.navigate(['/usefull-information']);
@@ -49,5 +56,9 @@ export class HomepagePage {
   
   goDonate() {
           this.router.navigate(['/donate']);
+  }
+  
+  goMakeDonate() {
+          this.router.navigate(['/make-donate-1']);
     }
 }
