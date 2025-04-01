@@ -218,6 +218,10 @@ const routes: Routes = [
     path: 'filters',
     loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
   },
+  {
+    path: 'shelter-info-location',
+    loadChildren: () => import('./pages/shelter-info-location/shelter-info-location.module').then( m => m.ShelterInfoLocationPageModule)
+  },
 
 ];
 
