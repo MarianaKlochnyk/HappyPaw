@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col">
           <p class="lead-inf">Distance</p>
-          <p class="secondary-inf">0 km</p>
+          <p class="secondary-inf">{{ distanceToNearestShelter > 0 ? distanceToNearestShelter.toFixed(2) + ' km' : '-' }}</p>
         </div>
 
         <div class="v-line"></div>
@@ -20,20 +20,20 @@
 
         <div class="col">
           <p class="lead-inf">Arrival</p>
-          <p class="secondary-inf">in 0 min</p>
+          <p class="secondary-inf">{{ arrivalTimeWalking ? 'in ' + arrivalTimeWalking : '-' }}</p>
         </div>
       </div>
 
       <div class="g-line"></div>
 
-      <div class="button">
+      <div class="button" (click)="findNearestShelter()">
         <img src="assets/find-shelter.png" alt="find-shelter" class="button-png">
         <p class="but-info">Find a shelter</p>
       </div>
 
       <div class="g-line"></div>
 
-      <div class="button-cancel">
+      <div class="button-cancel" (click)="cancelSearch()">
         <p class="but-cancel-info">Cancel</p>
       </div>
     </div>

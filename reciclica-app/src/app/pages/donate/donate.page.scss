@@ -77,7 +77,7 @@ ion-content {
   margin-bottom: 50px;
 }
 
-.cat,.dog{
+.animal-image{
   position: absolute;
   width: 80px;
   height: auto;
@@ -306,20 +306,10 @@ ion-content {
     stroke: #000000;
     stroke-width: 8;
   }
-
-  .progress-circle,.progress-circle-1 {
-    fill: none;
-    stroke: url(#gradient);
-    stroke-width: 5;
-    stroke-dasharray: 251.2;
-    stroke-dashoffset: calc(251.2 - (251.2 * 45) / 100);
-    transition: stroke-dashoffset 0.6s ease-in-out;
-    stroke-linecap: round;
-    filter: url(#glow);
-  }
-  .progress-circle-1{
-    stroke-dashoffset: calc(251.2 - (251.2 * 48) / 100);
-  }
+  
+    circle {
+      transition: stroke-dashoffset 0.6s ease-in-out;
+    }
 
   .progress-text {
     fill: #FFFFFF;

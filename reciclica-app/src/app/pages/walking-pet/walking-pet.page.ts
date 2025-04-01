@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';  // Додайте це
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SupabaseService } from 'src/service/supabase.service';
 
