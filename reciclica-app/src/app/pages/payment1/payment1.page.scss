@@ -1,0 +1,247 @@
+.payment-modal {
+  --background: rgba(0, 0, 0, 0.5); /* Затемнений фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-im {
+  margin-top: -10px;
+  margin-left: -5px;
+  width: 440px;
+  max-width: none;
+  position: fixed;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f8f6;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.card-logo {
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.card-number {
+  flex-grow: 1;
+  text-align: left;
+  color: #444;
+}
+
+.add-card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #aad5d1;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.add-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.or-text {
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+  margin-right: -5px;
+  margin-top: -10px;
+}
+
+ion-button.donate-button {
+  width: 320px;
+  position: relative;
+  left: 15px;
+  --color: white;
+  --background: #aad5d1 !important;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -75px;
+  border-radius: 25px !important;
+}
+
+ion-button.donate-button::part(native) {
+  border-radius: 21px !important;
+  height: 50px !important;
+  margin-left: 0px;
+}
+
+ion-content {
+  --background: #f1f1f1;
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  --padding-start: 0px;
+  --padding-end: 0px;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px #aad5d1 solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.card-info {
+  color: #324b49;
+  font-size: 11px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 4px;
+
+  &.first-card {
+    gap: 51px;
+    margin-left: -75px;
+  }
+
+  &.second-card {
+    gap: 40px;
+    margin-left: -75px;
+  }
+}
+
+.selected {
+  color: #aad5d1;
+  margin-bottom: 2px;
+}
+
+.not-selected {
+  color: #aad5d1;
+  margin-bottom: 2px;
+}
+
+.add-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #324b49;
+  font-size: 11px;
+  font-family: Mulish, sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  background: #aad5d1;
+  color: white;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.add-card span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.cryptocurrencies-container {
+  width: 390px;
+  height: 130px;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: none;
+  overflow: visible;
+  position: relative;
+  top: -10px;
+}
+
+.cryptocurrencies {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.cryptocurrence {
+  width: 90px;
+  height: 50px;
+  border: 1px #aad5d1 solid;
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -29px;
+  top: -30px;
+}
+
+.cryptocurrence img {
+  height: 34px;
+  margin-left: 3px;
+}
+.payment-container {
+  position: fixed; /* Фіксує картку внизу */
+  bottom: 0;
+  margin-left: 20px;
+  //   right: 0px;
+  height: 450px;
+  top: 460px;
+  width: 435px; /* Розтягуємо картку на всю ширину */
+  background: white; /* Білий фон */
+  border-radius: 65px 65px 0 0; /* Заокруглені кути зверху */
+  box-shadow: none; /* Видаляємо тінь */
+  padding: 20px; /* Додаємо внутрішні відступи */
+  max-height: 80vh; /* Щоб не займала всю висоту */
+  overflow-y: auto; /* Прокрутка, якщо контент великий */
+  transform: translateX(-20px);
+}
+.background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.background-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Затемнення (можеш змінити прозорість) */
+}
+.close-button {
+  position: absolute;
+  top: 42px;
+  right: 16px;
+  font-size: 24px;
+  color: #324b49;
+  cursor: pointer;
+}
