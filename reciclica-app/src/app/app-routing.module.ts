@@ -212,8 +212,24 @@ const routes: Routes = [
     loadChildren: () => import('./pages/addnewcard/addnewcard.module').then( m => m.AddnewcardPageModule)
   },
   {
+    path: 'payment-m',
+    loadChildren: () => import('./pages/payment-m/payment-m.module').then( m => m.PaymentMPageModule)
+  },
+  {
+    path: 'custom',
+    loadChildren: () => import('./pages/custom/custom.module').then( m => m.CustomPageModule)
+  },
+  {
+    path: 'payment1',
+    loadChildren: () => import('./pages/payment1/payment1.module').then( m => m.Payment1PageModule)
+  },
+  {
     path: 'location',
     loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
+  },
+  {
+    path: 'filters',
+    loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
   },
 ];
 

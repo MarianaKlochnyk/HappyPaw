@@ -1,0 +1,39 @@
+<ion-content class="custom-modal">
+  <div class="Background">
+    <img src="/assets/Custom.jpg" alt="Background" />
+  </div>
+  <div class="overlay"></div>
+
+  <div class="modal-container">
+    <ion-toolbar>
+      <ion-title class="modal-title">Custom</ion-title>
+      <ion-buttons slot="end">
+        <ion-button fill="clear">
+          <ion-icon name="close" class="close-btn"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+
+    <div class="modal-content">
+      <ion-item class="custom-input">
+        <ion-label position="stacked">Amount</ion-label>
+        <ion-input
+          placeholder="the amount you would consider appropriate to send to a good cause"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-input">
+        <ion-label position="stacked">Note💞</ion-label>
+        <ion-input
+          placeholder="maybe you want to leave a few nice words"
+        ></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="modal-footer">
+      <ion-button expand="full" class="payment-button"
+        >GO TO PAYMENT</ion-button
+      >
+    </div>
+  </div>
+</ion-content>
