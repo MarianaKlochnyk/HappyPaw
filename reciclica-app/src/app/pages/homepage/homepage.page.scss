@@ -7,6 +7,7 @@ ion-content {
     --padding-bottom: 80px;
   --background: #f1f1f1;
   --overflow: visible;
+  position: relative;
       //--padding-bottom: 80px;
       /* Щоб контент не закривав футер */
     
@@ -530,19 +531,26 @@ ion-footer {
   left: 0;
   width: 100%;
   z-index: 1000;
+  text-align: center;
+
 }
 
 ion-toolbar {
   --background: transparent;
   --ion-background-color: transparent;
   background: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 
 ion-tab-bar {
   --background: white;
   --border: none;
-  width: 430px;
+  width: 500px;
+
 
   ion-tab-button {
     color: #324B49;

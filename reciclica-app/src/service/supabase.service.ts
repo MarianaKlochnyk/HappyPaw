@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { environment } from 'src/environments/environment';
@@ -5,7 +6,10 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
+
 export class SupabaseService {
+
+  client: any;
   async getPetById(petId: string) {
     const { data, error } = await this.supabase
       .from('animals') // Заміни 'pets' на правильну назву таблиці в твоїй базі даних
@@ -127,5 +131,114 @@ async getShelterById(shelterId: string) {
   }
 
   return data;  // Повертаємо дані притулку
+}
+
+async getShelterLocations() {
+  const { data, error } = await this.supabase
+    .from('locations')
+    .select('latitude, longitude, shelter_id');
+
+  if (error) {
+    console.error('Помилка отримання локацій притулків:', error);
+    return [];
+  }
+  
+  return data;
+}
+
+// Отримання тварин, що потребують термінової допомоги
+async getUrgentShelters() {
+  // Отримуємо список shelter_id з таблиці 'needs', де priority_id = 1
+  const { data: needsData, error: needsError } = await this.supabase
+    .from('needs')
+    .select('shelter_id')
+    .eq('priority_id', 1);
+
+  if (needsError) {
+    console.error('Error fetching needs data:', needsError);
+    return { data: [], error: needsError };
+  }
+
+  // Якщо є shelter_id, то використовуємо їх для отримання притулків з таблиці 'shelters'
+  const shelterIds = needsData.map((need) => need.shelter_id);
+
+  if (shelterIds.length === 0) {
+    return { data: [], error: null };
+  }
+
+  // Отримуємо притулки з таблиці 'shelters', де shelter_id є в shelterIds
+  const { data: shelters, error: sheltersError } = await this.supabase
+    .from('shelters')
+    .select('shelter_id, shelter_name, file_path')
+    .in('shelter_id', shelterIds);
+
+  return { data: shelters, error: sheltersError };
+}
+
+// Отримання тварин, що потребують термінової допомоги
+async getUrgentAnimals() {
+  const { data, error } = await this.supabase
+    .rpc('get_urgent_animals');  // Викликаємо RPC-функцію для отримання тварин
+
+  if (error) {
+    console.error('Error fetching urgent animals:', error);
+    return [];
+  }
+
+  return data;
+}
+
+async getNeeds() {
+  const { data, error } = await this.supabase
+    .from('needs')
+    .select('*');  // Або інші поля, якщо тобі потрібні конкретні дані
+
+  if (error) {
+    console.error('Error fetching needs:', error);
+    return { data: [], error };
+  }
+
+  return { data, error: null };
+}
+
+async getShelters() {
+  const { data, error } = await this.supabase
+    .from('shelters')
+    .select(`
+      shelter_id,
+      shelter_name,
+      file_path,
+      needs:needs(priority_id)
+    `);  // Додаємо зв’язок з `needs`
+
+  if (error) {
+    console.error('Error fetching shelters:', error);
+    return [];
+  }
+  return data;
+}
+
+async getDonations() {
+  const { data, error } = await this.supabase
+    .from('donation')
+    .select('*'); // Отримуємо всі записи про донати
+
+  if (error) {
+    console.error('Помилка при отриманні донатів:', error);
+    return { data: [], error };
+  }
+
+  return { data, error: null };
+}
+
+async getCategories() {
+  const { data, error } = await this.supabase
+    .from('categories')
+    .select('*'); // Отримуємо всі категорії
+  
+  if (error) {
+    console.error("Error fetching categories:", error);
+  }
+  return { data, error };
 }
 }
