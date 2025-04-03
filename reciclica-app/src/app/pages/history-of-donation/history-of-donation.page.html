@@ -1,4 +1,4 @@
-<ion-content class="ion-padding">
+ <ion-content class="ion-padding">
   <div class="history-conteiner">
     <img src="assets/logo.png" alt="Logo" class="logo" />
 
@@ -15,109 +15,23 @@
     </div>
 
     <div class="donations">
-      <div (click)="goDetailedInfo()" class="white-secondary-1">
+      <div *ngFor="let donation of donations" (click)="goDetailedInfo()" class="white-secondary-1">
         <div class="green-squere"></div>
         <div class="col-information">
-          <p class="shelter">Furry Friends Rescue</p>
+          <p class="shelter">{{ donation.shelter_name }}</p>
           <div class="row-information">
-            <p class="data">24 May 2025</p>
-            <p class="data">18:45 PM</p>
+            <p class="data">{{ donation.date | date: 'dd MMMM yyyy' }}</p>
+            <p class="data">{{ donation.time }}</p>
           </div>
         </div>
         <div class="col-amount">
-          <p class="lead-amount">₴ 5000.00</p>
+          <p class="lead-amount">₴ {{ donation.amount | number:'1.2-2' }}</p>
           <div class="button-status">
-            <p class="information-status">confirmed</p>
+            <p class="information-status">{{ donation.status }}</p>
           </div>
         </div>
       </div>
-
-          <div (click)="goDetailedInfo()" class="white-secondary">
-            <div class="green-squere"></div>
-            <div class="col-information">
-              <p class="shelter">Love & Care Shelter</p>
-              <div class="row-information">
-                <p class="data">15 May 2025</p>
-                <p class="data">14:25 PM</p>
-              </div>
-            </div>
-            <div class="col-amount">
-              <p class="lead-amount">₴ 10000.00</p>
-              <div class="button-status">
-                <p class="information-status">confirmed</p>
-              </div>
-            </div>
-          </div>
-
-          <div (click)="goDetailedInfo()" class="white-secondary">
-            <div class="green-squere"></div>
-            <div class="col-information">
-              <p class="shelter">Purrfect Haven</p>
-              <div class="row-information">
-                <p class="data">5 May 2025</p>
-                <p class="data">06:55 PM</p>
-              </div>
-            </div>
-            <div class="col-amount">
-              <p class="lead-amount">₴ 5000.00</p>
-              <div class="button-status">
-                <p class="information-status">confirmed</p>
-              </div>
-            </div>
-          </div>
-
-              <div (click)="goDetailedInfo()" class="white-secondary">
-                <div class="green-squere"></div>
-                <div class="col-information">
-                  <p class="shelter">Forever Friends Rescue</p>
-                  <div class="row-information">
-                    <p class="data">30 April 2025</p>
-                    <p class="data">08:15 PM</p>
-                  </div>
-                </div>
-                <div class="col-amount">
-                  <p class="lead-amount">₴ 500.55</p>
-                  <div class="button-status">
-                    <p class="information-status">canceled</p>
-                  </div>
-                </div>
-              </div>
-
-                  <div (click)="goDetailedInfo()" class="white-secondary">
-                    <div class="green-squere"></div>
-                    <div class="col-information">
-                      <p class="shelter">Ruff & Fluff Rescue</p>
-                      <div class="row-information">
-                        <p class="data">28 March 2025</p>
-                        <p class="data">21:30 PM</p>
-                      </div>
-                    </div>
-                    <div class="col-amount">
-                      <p class="lead-amount">₴ 750.00</p>
-                      <div class="button-status">
-                        <p class="information-status">confirmed</p>
-                      </div>
-                    </div>
-                  </div>
-
-                      <div (click)="goDetailedInfo()" class="white-secondary">
-                        <div class="green-squere"></div>
-                        <div class="col-information">
-                          <p class="shelter">Paws & Claws Haven</p>
-                          <div class="row-information">
-                            <p class="data">4 March 2025</p>
-                            <p class="data">09:25 PM</p>
-                          </div>
-                        </div>
-                        <div class="col-amount">
-                          <p class="lead-amount">₴ 3550.00</p>
-                          <div class="button-status">
-                            <p class="information-status">confirmed</p>
-                          </div>
-                        </div>
-                      </div>
     </div>
-
 
   </div>
 </ion-content>
