@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DonateForShelterPageRoutingModule } from './donate-for-shelter-routing.module';
 
 import { DonateForShelterPage } from './donate-for-shelter.page';
+import { SupabaseService } from 'src/service/supabase.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { DonateForShelterPage } from './donate-for-shelter.page';
     DonateForShelterPageRoutingModule,
     DonateForShelterPage
   ],
+  providers: [SupabaseService],
   declarations: []
 })
 export class DonateForShelterPageModule {}

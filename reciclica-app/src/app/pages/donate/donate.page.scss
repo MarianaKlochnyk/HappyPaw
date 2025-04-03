@@ -116,6 +116,7 @@ ion-content {
 
 .lead {
   font-size: 10px;
+  text-transform: uppercase;
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   color: #FFFFFF;
@@ -138,7 +139,7 @@ ion-content {
 }
 
 .secondary {
-  font-size: 8px;
+  font-size: 9px;
   font-family: "Mulish", sans-serif;
   //font-weight: 600;
   color: #FFFFFF;
@@ -171,14 +172,12 @@ ion-content {
 
   margin-top: 0px 0;
   margin-left: 20px;
-  margin-top: 92px;
-  /* Исправлено */
+  margin-top: 85px;
 }
 
 .button-view-shelter {
   margin-top: 27px;
   margin-left: 15px;
-  /* Исправлено */
 }
 
 .logo-button {
@@ -195,12 +194,12 @@ ion-content {
 }
 
 .amount {
-  font-size: 6px;
+  font-size: 8px;
   font-family: "Mulish", sans-serif;
   font-weight: 300;
   color: #FFFFFF;
-  margin: 0px 0;
-  margin-left: 114px;
+  margin-top: -12px;
+  margin-left: 100px;
 }
 
 .white-buttons {

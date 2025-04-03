@@ -18,7 +18,7 @@
       <div class="white-donation">
         <p class="donate-title">Donations for specific animals</p>
         <div class="specific-animals">
-          <div *ngFor="let animal of animals" (click)="goDonateAnimal()" class="specific-animals-category">
+          <div *ngFor="let animal of animals" (click)="goDonateAnimal(animal.animal_id)" class="specific-animals-category">
             <img [src]="animal.file_path" alt="{{ animal.name }}" class="animal-image">
 
             <p class="lead">{{ getAnimalNeed(animal.animal_id)?.short_description ?? 'N/A' }} FOR <br>LITTLE {{ animal.name }}</p>
@@ -40,7 +40,7 @@
                 <circle class="background-circle" cx="35" cy="35" r="25" stroke="#eee" stroke-width="5" fill="none"></circle>
             
                 <!-- Динамічний прогрес -->
-                <circle cx="35" cy="35" r="25"
+                <circle  cx="35" cy="35" r="25"
                   stroke="url(#gradient)"
                   stroke-width="5"
                   fill="none"
@@ -83,12 +83,11 @@
       <div class="white-donation-shelter">
         <p class="donate-title">Donations for shelters</p>
         <div class="specific-shelters">
-          <div *ngFor="let shelter of shelters" (click)="goDonateShelter()" class="specific-shelters-category">
+          <div *ngFor="let shelter of shelters" (click)="goDonateShelter(shelter.shelter_id)" class="specific-shelters-category">
             <img [src]="shelter.file_path" alt="{{ shelter.shelter_name }}" class="shelter">
             <div class="darkness-shelter">
               <div class="text-info">
                 <p class="lead-shelter">
-
                   {{ getShelterNeed(shelter.shelter_id)?.short_description ?? 'N/A' }} <br>IN THE {{ shelter.shelter_name }}
                 </p>
                 <p class="secondary-shelter">
