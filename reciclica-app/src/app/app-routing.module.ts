@@ -177,20 +177,20 @@ const routes: Routes = [
       import('./pages/faq/faq.module').then((m) => m.FaqPageModule),
   },
   {
-    path: 'donate-for-pet',
+    path: 'donate-for-pet/:animal_id',
     loadChildren: () =>
       import('./pages/donate-for-pet/donate-for-pet.module').then(
         (m) => m.DonateForPetPageModule
       ),
   },
   {
-    path: 'donate-for-shelter',
+    path: 'donate-for-shelter/:shelter_id',
     loadChildren: () =>
       import('./pages/donate-for-shelter/donate-for-shelter.module').then(
         (m) => m.DonateForShelterPageModule
       ),
   },
-    
+
   {
     path: 'adopted-pet',
     loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)

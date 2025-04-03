@@ -223,9 +223,20 @@ ion-content {
   position: absolute;
 }
 
-.white-helping-pet{
+.white-helping-pet {
+  width: 169px;
+  height: 89px;
   background: #FFFFFF;
+  border-radius: 25px;
   margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Вирівнюємо текст зліва */
+  text-align: left; /* Вирівнюємо текст по лівому краю */
+  padding: 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .helping-pet-name{
@@ -244,9 +255,11 @@ ion-content {
 }
 
 .helping-pet-shelter,
-.helping-pet-address{
+.helping-pet-address {
   font-size: 8px;
   font-weight: 600;
+  word-wrap: break-word;    /* Дозволяє переносити слова */
+  white-space: normal;      /* Дозволяє багаторядковий текст */
 }
 
 .helping-pet-address{
