@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
     IonicModule
   ]
 })
+  
 export class CreateAccount2Page {
 
   constructor(private router: Router) { }
