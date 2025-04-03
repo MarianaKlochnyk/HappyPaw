@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { environment } from 'src/environments/environment';
@@ -8,7 +9,6 @@ import { environment } from 'src/environments/environment';
 
 export class SupabaseService {
 
-  
   client: any;
   async getPetById(petId: string) {
     const { data, error } = await this.supabase
@@ -88,14 +88,32 @@ async getAnimalsWithBreeds() {
     .from('animals')
     .select(`
       animal_id,
+      shelter_id,
       name,
       file_path,
       age,
       weight,
       health_status,
       breed_id,
-      breed:breeds(breed)
+      breed:breeds(breed),
+      is_adopted,
+      species_id
     `);// Використовуємо join між тваринами та породами
+}
+
+async getSpeciesById(species_id: number) {
+  const { data, error } = await this.supabase
+    .from('species') // Назва таблиці в Supabase
+    .select('species')
+    .eq('species_id', species_id)
+    .maybeSingle(); // Отримати тільки один запис
+
+  if (error) {
+    console.error('Error fetching species:', error);
+    return null;
+  }
+
+  return data;
 }
 
 async getShelterByAnimalId(animalId: string) {
@@ -227,7 +245,7 @@ async getDonations() {
     console.error('Помилка при отриманні донатів:', error);
     return { data: [], error };
   }
-
+  
   return { data, error: null };
 }
 
@@ -240,7 +258,50 @@ async getCategories() {
     console.error("Error fetching categories:", error);
   }
   return { data, error };
+}
+
+async getVolunteersCount() {
+  const { count, error } = await this.supabase
+    .from('volunteer') // Назва таблиці з волонтерами
+    .select('*', { count: 'exact', head: true }); // Повертає тільки кількість
+  
+  return { count, error };
+}
+
+async getTotalDonations() {
+  const { data, error } = await this.supabase
+    .from('donation') // Назва таблиці з донатами
+    .select('amount') // Отримуємо тільки поле amount
+
+  if (error) {
+    return { sum: 0, error };
   }
-  
-  
+
+  const sum = data.reduce((total, donation) => total + donation.amount, 0);
+  return { sum, error: null };
+}
+
+async getCurrentUser() {
+  const { data, error } = await this.supabase.auth.getUser();
+  if (error) {
+    console.error("Error fetching current user:", error);
+    return null;
+  }
+  return data.user;
+}
+
+async getVolunteerByUserId(userId: string) {
+  const { data, error } = await this.supabase
+    .from("volunteer") // Назва таблиці в Supabase
+    .select("name") // Отримуємо лише ім'я волонтера
+    .eq("user_id", userId) // Фільтр по user_id
+    .single(); // Очікуємо лише один запис  
+
+  if (error) {
+    console.error("Error fetching volunteer:", error);
+    return null;
+  }
+  return data; // Повертає об'єкт { name: "..." }
+}
+
 }

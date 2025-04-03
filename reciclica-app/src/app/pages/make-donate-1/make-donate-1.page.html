@@ -3,7 +3,7 @@
   <ion-card-header class="header-card">
     <div class="logo-container">
       <img src="assets/logowhite.svg" alt="logo" class="logo-icon">
-      <ion-icon (click)="goBack()" name="arrow-back-outline" class="header-icon"></ion-icon>
+      <ion-icon name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
     <h1 class="header-title">Help save lives and <br> give a chance for a <br> happy future!</h1>
   </ion-card-header>
@@ -26,24 +26,28 @@
 
     <ion-card-content>
       <ion-row class="donation-container">
+
         <ion-col (click)="goPayment1()" size="3">
           <div class="donation-card">
             <p class="amount">100<br>UAH</p>
             <img src="assets/icon/Dog 2.png" alt="Dog" class="animal-icon">
           </div>
         </ion-col>
+
         <ion-col (click)="goPayment1()" size="3">
           <div class="donation-card">
             <p class="amount">250<br>UAH</p>
             <img src="assets/icon/Ferret.png" alt="Ferret" class="animal-icon">
           </div>
         </ion-col>
+
         <ion-col (click)="goPayment1()" size="3">
           <div class="donation-card">
             <p class="amount">500<br>UAH</p>
             <img src="assets/icon/Guinea Pig.png" alt="Hamster" class="animal-icon">
           </div>
         </ion-col>
+
         <ion-col (click)="goPayment1()" size="3">
           <div class="donation-card">
             <p class="amount">1000<br>UAH</p>
@@ -55,6 +59,7 @@
 
 
     <div (click)="goCustom()" class="traits">
+
       <div class="trait-box">
         <ion-icon name="heart"></ion-icon>
         <span>CUSTOM</span>
@@ -84,7 +89,7 @@
                 fill="currentColor" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button (click)="goLocation()" tab="location">
             <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -95,7 +100,7 @@
                 fill="currentColor" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button (click)="goStatistic()" tab="stats">
             <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -106,7 +111,7 @@
                 fill="currentColor" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button tab="feedback">
             <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -114,7 +119,7 @@
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </ion-tab-button>
-  
+
           <ion-tab-button (click)="goNotification()" tab="notifications">
             <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
