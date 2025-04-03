@@ -235,6 +235,7 @@ const routes: Routes = [
     path: 'shelter-info-location',
     loadChildren: () => import('./pages/shelter-info-location/shelter-info-location.module').then( m => m.ShelterInfoLocationPageModule)
   },
+
 ];
 
 @NgModule({
