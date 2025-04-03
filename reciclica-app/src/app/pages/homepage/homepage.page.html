@@ -10,17 +10,17 @@
       </ion-buttons>
     </div>
     
-    <p class="tittle">Welcome to our platform, <br>Solomiia</p>
+    <p class="tittle">Welcome to our platform, <br>{{ volunteerName }}</p>
 
     <div class="whites">
       <div class="white-1">
         <img src="assets/pet-shpiz.png" alt="pet-shpiz" class="pet-shpiz">
         <p class="lead-white-info">Volunteers on the platform</p>
-        <p class="lead-white-amount">145 625</p>
+        <p class="lead-white-amount">{{ volunteerCount ?? 0 }}</p>
         <div class="green-row">
           <div class="green">
             <p class="secondary-white-info">Shelters on the platform</p>
-            <p class="secondary-white-amount">1 625</p>
+            <p class="secondary-white-amount">{{ shelterCount ?? 0}} </p>
           </div>
           <div class="green-">
             <p class="secondary-white-info">Rescued animals</p>
@@ -28,7 +28,7 @@
           </div>
           <div class="green-">
             <p class="secondary-white-info">Donations</p>
-            <p class="secondary-white-amount">1 245 625</p>
+            <p class="secondary-white-amount">{{ totalDonations ? totalDonations.toLocaleString() : '0' }}</p>
           </div>
         </div>
       </div>
@@ -84,16 +84,16 @@
 
     <div class="helping-pet">
 
-      <div class="helping-pet-conteiner">
-        <img src="assets/pet-cat.png" alt="pet-cat" class="pet-cat">
+      <div class="helping-pet-conteiner" *ngFor="let animal of animals">
+        <img [src]="animal.file_path" alt="pet-cat" class="pet-cat">
         <div class="green-helping-pet">
-          <p class="helping-pet-name">Matilda</p>
-          <p class="helping-pet-shelter">Helping Paw shelter</p>
-          <p class="helping-pet-address">Knyahynya Olha Street, <br>65a</p>
-          <div class="campaign-percantage">75%</div>
-          <div class="campaign-percantage-1">1500$</div>
+          <p class="helping-pet-name">{{ animal.name }}</p>
+          <p class="helping-pet-shelter">{{ animal.shelter?.shelter_name || 'Unknown Shelter' }}</p>
+          <p class="helping-pet-address">{{ animal.shelter?.address || 'Unknown Shelter Address' }} </p>
+          <div class="campaign-percantage">{{ getAnimalNeed(animal?.animal_id)?.campaign_percentage ?? 0 }}%</div>
+          <div class="campaign-percantage-1">{{ getAnimalNeed(animal?.animal_id)?.amount ?? 'N/A' }}$</div>
           <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%;"></div>
+            <div class="progress-fill" [style.width]="(getAnimalNeed(animal.animal_id)?.campaign_percentage ?? 0) + '%'"></div>
             <div class="progress-dots"></div>
           </div>
           <div class="button-donate">
@@ -102,29 +102,7 @@
           </div>
         </div>
         <div class="white-helping-pet">
-          <p class="helping-pet-info">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign for $2000 <br>is underway</p>
-        </div>
-      </div>
-      <div class="helping-pet-conteiner">
-        <img src="assets/pet-doberman.png" alt="pet-doberman" class="pet-doberman">
-        <div class="green-helping-pet">
-          <p class="helping-pet-name">Graff</p>
-          <p class="helping-pet-shelter">Helping Paw shelter</p>
-          <p class="helping-pet-address">Knyahynya Olha Street, <br>65a</p>
-          <div class="campaign-percantage">75%</div>
-          <div class="campaign-percantage-1">1500$</div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%;"></div>
-            <div class="progress-dots"></div>
-          </div>
-          <div class="button-donate">
-            <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-            <p (click)="goMakeDonate()" class="info-button-donate">Donate</p>
-          </div>
-        </div>
-        <div class="white-helping-pet">
-          <p class="helping-pet-info">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign
-            for $2000 <br>is underway</p>
+          <p class="helping-pet-info">{{ getAnimalNeed(animal.animal_id)?.short_description ?? 'N/A' }}</p>
         </div>
       </div>
     </div>

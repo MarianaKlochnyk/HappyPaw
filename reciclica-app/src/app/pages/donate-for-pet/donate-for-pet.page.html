@@ -6,24 +6,24 @@
       <ion-icon (click)="goDonate()" name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
     <div>
-      <img src="assets/matilda.png" alt="logo" class="pet-photo">
+    <img [src]="animal?.file_path" alt="{{ animal?.name }}" class="pet-photo">
     </div>
   </ion-card-header>
 
 
   <ion-card class="rescue-card">
-    <ion-card-header>
-      <ion-card-title>URGENT SURGERY FOR <br> LITTLE LILY</ion-card-title>
+    <ion-card-header >
+      <ion-card-title>URGENT SURGERY FOR <br> LITTLE {{ animal?.name }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <div class="rescue-details">
         <div class="rescue-info">
           <ion-icon name="home-outline"></ion-icon>
-          <span>Forever Friends Rescue</span>
+          <span>{{ shelter?.shelter_name || 'Unknown Shelter' }}</span>
         </div>
         <div class="rescue-location">
           <ion-icon name="location-outline"></ion-icon>
-          <span>Lviv, Ukraine</span>
+          <span>{{ shelter?.city|| 'Unknown City' }}, {{ shelter?.country || 'Unknown country' }}</span>
         </div>
       </div>
     </ion-card-content>
@@ -31,16 +31,13 @@
 
   <ion-card class="rescue-card">
     <ion-card-header>
-      <ion-card-title>About Lily</ion-card-title>
+      <ion-card-title>About {{ animal?.name }}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <div class="description-card">
+      <div *ngFor="let need of animalNeeds">
         <p class="description-text">
-          Lily is a little chinchilla lanigera who was found on the side of the road with an injured leg.
-          She could not walk and was terrified of people.
-          Doctors diagnosed a fracture, and without urgent surgery, the leg would have to be amputated.
-          We want to give Lily a chance to run again and enjoy life!💙🐾
+          {{ need.description }}
         </p>
       </div>
     </ion-card-content>
@@ -52,7 +49,7 @@
             <span class="trait-title">The amount needed:</span>
             <div class="trait-box">
               <ion-icon name="paw"></ion-icon>
-              <span>12 000 UAH</span>
+              <span>{{ getAnimalNeed(animal?.animal_id)?.amount ?? 'N/A' }} UAH</span>
             </div>
           </div>
         </ion-col>
@@ -61,7 +58,7 @@
             <span class="trait-title">Current fundraising:</span>
             <div class="trait-box">
               <ion-icon name="heart"></ion-icon>
-              <span>5 500 UAH</span>
+              <span>{{ getAnimalNeed(animal?.animal_id)?.totalFundraising ?? 0 }}</span>
             </div>
           </div>
         </ion-col>
@@ -74,7 +71,7 @@
       <div class="raise-details">
         <div class="raise-info">
           <ion-icon name="alarm-outline"></ion-icon>
-          <span>6 500 UAH left to raise</span>
+          <span>{{ getAnimalNeed(animal?.animal_id)?.amount_left ?? 'N/A' }} UAH left to raise</span>
         </div>
       </div>
     </ion-card-content>
@@ -91,7 +88,7 @@
         </button>
       </ion-col>
       <ion-col size="6" class="right-action">
-        <button (click)="goMakeDonate()" class="request-button">
+        <button class="request-button">
           <ion-icon name="star-outline"></ion-icon>
           DONATE
         </button>

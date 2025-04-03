@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomepagePageRoutingModule } from './homepage-routing.module';
 
 import { HomepagePage } from './homepage.page';
+import { SupabaseService } from 'src/service/supabase.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { HomepagePage } from './homepage.page';
     HomepagePageRoutingModule,
     HomepagePage
   ],
+  providers: [SupabaseService],
   declarations: []
 })
 export class HomepagePageModule {}

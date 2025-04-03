@@ -7,7 +7,7 @@
       <ion-icon (click)="goDonate()"name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
     <div>
-      <img src="assets/shelter2.png" alt="logo" class="pet-photo">
+      <img *ngIf="shelter?.file_path" [src]="shelter.file_path" alt="pet-photo" />
     </div>
   </ion-card-header>
 
@@ -20,11 +20,11 @@
       <div class="rescue-details">
         <div class="rescue-info">
           <ion-icon name="home-outline"></ion-icon>
-          <span>Purrfect Heaven Shelter</span>
+          <span>{{ shelter?.shelter_name }}</span>
         </div>
         <div class="rescue-location">
           <ion-icon name="location-outline"></ion-icon>
-          <span>Lviv, Ukraine</span>
+          <span>{{ shelter?.city|| 'Unknown City' }}, {{ shelter?.country || 'Unknown country' }}</span>
         </div>
       </div>
     </ion-card-content>
@@ -38,9 +38,7 @@
     <ion-card-content>
       <div class="description-card">
         <p class="description-text">
-          🐕 15 puppies in the ‘Purrfect Heaven’ shelter are preparing for adoption, but before that they need
-          vaccination.
-          Without vaccinations, they are at risk of contracting deadly viruses.
+          {{ getShelterNeed(shelter?.shelter_id)?.description ?? 'N/A' }}
         </p>
       </div>
     </ion-card-content>
@@ -61,7 +59,7 @@
             <span class="trait-title">The amount needed:</span>
             <div class="trait-box">
               <ion-icon name="paw"></ion-icon>
-              <span>9 000 UAH</span>
+              <span>{{ getShelterNeed(shelter?.shelter_id)?.amount ?? 'N/A' }} UAH</span>
             </div>
           </div>
         </ion-col>
@@ -70,7 +68,7 @@
             <span class="trait-title">Current fundraising:</span>
             <div class="trait-box">
               <ion-icon name="heart"></ion-icon>
-              <span>4 500 UAH</span>
+              <span>{{ getTotalFundraising() }} UAH</span>
             </div>
           </div>
         </ion-col>
@@ -83,9 +81,9 @@
       <div class="raise-details">
         <div class="raise-info">
           <ion-icon name="alarm-outline"></ion-icon>
-          <span>4 500 UAH left to raise</span>
+          <span>{{ (getShelterNeed(shelter?.shelter_id)?.amount_left ?? 'N/A') }} UAH left to raise</span>
         </div>
-      </div>
+      </div>      
     </ion-card-content>
   </ion-card>
 
