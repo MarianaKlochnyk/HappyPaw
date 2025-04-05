@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { HistoryOfDonationPageRoutingModule } from './history-of-donation-routing.module';
+import { SupabaseService } from 'src/service/supabase.service';
+
 
 @NgModule({
   imports: [
@@ -13,6 +15,8 @@ import { HistoryOfDonationPageRoutingModule } from './history-of-donation-routin
     IonicModule,
     HistoryOfDonationPageRoutingModule
   ],
-  declarations: []
+   providers: [SupabaseService],
+    declarations: []
 })
 export class HistoryOfDonationPageModule {}
+

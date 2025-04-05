@@ -35,7 +35,7 @@ export class MakeDonate1Page  {
   }
 
   goPayment1() {
-             this.router.navigate(['/custom']);
+             this.router.navigate(['/payment1']);
   }
 
 }

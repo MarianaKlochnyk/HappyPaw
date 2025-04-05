@@ -147,7 +147,7 @@ export class DonateForPetPage implements OnInit {
              this.router.navigate(['/donate']);
   }
     goMakeDonate() {
-      this.router.navigate(['/make-donate-1'], { state: { from: '/donate-for-pet' } });
+             this.router.navigate(['/make-donate-1']);
   }
   
 }
