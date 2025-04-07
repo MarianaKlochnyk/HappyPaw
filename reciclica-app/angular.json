@@ -44,8 +44,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "11kb",
-                  "maximumError": "11kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "fileReplacements": [
@@ -80,8 +80,12 @@
               "buildTarget": "app:build:development"
             },
             "ci": {
-              "progress": false
-            }
+              
+            },
+            "options": {
+            "host": "localhost",
+            "port": 4200
+}
           },
           "defaultConfiguration": "development"
         },
@@ -137,6 +141,7 @@
     "schematicCollections": [
       "@ionic/angular-toolkit"
     ],
+    
     "analytics": "3e07b977-1051-49ee-95ac-57c60812025a"
   },
   "schematics": {
@@ -147,4 +152,5 @@
       "styleext": "scss"
     }
   }
+  
 }
