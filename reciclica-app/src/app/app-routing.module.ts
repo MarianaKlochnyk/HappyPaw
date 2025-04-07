@@ -192,7 +192,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'adopted-pet',
+    path: 'adopted-pet/:animal_id',
     loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)
   },
   {
@@ -232,7 +232,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
   },
   {
-    path: 'shelter-info-location',
+    path: 'shelter-info-location/:shelter_id',
     loadChildren: () => import('./pages/shelter-info-location/shelter-info-location.module').then( m => m.ShelterInfoLocationPageModule)
   },
 ];

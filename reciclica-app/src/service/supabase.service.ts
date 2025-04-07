@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -303,5 +303,26 @@ async getVolunteerByUserId(userId: string) {
   }
   return data; // Повертає об'єкт { name: "..." }
 }
+
+  // Метод для отримання деталей конкретного притулку за його ID
+  async getShelterDetails(shelterId: string) {
+    const { data, error } = await this.supabase
+      .from('shelters') // замініть на свою таблицю
+      .select('*')
+      .eq('shelter_id', shelterId) // або використовуйте правильне поле ID
+      .single(); // Оскільки ми хочемо отримати один запис
+
+    if (error) {
+      console.error(error);
+      return null;
+    }
+    return data;
+  }
+
+  async getAllSpecies() {
+    return this.supabase
+      .from('species')
+      .select('species');
+  }
 
 }

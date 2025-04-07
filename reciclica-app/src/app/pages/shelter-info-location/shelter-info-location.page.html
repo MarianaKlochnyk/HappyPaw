@@ -13,15 +13,15 @@
       <div class="shelter-info">
         <div class="shelter-line"></div>
         <div class="shelter-text">
-          <h2 class="shelter-name">Purrfect Heaven Shelter</h2>
+          <h2 class="shelter-name">{{ shelterDetails?.shelter_name }}</h2>
           <div class="shelter-details">
             <div class="shelter-location">
               <ion-icon name="home-outline"></ion-icon>
-              <span>Malogoloskivska Street, 8d</span>
+              <span> {{shelterDetails?.address}} </span>
             </div>
             <div class="shelter-location">
               <ion-icon name="location-outline"></ion-icon>
-              <span>Lviv, Ukraine</span>
+              <span>{{shelterDetails?.city}}, {{shelterDetails?.country}} </span>
             </div>
           </div>
         </div>
@@ -36,21 +36,21 @@
     <ion-grid>
       <ion-row>
         <ion-col size="3" class="logo-container">
-          <img src="assets/icon/shelter-logo.png" alt="PAWS Pet Care Logo" class="logo" />
+          <img src={{shelterDetails?.file_path}} alt="PAWS Pet Care Logo" class="logo" />
         </ion-col>
         <ion-col size="9" class="info-container">
           <div class="contact-item">
             <ion-icon name="call-outline"></ion-icon>
             <div>
               <p class="title">Our corporate number</p>
-              <p class="content">+380456254545</p>
+              <p class="content">{{shelterDetails?.phone}}</p>
             </div>
           </div>
           <div class="contact-item">
             <ion-icon name="mail-outline"></ion-icon>
             <div>
               <p class="title">Your corporate email</p>
-              <p class="content">purrfect.heaven.shelter&#64;gmail.com</p>
+              <p class="content">{{shelterDetails?.email}}</p>
             </div>
           </div>
         </ion-col>
@@ -62,7 +62,7 @@
       <div class="schedule">
         <div class="schedule-box">
           <p class="title">Work schedule</p>
-          <p class="time">08:00 - 18:00</p>
+          <p class="time">{{shelterDetails?.work_schedule}}</p>
         </div>
         <p class="note">opening hours may differ in<br>relation to national holidays</p>
       </div>
@@ -70,7 +70,7 @@
         <div class="distance">
           <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
           <p class="title-distance">Destination</p>
-          <p class="value">5 km</p>
+          <p class="value">10 km</p>
         </div>
         <div class="distance-time">
             <div class="icon-box"><ion-icon name="alarm-outline"></ion-icon></div>
@@ -89,11 +89,7 @@
         <div class="about-content">
           <div style="width: 370px;">
           <h2 class="about-title">About us</h2>
-          <p class="about-text">
-            “Purrfect Heaven” is more than just a shelter.
-            It is a chance for a new life for animals who find themselves on the street.
-            We find them in difficult conditions - hungry, frightened, sometimes sick - and give them a second chance.
-            Here, every tail has its own story, every paw is waiting for warmth and care.
+          <p class="about-text">{{shelterDetails?.about_us}}
           </p>
           </div>
           
@@ -129,7 +125,7 @@
   <ion-card class="location-button">
     <ion-card-content>
       <div class="button">
-        <div class="button-content">
+        <div class="button-content" (click)="goToLocation()">
           <ion-icon name="location-outline"></ion-icon>
           <p class="button-name">Back to the location</p>
         </div>
@@ -179,5 +175,3 @@
     </ion-tabs>
   </ion-toolbar>
 </ion-footer>
-
-

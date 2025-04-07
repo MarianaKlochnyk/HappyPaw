@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SupabaseService } from 'src/service/supabase.service';
+import { SupabaseService } from '../../../service/supabase.service';
 import { Geolocation } from '@capacitor/geolocation';
 import { IonicModule } from '@ionic/angular';
 
@@ -98,10 +98,10 @@ export class LocationPage implements OnInit {
     this.shelterLocations = await this.supabase.getShelterLocations();
   
     this.shelterLocations.forEach((loc) => {
-      new google.maps.Marker({
+      const marker = new google.maps.Marker({
         position: { lat: loc.latitude, lng: loc.longitude },
         map: this.map,
-        title: `Shelter ID: ${loc.shelter_id}`, 
+        title: `Shelter ID: ${loc.shelter_id}`,
         icon: {
           url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
@@ -110,6 +110,11 @@ export class LocationPage implements OnInit {
           `),
           scaledSize: new google.maps.Size(40, 40)
         }
+      });
+  
+      // Додаємо обробник події для кліку на маркер
+      marker.addListener('click', () => {
+        this.router.navigate(['/shelter-info-location', loc.shelter_id]);
       });
     });
   }
@@ -155,6 +160,7 @@ export class LocationPage implements OnInit {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
   }
+
 
   async calculateArrivalTime(destinationLat: number, destinationLng: number, mode: 'driving' | 'walking') {
     const origin = `${this.userLocation!.lat},${this.userLocation!.lng}`;
