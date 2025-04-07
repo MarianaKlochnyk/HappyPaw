@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+
 @Component({
   selector: 'app-payment1',
   templateUrl: './payment1.page.html',
