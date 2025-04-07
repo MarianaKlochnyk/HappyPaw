@@ -199,11 +199,11 @@ export class DonatePage implements OnInit {
     this.router.navigate(['/location']);
   }
 
-  goDonateAnimal(animalId: string) {
+  goDonateAnimal(animalId:string) {
     this.router.navigate(['/donate-for-pet', animalId]);
   }
 
-  goDonateShelter(shelterId: string) {
+  goDonateShelter(shelterId:string) {
     this.router.navigate(['/donate-for-shelter', shelterId]);
   }
 }

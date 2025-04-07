@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <div class="adopted-pet">
     <div class="leed-green-design">
-      <img src="assets/doberman.png" alt="dog" class="dog">
+      <img [src]="animal?.file_path" alt="dog" class="dog">
       <div class="header-icon">
         <ion-icon (click)="goHome()" name="chevron-back-outline"></ion-icon>
         <div (click)="goProfile()" data-svg-wrapper style="position: relative">
@@ -43,25 +43,21 @@
 
       <div class="column-information">
         <div class="row-information-1">
-          <p class="lead">Bettie Dog</p>
+          <p class="lead">{{ animal?.name || 'Unknown Name' }} </p>
           <img src="assets/tick.png" alt="tick" class="tick">
         </div>
         <div class="row-information-2">
           <div class="row-1">
-            <p class="text">Male</p>
+            <p class="text">{{ animal?.gender || 'Unknown Gender' }}</p>
             <img src="assets/point.png" alt="point" class="point">
-            <p class="text">10 Months</p>
+            <p class="text">{{ animal?.age || 'Unknown Age' }}</p>
           </div>
           <p class="text">3.0 km</p>
         </div>
       </div>
 
       <div class="white-info">
-        <p class="info">You consider their welfare and love them <br>unconditionally. You know that your dog is part of
-          <br>the family when you
-          genuinely care and nurture <br>them with so much love and affection. All you <br>ever think of is providing
-          them with all the
-          <br>happiness and understanding their welfare
+        <p class="info">{{ animal?.health_status || 'Unknown Health Status' }}
         </p>
       </div>
 

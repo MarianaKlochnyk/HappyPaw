@@ -7,7 +7,5 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class PaymentMPage implements OnInit {
-  constructor() {}
-
   ngOnInit() {}
 }
