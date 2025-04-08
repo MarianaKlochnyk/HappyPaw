@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>reciclica-app</string>
+	<string>HappyPaw</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -45,5 +45,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Цей додаток використовує вашу локацію для показу на карті</string>
+	<key>GMSApiKey</key>
+	<string>AIzaSyAev_96sTBskpqrg2f5E3tDI92ZEXVRL-o</string>
 </dict>
 </plist>

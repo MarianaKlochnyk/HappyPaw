@@ -14,4 +14,20 @@ constructor(private router: Router) {}
   goPayment() {
     this.router.navigate(['/payment-1']);
   }
+  
+  goStatistic() {
+                this.router.navigate(['/statistics']);
+      }
+    
+      goHomepage() {
+              this.router.navigate(['/homepage']);
+      }
+      
+       goNotification() {
+              this.router.navigate(['/notification']);
+      }
+    
+      goLocation() {
+                  this.router.navigate(['/location']);
+        }
 }
