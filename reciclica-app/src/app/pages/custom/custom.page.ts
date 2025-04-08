@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-custom',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./custom.page.scss'],
   imports: [IonicModule],
 })
-export class CustomPage {
+export class CustomPage implements OnInit {
   constructor(private router: Router) {}
   
   goPayment() {

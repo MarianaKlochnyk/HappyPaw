@@ -534,36 +534,9 @@ ion-content {
   height: auto;
 }
 
-ion-footer {
-  --background: transparent;
-  --ion-background-color: transparent;
-  background: transparent !important;
-  box-shadow: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  text-align: center;
-
-}
-
-ion-toolbar {
-  --background: transparent;
-  --ion-background-color: transparent;
-  background: transparent !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-
 ion-tab-bar {
   --background: white;
   --border: none;
-  width: 500px;
-
 
   ion-tab-button {
     color: #324B49;

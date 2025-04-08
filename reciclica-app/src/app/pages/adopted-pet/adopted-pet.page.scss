@@ -48,10 +48,10 @@ ion-content {
 
 .dog{
   position: absolute;
-  width: 330px;
+  width: 200px;
   height: auto;
-  margin-top: 300px;
-  margin-left: -50px;
+  margin-top: 430px;
+  transform: translateX(-10%);
   z-index: 3;
 }
 
