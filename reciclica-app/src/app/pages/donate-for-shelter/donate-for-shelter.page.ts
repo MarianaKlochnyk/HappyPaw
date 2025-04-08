@@ -151,6 +151,6 @@ async loadNeeds() {
       }
 
       goMakeDonate() {
-                this.router.navigate(['/make-donate-1']);
-      }
+      this.router.navigate(['/make-donate-1'], { state: { from: '/donate-for-shelter' } });
+  }
 }

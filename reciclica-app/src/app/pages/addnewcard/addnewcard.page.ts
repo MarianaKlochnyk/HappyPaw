@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addnewcard',
@@ -7,8 +8,10 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./addnewcard.page.scss'],
   imports: [IonicModule],
 })
-export class AddnewcardPage implements OnInit {
-  constructor() {}
+export class AddnewcardPage  {
+constructor(private router: Router) {}
 
-  ngOnInit() {}
+  goPayment() {
+    this.router.navigate(['/payment-1']);
+  }
 }

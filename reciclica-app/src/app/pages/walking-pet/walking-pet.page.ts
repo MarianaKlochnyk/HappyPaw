@@ -83,7 +83,7 @@ export class WalkingPetPage implements OnInit {
   }
 
   goHomepage() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/homepage']);
   }
 
   goLocation() {
