@@ -135,7 +135,9 @@ display: flex;
 }
 
 .dog{
-  width: 158px;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
   height: auto;
   position: absolute;
   object-fit: cover;
