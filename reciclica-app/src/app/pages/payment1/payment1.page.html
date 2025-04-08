@@ -5,7 +5,7 @@
   <ion-card class="payment-container" style="margin-left: 16px">
     <ion-card-header>
       <h2 class="subtitle">Choose payment methods</h2>
-      <ion-icon name="close" class="close-button"></ion-icon>
+      <ion-icon (click)="goMakeDonate()" name="close" class="close-button"></ion-icon>
     </ion-card-header>
     <ion-card-content>
       <div class="payment-methods">
@@ -58,7 +58,7 @@
         </ion-card-content>
       </ion-card>
       <div class="modal-footer">
-        <ion-button expand="full" class="donate-button">DONATE</ion-button>
+        <ion-button (click)="goMakeDonate()" expand="full" class="donate-button">DONATE</ion-button>
       </div>
     </ion-card-content>
   </ion-card>

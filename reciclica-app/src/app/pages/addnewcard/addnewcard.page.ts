@@ -8,10 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./addnewcard.page.scss'],
   imports: [IonicModule],
 })
-export class AddnewcardPage implements OnInit {
-      constructor(private router: Router) { }
-    
-        goStatistic() {
+export class AddnewcardPage  {
+constructor(private router: Router) {}
+
+  goPayment() {
+    this.router.navigate(['/payment-1']);
+  }
+  
+  goStatistic() {
                 this.router.navigate(['/statistics']);
       }
     
@@ -26,5 +30,4 @@ export class AddnewcardPage implements OnInit {
       goLocation() {
                   this.router.navigate(['/location']);
         }
-  ngOnInit() {}
 }
