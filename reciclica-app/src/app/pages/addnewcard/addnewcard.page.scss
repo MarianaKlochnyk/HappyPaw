@@ -110,13 +110,13 @@ ion-button.submit-btn::part(native) {
   gap: 10px; /* Відстань між полями */
   margin-top: 1px;
 }
+
 ion-tab-bar {
   --background: white;
   --border: none;
-  width: 430px;
 
   ion-tab-button {
-    color: #324b49;
-    --color-selected: #aad5d1;
+    color: #324B49;
+    --color-selected: #AAD5D1;
   }
 }
