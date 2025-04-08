@@ -72,7 +72,7 @@ export class WalkingPetAnimalPage implements OnInit {
       return;
     }
 
-    this.shelter = shelterData; // Зберігаємо перший елемент, якщо є кілька
+    this.shelter = shelterData[0];  // Зберігаємо перший елемент, якщо є кілька
   }
 
 
