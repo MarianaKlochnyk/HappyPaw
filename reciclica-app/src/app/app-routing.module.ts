@@ -116,7 +116,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'detailed-info/:donation_id',
+    path: 'detailed-info',
     loadChildren: () =>
       import('./pages/detailed-info/detailed-info.module').then(
         (m) => m.DetailedInfoPageModule

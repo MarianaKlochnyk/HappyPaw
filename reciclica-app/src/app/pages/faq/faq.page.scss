@@ -308,13 +308,3 @@ ion-tab-bar {
   margin-bottom: 65px;
   /* або більше, якщо потрібно */
 }
-
-ion-tab-bar {
-  --background: white;
-  --border: none;
-
-  ion-tab-button {
-    color: #324B49;
-    --color-selected: #AAD5D1;
-  }
-}

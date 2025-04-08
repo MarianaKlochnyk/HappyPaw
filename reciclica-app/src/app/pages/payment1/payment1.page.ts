@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment1',
@@ -8,10 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./payment1.page.scss'],
   imports: [IonicModule],
 })
-export class Payment1Page  {
-  constructor(private router: Router) {}
+export class Payment1Page implements OnInit {
+  constructor() {}
 
-  goMakeDonate() {
-    this.router.navigate(['/make-donate-1']);
-  }
+  ngOnInit() {}
 }

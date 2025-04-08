@@ -135,9 +135,7 @@ display: flex;
 }
 
 .dog{
-  width: 100px;
-  height: 100px;
-  bottom: 0;
+  width: 158px;
   height: auto;
   position: absolute;
   object-fit: cover;
@@ -284,9 +282,29 @@ display: flex;
       margin-left: 60px;
 }
 
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+}
+
+
 ion-tab-bar {
   --background: white;
   --border: none;
+  width: 430px;
 
   ion-tab-button {
     color: #324B49;

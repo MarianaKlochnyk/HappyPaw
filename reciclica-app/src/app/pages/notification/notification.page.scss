@@ -114,9 +114,29 @@ ion-avatar {
   margin-top: 10px;
 }
 
+ion-footer {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-background-color: transparent;
+  background: transparent !important;
+  box-shadow: none;
+}
+
 ion-tab-bar {
   --background: white;
   --border: none;
+  width: 430px;
 
   ion-tab-button {
     color: #324B49;

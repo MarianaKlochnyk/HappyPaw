@@ -1,8 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.page.html',
@@ -13,24 +12,9 @@ import { Router } from '@angular/router';
   ]
 })
 export class FiltersPage implements OnInit {
-    constructor(private router: Router) { }
-  
-      goStatistic() {
-              this.router.navigate(['/statistics']);
-    }
-  
-    goHomepage() {
-            this.router.navigate(['/homepage']);
-    }
-    
-     goNotification() {
-            this.router.navigate(['/notification']);
-    }
-  
-    goLocation() {
-                this.router.navigate(['/location']);
-      }
-  ngOnInit() {}
+  constructor() { }
+  ngOnInit() {
+  }
   today: string = new Date().toISOString().split('T')[0];
   selectedPeriods: string[] = [];
   selectedTypes: string[] = [];
