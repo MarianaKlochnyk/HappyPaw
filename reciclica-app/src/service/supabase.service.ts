@@ -311,7 +311,24 @@ async getVolunteerByUserId(userId: string) {
     return null;
   }
   return data; // Повертає об'єкт { name: "..." }
-}
+  }
+  
+    getTodos() {
+    return this.supabase.from('todos').select('*');
+  }
+
+  // Тестовий запит для перевірки підключення
+  async testConnection() {
+    const { data, error } = await this.supabase.from('todos').select('*'); // Замість 'todos' використовуйте вашу таблицю
+
+    if (error) {
+      console.error('Error connecting to Supabase:', error);
+      return false;
+    } else {
+      console.log('Connection successful, data:', data);
+      return true;
+    }
+  }
 
   // Метод для отримання деталей конкретного притулку за його ID
   async getShelterDetails(shelterId: string) {

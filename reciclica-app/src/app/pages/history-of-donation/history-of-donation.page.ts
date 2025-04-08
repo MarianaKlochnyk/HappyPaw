@@ -1,19 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms'; 
 import { Router } from '@angular/router';
-import { SupabaseService } from 'src/service/supabase.service';
 
 @Component({
   selector: 'app-history-of-donation',
   templateUrl: './history-of-donation.page.html',
   styleUrls: ['./history-of-donation.page.scss'],
-  standalone: true,
   imports: [
-    CommonModule,
-    IonicModule,
-    FormsModule,
+    IonicModule
   ]
 })
 export class HistoryOfDonationPage implements OnInit {
@@ -70,19 +64,19 @@ export class HistoryOfDonationPage implements OnInit {
     this.router.navigate(['/detailed-info', donation_id]);
   }
 
-  goHomepage() {
-    this.router.navigate(['/homepage']);
+     goHomepage() {
+          this.router.navigate(['/homepage']);
   }
-
-  goNotification() {
-    this.router.navigate(['/notification']);
+  
+   goNotification() {
+          this.router.navigate(['/notification']);
   }
-
-  goStatistic() {
-    this.router.navigate(['/statistics']);
+    goStatistic() {
+            this.router.navigate(['/statistics']);
   }
 
   goLocation() {
-    this.router.navigate(['/location']);
-  }
+              this.router.navigate(['/location']);
+    }
+
 }
