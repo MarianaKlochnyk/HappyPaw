@@ -17,10 +17,8 @@
       <ion-button class="left-button"><img src="../assets/icon3.png" alt="icon" class="button-icon-g">With
         Google</ion-button>
       <div class="right-buttons">
-        <ion-button class="right-button"><img src="../assets/icon2.png" alt="icon"
-            class="button-icon"></ion-button>
-        <ion-button class="right-button"><img src="../assets/icon1.png" alt="icon"
-            class="button-icon"></ion-button>
+        <ion-button class="right-button"><img src="../assets/icon2.png" alt="icon" class="button-icon"></ion-button>
+        <ion-button class="right-button"><img src="../assets/icon1.png" alt="icon" class="button-icon"></ion-button>
       </div>
     </div>
   </ion-card-header>
@@ -48,7 +46,6 @@
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Volunteer photo<span class="star">*</span></label>
     <div class="input-group5">
       <div class="photo-preview" id="photoPreview">
@@ -62,53 +59,44 @@
         <span>Download</span>
       </ion-button>
     </div>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
-    <label class="input-label">Volunteer name<span class="star">*</span></label>
+    <label   class="input-label">Volunteer name<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="Your first name"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.first_name" placeholder="Your first name"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
-    <label class="input-label">Volunteer surname<span class="star">*</span></label>
+    <label  class="input-label">Volunteer surname<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="Your last name"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.last_name" placeholder="Your last name"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Email address<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="Your cooperative email address"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.email" placeholder="Your cooperative email address"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Date of birth<span class="star">*</span></label>
     <div class="input-group">
       <ion-item class="input-place1">
-        <ion-input placeholder="Month" maxlength="2"></ion-input>
+        <ion-input [(ngModel)]="volunteerData.birthYear" placeholder="Year" maxlength="4"></ion-input>
       </ion-item>
       <ion-item class="input-place1">
-        <ion-input placeholder="Day" maxlength="2"></ion-input>
+        <ion-input [(ngModel)]="volunteerData.birthDay" placeholder="Day" maxlength="2"></ion-input>
       </ion-item>
       <ion-item class="input-place1">
-        <ion-input placeholder="Year" maxlength="4"></ion-input>
+        <ion-input [(ngModel)]="volunteerData.birthMonth" placeholder="Month" maxlength="2"></ion-input>
       </ion-item>
-    </div>
     </div>
   </ion-card-header>
 
@@ -124,7 +112,7 @@
       <div class="input-wrapper">
         <label class="input-label">City<span class="star">*</span></label>
         <ion-item class="input-place2">
-          <ion-input placeholder="Your city"></ion-input>
+          <ion-input [(ngModel)]="volunteerData.city" placeholder="Your city"></ion-input>
           <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
         </ion-item>
       </div>
@@ -132,17 +120,14 @@
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Address<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="Your address"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.address" placeholder="Your address"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Phone number<span class="star">*</span></label>
     <div class="input-group2">
       <ion-select class="country-code" placeholder="+380">
@@ -152,41 +137,34 @@
         <ion-select-option value="+49">+49</ion-select-option>
       </ion-select>
       <ion-item class="input-place4">
-        <ion-input placeholder="Your phone number" maxlength="9"></ion-input>
+        <ion-input [(ngModel)]="volunteerData.phone" placeholder="Your phone number" maxlength="9"></ion-input>
         <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
       </ion-item>
     </div>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Create a username<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="It must be your name"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.username" placeholder="It must be your name"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Create a password<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="Your password must be at least 8 characters"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.password" placeholder="Your password must be at least 8 characters"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
-    <div>
     <label class="input-label">Confirm password<span class="star">*</span></label>
     <ion-item class="input-place">
-      <ion-input placeholder="Repeat your password"></ion-input>
+      <ion-input [(ngModel)]="volunteerData.password" placeholder="Repeat your password"></ion-input>
       <ion-icon name="checkmark-outline" class="check-icon"></ion-icon>
     </ion-item>
-    </div>
   </ion-card-header>
 
   <ion-card-header>
@@ -203,7 +181,7 @@
   </ion-card-header>
 
   <ion-card-header>
-    <ion-button (click)="goConfirm3()" class="continue-button">Continue</ion-button>
+    <ion-button (click)="registerVolunteer()" class="continue-button">Continue</ion-button>
   </ion-card-header>
 
   <ion-card-header>

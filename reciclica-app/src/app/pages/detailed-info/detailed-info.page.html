@@ -5,15 +5,15 @@
       <ion-icon (click)="goHistoryOfDonation()" name="arrow-back-outline" class="header-icon"></ion-icon>
     </div>
 
-    <div class="black-squere">
+    <div class="black-squere" *ngIf="donation">
       <div class="photo-white"></div>
-      <p class="lead-text">Furry Friends Rescue</p>
+      <p class="lead-text">{{ donation.shelter_name }}</p>
       <div class="row-text">
         <img src="assets/detailed-time.png" alt="detailed-time" class="detailed-time">
-        <p class="data">24 May 2025</p>
-        <p class="time">18:45 PM</p>
+        <p class="data">{{ donation.date | date: 'dd MMMM yyyy' }}</p>
+        <p class="time">{{ donation.time | date: 'HH:mm' }}</p>
       </div>
-      <p class="amount">₴ 5000.00</p>
+      <p class="amount">₴ {{ donation.amount | number:'1.2-2' }}</p>
 
       <div class="arr-col">
         <div class="row-1">

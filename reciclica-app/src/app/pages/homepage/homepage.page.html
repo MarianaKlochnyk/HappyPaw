@@ -10,17 +10,17 @@
       </ion-buttons>
     </div>
     
-    <p class="tittle">Welcome to our platform, <br>Solomiia</p>
+    <p class="tittle">Welcome to our platform, <br>{{ volunteerName }}</p>
 
     <div class="whites">
       <div class="white-1">
         <img src="assets/pet-shpiz.png" alt="pet-shpiz" class="pet-shpiz">
         <p class="lead-white-info">Volunteers on the platform</p>
-        <p class="lead-white-amount">145 625</p>
+        <p class="lead-white-amount">{{ volunteerCount ?? 0 }}</p>
         <div class="green-row">
           <div class="green">
             <p class="secondary-white-info">Shelters on the platform</p>
-            <p class="secondary-white-amount">1 625</p>
+            <p class="secondary-white-amount">{{ shelterCount ?? 0}} </p>
           </div>
           <div class="green-">
             <p class="secondary-white-info">Rescued animals</p>
@@ -28,7 +28,7 @@
           </div>
           <div class="green-">
             <p class="secondary-white-info">Donations</p>
-            <p class="secondary-white-amount">1 245 625</p>
+            <p class="secondary-white-amount">{{ totalDonations ? totalDonations.toLocaleString() : '0' }}</p>
           </div>
         </div>
       </div>
@@ -84,16 +84,16 @@
 
     <div class="helping-pet">
 
-      <div class="helping-pet-conteiner">
-        <img src="assets/pet-cat.png" alt="pet-cat" class="pet-cat">
+      <div class="helping-pet-conteiner" *ngFor="let animal of animals">
+        <img [src]="animal.file_path" alt="pet-cat" class="pet-cat">
         <div class="green-helping-pet">
-          <p class="helping-pet-name">Matilda</p>
-          <p class="helping-pet-shelter">Helping Paw shelter</p>
-          <p class="helping-pet-address">Knyahynya Olha Street, <br>65a</p>
-          <div class="campaign-percantage">75%</div>
-          <div class="campaign-percantage-1">1500$</div>
+          <p class="helping-pet-name">{{ animal.name }}</p>
+          <p class="helping-pet-shelter">{{ animal.shelter?.shelter_name || 'Unknown Shelter' }}</p>
+          <p class="helping-pet-address">{{ animal.shelter?.address || 'Unknown Shelter Address' }} </p>
+          <div class="campaign-percantage">{{ getAnimalNeed(animal?.animal_id)?.campaign_percentage ?? 0 }}%</div>
+          <div class="campaign-percantage-1">{{ getAnimalNeed(animal?.animal_id)?.amount ?? 'N/A' }}$</div>
           <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%;"></div>
+            <div class="progress-fill" [style.width]="(getAnimalNeed(animal.animal_id)?.campaign_percentage ?? 0) + '%'"></div>
             <div class="progress-dots"></div>
           </div>
           <div class="button-donate">
@@ -102,29 +102,7 @@
           </div>
         </div>
         <div class="white-helping-pet">
-          <p class="helping-pet-info">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign for $2000 <br>is underway</p>
-        </div>
-      </div>
-      <div class="helping-pet-conteiner">
-        <img src="assets/pet-doberman.png" alt="pet-doberman" class="pet-doberman">
-        <div class="green-helping-pet">
-          <p class="helping-pet-name">Graff</p>
-          <p class="helping-pet-shelter">Helping Paw shelter</p>
-          <p class="helping-pet-address">Knyahynya Olha Street, <br>65a</p>
-          <div class="campaign-percantage">75%</div>
-          <div class="campaign-percantage-1">1500$</div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%;"></div>
-            <div class="progress-dots"></div>
-          </div>
-          <div class="button-donate">
-            <img src="assets/logo-button.png" alt="logo-button" class="logo-button">
-            <p (click)="goMakeDonate()" class="info-button-donate">Donate</p>
-          </div>
-        </div>
-        <div class="white-helping-pet">
-          <p class="helping-pet-info">The cat needs urgent heart <br>surgery and rehabilitation, a <br>fundraising campaign
-            for $2000 <br>is underway</p>
+          <p class="helping-pet-info">{{ getAnimalNeed(animal.animal_id)?.short_description ?? 'N/A' }}</p>
         </div>
       </div>
     </div>
@@ -195,18 +173,21 @@
       <path d="M8 12a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V13h-4v9a1 1 0 1 1-2 0V12Z" fill="currentColor"/>
     </svg>
   </ion-tab-button>
+
   <ion-tab-button (click)="goLocation()" tab="location">
     <svg width="68" height="40" viewBox="0 0 68 40" fill="none">
       <path d="M33.875 10.4c-1.89 0-3.715.789-5.07 2.215-1.357 1.428-2.129 3.377-2.129 5.422 0 2.977 1.844 5.883 3.892 8.157 1.003 1.114 2.01 2.026 2.767 2.66.2.168.383.316.542.442.159-.126.342-.274.542-.442.757-.634 1.764-1.546 2.767-2.66 2.048-2.274 3.892-5.18 3.892-8.157 0-2.045-.772-3.994-2.13-5.422C37.59 11.189 35.765 10.4 33.875 10.4Zm0 20.4c-.689.983-.69.983-.69.983l-.007-.005-.023-.016a8.637 8.637 0 0 1-.279-.193c-.067-.049-.164-.121-.285-.213-.243-.184-.586-.453-.996-.796-.818-.685-1.911-1.675-3.008-2.893-2.152-2.39-4.508-5.866-4.508-9.763 0-2.642.997-5.188 2.791-7.074C28.86 9.073 31.308 8 33.875 8c2.566 0 5.014 1.073 6.81 2.961 1.793 1.886 2.79 4.432 2.79 7.075 0 3.896-2.356 7.372-4.508 9.761-1.097 1.218-2.19 2.208-3.008 2.893-.41.343-.753.612-.996.796-.121.092-.218.164-.285.213a8.637 8.637 0 0 1-.279.193l-.023.016-.003.002c-.001 0-.002.001-.69-.983Zm.69.983c-.413.29-.964.29-1.378 0l.689-.983.689.983Z" fill="currentColor"/>
       <path d="M33.875 15.2c-1.325 0-2.4 1.075-2.4 2.4s1.075 2.4 2.4 2.4 2.4-1.075 2.4-2.4-1.075-2.4-2.4-2.4Zm-4.8 2.4c0-2.651 2.149-4.8 4.8-4.8s4.8 2.149 4.8 4.8-2.149 4.8-4.8 4.8-4.8-2.149-4.8-4.8Z" fill="currentColor"/>
     </svg>           
   </ion-tab-button>
+
   <ion-tab-button (click)="goStatistic()" tab="stats">
     <svg width="69" height="40" viewBox="0 0 69 40" fill="none">
       <path d="M31.541 10.43c.221.506-.01 1.096-.516 1.317-1.348.588-2.531 1.497-3.446 2.648-.915 1.151-1.534 2.508-1.803 3.954-.27 1.445-.181 2.934.258 4.337.44 1.403 1.216 2.677 2.262 3.71 1.045 1.034 2.328 1.795 3.735 2.218 1.408.424 2.898.496 4.34.211 1.442-.285 2.792-.92 3.933-1.848 1.14-.928 2.035-2.121 2.608-3.475.215-.509.801-.747 1.31-.532.509.215.747.801.532 1.31-.7 1.655-1.794 3.113-3.188 4.247-1.394 1.134-3.044 1.91-4.806 2.259-1.763.349-3.584.261-5.305-.256-1.72-.517-3.288-1.448-4.566-2.711-1.278-1.263-2.227-2.82-2.764-4.534-.537-1.715-.646-3.535-.317-5.302.329-1.766 1.086-3.425 2.204-4.831 1.118-1.407 2.563-2.518 4.21-3.236.506-.221 1.096.01 1.317.516Z" fill="currentColor"/>
       <path d="M33.918 9.293c.188-.188.442-.293.707-.293 1.445 0 2.876.285 4.21.838 1.335.553 2.548 1.363 3.569 2.384 1.022 1.022 1.832 2.235 2.385 3.569.553 1.335.838 2.765.838 4.21 0 .553-.448 1-1 1h-10c-.553 0-1-.447-1-1v-10c0-.265.105-.52.293-.707Zm1.707 1.763V19h7.944a10.9 10.9 0 0 0-.63-2.445c-.452-1.092-1.115-2.085-1.951-2.921-.836-.836-1.828-1.499-2.921-1.951A10.9 10.9 0 0 0 35.625 11.055Z" fill="currentColor"/>
     </svg>      
   </ion-tab-button>
+
   <ion-tab-button tab="feedback">
     <svg width="69" height="40" viewBox="0 0 69 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -214,6 +195,7 @@
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   </ion-tab-button>
+
   <ion-tab-button (click)="goNotification()" tab="notifications">
     <svg width="68" height="40" viewBox="0 0 68 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

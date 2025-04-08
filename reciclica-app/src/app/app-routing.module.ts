@@ -10,6 +10,7 @@ const routes: Routes = [
   {
     path: 'splash-screen',
 
+
     loadChildren: () =>
       import('./pages/splash-screen/splash-screen.module').then(
         (m) => m.SplashScreenPageModule
@@ -115,7 +116,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'detailed-info',
+    path: 'detailed-info/:donation_id',
     loadChildren: () =>
       import('./pages/detailed-info/detailed-info.module').then(
         (m) => m.DetailedInfoPageModule
@@ -177,22 +178,22 @@ const routes: Routes = [
       import('./pages/faq/faq.module').then((m) => m.FaqPageModule),
   },
   {
-    path: 'donate-for-pet',
+    path: 'donate-for-pet/:animal_id',
     loadChildren: () =>
       import('./pages/donate-for-pet/donate-for-pet.module').then(
         (m) => m.DonateForPetPageModule
       ),
   },
   {
-    path: 'donate-for-shelter',
+    path: 'donate-for-shelter/:shelter_id',
     loadChildren: () =>
       import('./pages/donate-for-shelter/donate-for-shelter.module').then(
         (m) => m.DonateForShelterPageModule
       ),
   },
-    
+
   {
-    path: 'adopted-pet',
+    path: 'adopted-pet/:animal_id',
     loadChildren: () => import('./pages/adopted-pet/adopted-pet.module').then( m => m.AdoptedPetPageModule)
   },
   {
@@ -232,9 +233,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/filters/filters.module').then( m => m.FiltersPageModule)
   },
   {
-    path: 'shelter-info-location',
+    path: 'shelter-info-location/:shelter_id',
     loadChildren: () => import('./pages/shelter-info-location/shelter-info-location.module').then( m => m.ShelterInfoLocationPageModule)
   },
+
 ];
 
 @NgModule({

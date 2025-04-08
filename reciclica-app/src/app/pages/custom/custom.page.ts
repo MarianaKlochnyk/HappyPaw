@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-custom',
   templateUrl: './custom.page.html',
@@ -8,7 +9,12 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class CustomPage implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
+  
+  goPayment() {
+    this.router.navigate(['/custom']);
+  }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+  }
 }

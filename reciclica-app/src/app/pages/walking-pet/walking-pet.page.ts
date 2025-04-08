@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';  // Додайте це
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SupabaseService } from 'src/service/supabase.service';
 
@@ -33,31 +33,41 @@ export class WalkingPetPage implements OnInit {
 
   async loadAnimalsWithBreeds() {
     const { data: animals, error: animalsError } = await this.supabaseService.getAnimalsWithBreeds();
-  
+    
     if (animalsError) {
       console.error('Error fetching animals:', animalsError);
       return;
     }
-
-    const updatedAnimals = await Promise.all(animals.map(async (animal) => {
-      const breedData = await this.supabaseService.getBreedById(animal.breed_id);
-
-      if (!breedData) {
-        console.error('Error fetching breed for animal:', animal);
+  
+    console.log('Fetched animals:', animals); // Перевірка отриманих тварин
+  
+    const updatedAnimals = await Promise.all(animals
+      .filter(animal => !animal.is_adopted) // Прибираємо всиновлених тварин
+      .map(async (animal) => {
+        const [breedData, speciesData] = await Promise.all([
+          this.supabaseService.getBreedById(animal.breed_id),
+          this.supabaseService.getSpeciesById(animal.species_id) // Викликаємо новий метод
+        ]);
+  
+        console.log(`Animal ID ${animal.species_id}: species ->`, speciesData?.species);
+  
+        // Фільтруємо тільки собак (species = 'Dog')
+        if (!speciesData || speciesData.species !== 'Dog') {
+          return null;
+        }
+  
         return {
           ...animal,
-          breed: 'Unknown Breed',
+          breed: breedData?.breed || 'Unknown Breed',
+          species: speciesData?.species || 'Unknown Species',
         };
-      }
-
-      return {
-        ...animal,
-        breed: breedData.breed || 'Unknown Breed',
-      };
-    }));
-
-    this.animals = updatedAnimals;
-    this.filteredAnimals = updatedAnimals;
+      })
+    );
+  
+    console.log('Updated animals:', updatedAnimals); // Перевірка після фільтрації
+  
+    this.animals = updatedAnimals.filter(animal => animal !== null); // Видаляємо `null` значення
+    this.filteredAnimals = this.animals;
   }
 
   filterAnimals() {

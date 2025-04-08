@@ -71,9 +71,8 @@ export class WalkingPetAnimalPage implements OnInit {
       console.error('Не вдалося отримати притулок');
       return;
     }
-  
-    console.log('Отримані дані притулку:', shelterData);  // Логування отриманих даних
-    this.shelter = shelterData[0];  // Зберігаємо перший елемент, якщо є кілька
+
+    this.shelter = shelterData; // Зберігаємо перший елемент, якщо є кілька
   }
 
 
