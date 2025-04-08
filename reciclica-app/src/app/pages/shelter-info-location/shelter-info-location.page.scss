@@ -13,7 +13,7 @@ ion-content{
   box-shadow: none;
 
   ion-card-header{
-    padding: 6px;
+    padding: 0px;
 }
 }
 
@@ -26,7 +26,7 @@ ion-content{
     align-items: center;
 
     ion-card-content{
-        padding: 6px;
+        padding: 0px;
     }
   }
   
@@ -61,7 +61,7 @@ ion-content{
   
   .shelter-details {
     display: flex;
-    gap: 100px;
+    gap: 125px;
     align-items: center;
   }
   
@@ -91,7 +91,7 @@ ion-content{
     overflow: hidden;
 
     ion-card-content{
-        padding: 6px;
+        padding: 0px;
     }
   }
   .contact-line {
@@ -230,7 +230,7 @@ ion-content{
     border-radius: 20px;
 
     ion-card-content{
-        padding: 6px;
+        padding: 0px;
     }
   }
   
@@ -376,36 +376,4 @@ ion-content{
     font-family: Mulish, sans-serif;
     font-weight: 700;
     word-wrap: break-word;
-}
-
-
-
-ion-footer {
-    --background: transparent;
-    --ion-background-color: transparent;
-    background: transparent !important;
-    box-shadow: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-  
-ion-toolbar {
-    --background: transparent;
-    --ion-background-color: transparent;
-    background: transparent !important;
-    box-shadow: none;
-}
-  
-ion-tab-bar {
-    --background: white;
-    --border: none;
-    width: 100%;
-  
-    ion-tab-button {
-      color: #324B49;
-      --color-selected: #AAD5D1;
-    }
 }

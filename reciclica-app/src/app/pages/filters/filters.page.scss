@@ -163,6 +163,15 @@
   }
   
   
+  ion-tab-bar {
+    --background: white;
+    --border: none;
+  
+    ion-tab-button {
+      color: #324B49;
+      --color-selected: #AAD5D1;
+    }
+  }
   
   
   

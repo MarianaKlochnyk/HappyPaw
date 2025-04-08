@@ -141,7 +141,8 @@ async getShelterById(shelterId: string) {
   const { data, error } = await this.supabase
     .from('shelters') // Ось тут перевірка правильності виклику
     .select('*') // Повертаємо всі дані
-    .eq('shelter_id', shelterId);  // Фільтруємо за shelter_id
+    .eq('shelter_id', shelterId)  // Фільтруємо за shelter_id
+    .single();
 
   if (error) {
     console.error('Помилка при запиті даних притулку:', error);
@@ -249,6 +250,14 @@ async getDonations() {
   return { data, error: null };
 }
 
+async getDonationById(donationId: string) {
+  return this.supabase
+    .from('donation')
+    .select('*')
+    .eq('donation_id', donationId)
+    .single(); // Поверне один об'єкт
+}
+
 async getCategories() {
   const { data, error } = await this.supabase
     .from('categories')
@@ -340,6 +349,36 @@ async getVolunteerByUserId(userId: string) {
     return this.supabase
       .from('species')
       .select('species');
+  }
+
+  async getNeedById(needId: string) {
+    const { data, error } = await this.supabase
+      .from('needs')
+      .select('animal_id')
+      .eq('need_id', needId)
+      .single();
+  
+    if (error) {
+      console.error('Помилка при запиті потреби:', error);
+      return null;
+    }
+  
+    return data;
+  }
+  
+  async getAnimalById(animalId: string) {
+    const { data, error } = await this.supabase
+      .from('animals')
+      .select('shelter_id')
+      .eq('animal_id', animalId)
+      .single();
+  
+    if (error) {
+      console.error('Помилка при запиті тварини:', error);
+      return null;
+    }
+  
+    return data;
   }
 
 }
