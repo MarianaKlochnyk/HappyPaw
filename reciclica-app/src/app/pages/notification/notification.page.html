@@ -18,7 +18,7 @@
               d="M2.3 5.93785C2.3 3.92872 3.92872 2.3 5.93785 2.3C7.94699 2.3 9.57571 3.92872 9.57571 5.93785C9.57571 7.94699 7.94699 9.57571 5.93785 9.57571C3.92872 9.57571 2.3 7.94699 2.3 5.93785ZM5.93785 0C2.65847 0 0 2.65847 0 5.93785C0 9.21724 2.65847 11.8757 5.93785 11.8757C7.16189 11.8757 8.29943 11.5053 9.2445 10.8705L11.2808 12.9068C11.7299 13.3559 12.458 13.3559 12.9071 12.9068C13.3562 12.4577 13.3562 11.7296 12.9071 11.2805L10.8708 9.24415C11.5054 8.29914 11.8757 7.16174 11.8757 5.93785C11.8757 2.65847 9.21724 0 5.93785 0Z"
               fill="#AAD5D1" />
           </svg>
-          <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg (click)="goToFilters()" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.4"
               d="M5.64672 8.81473H1.37263C0.831687 8.81473 0.392578 9.24614 0.392578 9.77759C0.392578 10.3083 0.831687 10.7405 1.37263 10.7405H5.64672C6.18766 10.7405 6.62677 10.3083 6.62677 9.77759C6.62677 9.24614 6.18766 8.81473 5.64672 8.81473Z"
               fill="#AAD5D1" />
@@ -36,196 +36,40 @@
       </div>
       <div class="container2">
         <div class="line"></div>
-        <p class="unread-notifications">55 unread notifications</p>
+        <p class="unread-notifications">{{ notificationsCount }} notifications</p>
       </div>
     </div>
   </ion-card-header>
 
-  <ion-card-header>
-    <div class="notififcation-card ">
-      <div class="notification-header">
-        <ion-avatar slot="start">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9M15 17H18.5905C18.973 17 19.1652 17 19.3201 16.9478C19.616 16.848 19.8475 16.6156 19.9473 16.3198C19.9997 16.1643 19.9997 15.9715 19.9997 15.5859C19.9997 15.4172 19.9995 15.3329 19.9863 15.2524C19.9614 15.1004 19.9024 14.9563 19.8126 14.8312C19.7651 14.7651 19.7047 14.7048 19.5858 14.5858L19.1963 14.1963C19.0706 14.0706 19 13.9001 19 13.7224V10C19 6.134 15.866 2.99999 12 3C8.13401 3.00001 5 6.13401 5 10V13.7224C5 13.9002 4.92924 14.0706 4.80357 14.1963L4.41406 14.5858C4.29477 14.7051 4.23504 14.765 4.1875 14.8312C4.09766 14.9564 4.03815 15.1004 4.0132 15.2524C4 15.3329 4 15.4172 4 15.586C4 15.9715 4 16.1642 4.05245 16.3197C4.15225 16.6156 4.3848 16.848 4.68066 16.9478C4.83556 17 5.02701 17 5.40956 17H9M18.0186 2.01367C19.3978 3.05299 20.4843 4.43177 21.1724 6.01574M5.98197 2.01367C4.60275 3.05299 3.5162 4.43177 2.82812 6.01574"
-              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </ion-avatar>
-        <ion-label>
-          <p class="notification-title">Today is the last day of collecting aid!📦</p>
-          <p class="notification-text">Hurry up and make your contribution.</p>
-        </ion-label>
+  <ion-list>
+    <ion-item lines="none" *ngFor="let item of filteredNotifications">
+      <div class="notififcation-card ">
+        <div class="notification-header">
+          <ion-avatar slot="start">
+            <div class="box">
+              <img [src]="getIconPath(item.type)" alt="{{ item.type }} icon" />
+            </div>              
+          </ion-avatar>
+          <ion-label>
+           <p class="notification-title">{{ item.title }}</p>
+           <p class="notification-text">{{ item.text }}</p>
+          </ion-label>
+        </div>
+        <div class="notification-footer">
+          <div slot="end" class="check-icon">
+            <ng-container *ngIf="item.readStatus; else single">
+              <img src="assets/read.svg" alt="Read" />
+            </ng-container>
+            <ng-template #single>
+              <img src="assets/unread.svg" alt="Unread" />
+            </ng-template>
+          </div>
+           <span class="date">{{ item.date }}</span>
+           <span class="time">{{ item.time }}</span> 
+        </div> 
       </div>
-      <div class="notification-footer">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M3.50049 6L5.97536 8.47487L11.2791 3.17163M1.02539 6.02515L3.50026 8.50002M8.80351 3.19678L6.15186 5.84843"
-            stroke="#AAD5D1" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span class="date">25 February 2025</span>
-        <span class="time">18:45 PM</span>
-      </div>
-    </div>
-  </ion-card-header>
-
-  <ion-card-header>
-    <div class="notififcation-card ">
-      <div class="notification-header">
-        <ion-avatar slot="start">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10 16H5V21M14 8H19V3M4.58301 9.0034C5.14369 7.61566 6.08244 6.41304 7.29255 5.53223C8.50266 4.65141 9.93686 4.12752 11.4298 4.02051C12.9227 3.9135 14.4147 4.2274 15.7381 4.92661C17.0615 5.62582 18.1612 6.68254 18.9141 7.97612M19.4176 14.9971C18.8569 16.3848 17.9181 17.5874 16.708 18.4682C15.4979 19.3491 14.0652 19.8723 12.5723 19.9793C11.0794 20.0863 9.58606 19.7725 8.2627 19.0732C6.93933 18.374 5.83882 17.3175 5.08594 16.0239"
-              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </ion-avatar>
-        <ion-label>
-          <p class="notification-title">We have updated the app! 🔄</p>
-          <p class="notification-text">New features for even more convenient help are now available. Check it out!</p>
-        </ion-label>
-      </div>
-      <div class="notification-footer">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 6L4.47487 8.47487L9.77862 3.17163" stroke="#AAD5D1" stroke-width="1.2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-        <span class="date">18 February 2025</span>
-        <span class="time">08:35 AM</span>
-      </div>
-    </div>
-  </ion-card-header>
-
-  <ion-card-header>
-    <div class="notififcation-card ">
-      <div class="notification-header">
-        <ion-avatar slot="start">
-          <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6.71012 0.0150303C7.94906 -0.154825 9.26149 1.13408 9.63947 2.91257C10.0175 4.68107 9.33499 6.25973 8.09605 6.43957C6.86762 6.61942 5.54468 5.33052 5.1562 3.55203C4.76772 1.78353 5.47119 0.204869 6.71012 0.0150303ZM14.2172 0.0150303C15.4667 0.204869 16.1596 1.78353 15.7922 3.55203C15.3932 5.33052 14.0807 6.61942 12.8418 6.43957C11.5924 6.25973 10.9099 4.68107 11.2984 2.91257C11.6764 1.13408 12.9888 -0.154825 14.2172 0.0150303ZM1.09291 4.61113C2.28985 4.12154 3.91727 5.01079 4.76772 6.55947C5.56568 8.13813 5.2927 9.79672 4.10626 10.2863C2.91982 10.7759 1.3029 9.89664 0.473444 8.32797C-0.356014 6.7593 -0.0620287 5.09072 1.09291 4.61113ZM19.9919 4.61113C21.1469 5.09072 21.4409 6.7593 20.6114 8.32797C19.782 9.89664 18.165 10.7759 16.9786 10.2863C15.7922 9.79672 15.5192 8.13813 16.3171 6.55947C17.1676 5.01079 18.795 4.12154 19.9919 4.61113ZM18.2385 15.382C18.2805 16.3212 17.5246 17.3603 16.6216 17.75C14.7422 18.5693 12.5163 16.8707 10.4269 16.8707C8.33754 16.8707 6.09066 18.6392 4.24275 17.75C3.1928 17.2604 2.46834 15.9615 2.60483 14.8824C2.79382 13.3937 4.67323 12.5943 5.78617 11.5053C7.2666 10.0965 8.31654 7.44872 10.4269 7.44872C12.5268 7.44872 13.6398 10.0565 15.0572 11.5053C16.2226 12.7242 18.165 13.7534 18.2385 15.382Z"
-              fill="white" />
-          </svg>
-        </ion-avatar>
-        <ion-label>
-          <p class="notification-title">New campaign: ‘Warmth for the homeless’. ❤️</p>
-          <p class="notification-text">Get involved now and give someone a cosy place to stay!</p>
-        </ion-label>
-      </div>
-      <div class="notification-footer">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M3.50049 6L5.97536 8.47487L11.2791 3.17163M1.02539 6.02515L3.50026 8.50002M8.80351 3.19678L6.15186 5.84843"
-            stroke="#AAD5D1" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span class="date">05 February 2025</span>
-        <span class="time">23:55 PM</span>
-      </div>
-    </div>
-  </ion-card-header>
-
-  <ion-card-header>
-    <div class="notififcation-card ">
-      <div class="notification-header">
-        <ion-avatar slot="start">
-          <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M19 25C19 22.7909 16.3137 21 13 21C9.68629 21 7 22.7909 7 25M13 18C10.7909 18 9 16.2091 9 14C9 11.7909 10.7909 10 13 10C15.2091 10 17 11.7909 17 14C17 16.2091 15.2091 18 13 18Z"
-              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <g clip-path="url(#clip0_79_1648)">
-              <path
-                d="M19.6808 8.01489C19.5894 7.9304 19.6391 7.77766 19.7626 7.763L21.5137 7.55531C21.564 7.54934 21.6078 7.51771 21.629 7.47166L22.3676 5.87047C22.4197 5.75747 22.5804 5.75744 22.6325 5.87045L23.3711 7.47162C23.3923 7.51768 23.4358 7.54939 23.4861 7.55536L25.2373 7.763C25.3608 7.77766 25.4103 7.93045 25.319 8.01494L24.0245 9.21222C23.9873 9.24666 23.9707 9.29791 23.9806 9.34766L24.3241 11.0772C24.3484 11.1992 24.2185 11.2938 24.1099 11.233L22.5713 10.3715C22.527 10.3467 22.4732 10.3469 22.429 10.3716L20.8902 11.2328C20.7816 11.2936 20.6514 11.1992 20.6757 11.0771L21.0193 9.34777C21.0292 9.29802 21.0126 9.24665 20.9754 9.21221L19.6808 8.01489Z"
-                stroke="white" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-            <g clip-path="url(#clip1_79_1648)">
-              <path
-                d="M10.6808 3.01489C10.5894 2.9304 10.6391 2.77766 10.7626 2.763L12.5137 2.55531C12.564 2.54934 12.6078 2.51771 12.629 2.47166L13.3676 0.870468C13.4197 0.757466 13.5804 0.757444 13.6325 0.870446L14.3711 2.47162C14.3923 2.51768 14.4358 2.54939 14.4861 2.55536L16.2373 2.763C16.3608 2.77766 16.4103 2.93045 16.319 3.01494L15.0245 4.21222C14.9873 4.24666 14.9707 4.29791 14.9806 4.34766L15.3241 6.07715C15.3484 6.19921 15.2185 6.29378 15.1099 6.233L13.5713 5.37151C13.527 5.34674 13.4732 5.34685 13.429 5.37163L11.8902 6.23278C11.7816 6.29356 11.6514 6.1992 11.6757 6.07715L12.0193 4.34777C12.0292 4.29802 12.0126 4.24665 11.9754 4.21221L10.6808 3.01489Z"
-                stroke="white" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-            <g clip-path="url(#clip2_79_1648)">
-              <path
-                d="M0.680786 8.01489C0.589422 7.9304 0.639051 7.77766 0.762629 7.763L2.51367 7.55531C2.56404 7.54934 2.60779 7.51771 2.62903 7.47166L3.36759 5.87047C3.41972 5.75747 3.58036 5.75744 3.63249 5.87045L4.37105 7.47162C4.3923 7.51768 4.43576 7.54939 4.48612 7.55536L6.23726 7.763C6.36084 7.77766 6.41033 7.93045 6.31897 8.01494L5.02452 9.21222C4.98728 9.24666 4.97071 9.29791 4.98059 9.34766L5.32413 11.0772C5.34839 11.1992 5.21848 11.2938 5.1099 11.233L3.57126 10.3715C3.527 10.3467 3.47323 10.3469 3.42898 10.3716L1.89018 11.2328C1.78159 11.2936 1.65145 11.1992 1.6757 11.0771L2.0193 9.34777C2.02918 9.29802 2.01265 9.24665 1.97541 9.21221L0.680786 8.01489Z"
-                stroke="white" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-            <defs>
-              <clipPath id="clip0_79_1648">
-                <rect width="7" height="7" fill="white" transform="translate(19 5)" />
-              </clipPath>
-              <clipPath id="clip1_79_1648">
-                <rect width="7" height="7" fill="white" transform="translate(10)" />
-              </clipPath>
-              <clipPath id="clip2_79_1648">
-                <rect width="7" height="7" fill="white" transform="translate(0 5)" />
-              </clipPath>
-            </defs>
-          </svg>
-        </ion-avatar>
-        <ion-label>
-          <p class="notification-title">Wow! You have already helped 25 animals! 🎉</p>
-          <p class="notification-text">Keep doing good with us.</p>
-        </ion-label>
-      </div>
-      <div class="notification-footer">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M3.50049 6L5.97536 8.47487L11.2791 3.17163M1.02539 6.02515L3.50026 8.50002M8.80351 3.19678L6.15186 5.84843"
-            stroke="#AAD5D1" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span class="date">01 February 2025</span>
-        <span class="time">17:05 PM</span>
-      </div>
-    </div>
-  </ion-card-header>
-
-  <ion-card-header>
-    <div class="notififcation-card ">
-      <div class="notification-header">
-        <ion-avatar slot="start">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10 16H5V21M14 8H19V3M4.58301 9.0034C5.14369 7.61566 6.08244 6.41304 7.29255 5.53223C8.50266 4.65141 9.93686 4.12752 11.4298 4.02051C12.9227 3.9135 14.4147 4.2274 15.7381 4.92661C17.0615 5.62582 18.1612 6.68254 18.9141 7.97612M19.4176 14.9971C18.8569 16.3848 17.9181 17.5874 16.708 18.4682C15.4979 19.3491 14.0652 19.8723 12.5723 19.9793C11.0794 20.0863 9.58606 19.7725 8.2627 19.0732C6.93933 18.374 5.83882 17.3175 5.08594 16.0239"
-              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </ion-avatar>
-        <ion-label>
-          <p class="notification-title">Technical work is scheduled for 28 February. 🔔</p>
-          <p class="notification-text">The application may be temporarily unavailable. Thank you for your understanding!
-          </p>
-        </ion-label>
-      </div>
-      <div class="notification-footer">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 6L4.47487 8.47487L9.77862 3.17163" stroke="#AAD5D1" stroke-width="1.2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-        <span class="date">31 January 2025</span>
-        <span class="time">18:45 PM</span>
-      </div>
-    </div>
-  </ion-card-header>
-
-  <ion-card-header>
-    <div class="notififcation-card ">
-      <div class="notification-header">
-        <ion-avatar slot="start">
-          <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6.71012 0.0150303C7.94906 -0.154825 9.26149 1.13408 9.63947 2.91257C10.0175 4.68107 9.33499 6.25973 8.09605 6.43957C6.86762 6.61942 5.54468 5.33052 5.1562 3.55203C4.76772 1.78353 5.47119 0.204869 6.71012 0.0150303ZM14.2172 0.0150303C15.4667 0.204869 16.1596 1.78353 15.7922 3.55203C15.3932 5.33052 14.0807 6.61942 12.8418 6.43957C11.5924 6.25973 10.9099 4.68107 11.2984 2.91257C11.6764 1.13408 12.9888 -0.154825 14.2172 0.0150303ZM1.09291 4.61113C2.28985 4.12154 3.91727 5.01079 4.76772 6.55947C5.56568 8.13813 5.2927 9.79672 4.10626 10.2863C2.91982 10.7759 1.3029 9.89664 0.473444 8.32797C-0.356014 6.7593 -0.0620287 5.09072 1.09291 4.61113ZM19.9919 4.61113C21.1469 5.09072 21.4409 6.7593 20.6114 8.32797C19.782 9.89664 18.165 10.7759 16.9786 10.2863C15.7922 9.79672 15.5192 8.13813 16.3171 6.55947C17.1676 5.01079 18.795 4.12154 19.9919 4.61113ZM18.2385 15.382C18.2805 16.3212 17.5246 17.3603 16.6216 17.75C14.7422 18.5693 12.5163 16.8707 10.4269 16.8707C8.33754 16.8707 6.09066 18.6392 4.24275 17.75C3.1928 17.2604 2.46834 15.9615 2.60483 14.8824C2.79382 13.3937 4.67323 12.5943 5.78617 11.5053C7.2666 10.0965 8.31654 7.44872 10.4269 7.44872C12.5268 7.44872 13.6398 10.0565 15.0572 11.5053C16.2226 12.7242 18.165 13.7534 18.2385 15.382Z"
-              fill="white" />
-          </svg>
-        </ion-avatar>
-        <ion-label>
-          <p class="notification-title">Charity food drive continues!🍏</p>
-          <p class="notification-text">Join us and help those in need.</p>
-        </ion-label>
-      </div>
-      <div class="notification-footer">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 6L4.47487 8.47487L9.77862 3.17163" stroke="#AAD5D1" stroke-width="1.2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-        <span class="date">12 January 2025</span>
-        <span class="time">06:15 AM</span>
-      </div>
-    </div>
-  </ion-card-header>
+    </ion-item>
+  </ion-list>
 </ion-content>
 
 <ion-tab-bar slot="bottom">
