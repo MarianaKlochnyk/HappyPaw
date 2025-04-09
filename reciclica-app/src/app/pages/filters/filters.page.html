@@ -32,7 +32,8 @@
                     [ngClass]="{'selected': selectedPeriods.includes('year')}"
                     (click)="togglePeriod('year')">This year</ion-button>
       </div>
-    </div>            
+    </div> 
+               
     <div class="line"></div>
     <div class="filter-section-select">
       <h3>Select period</h3>
@@ -86,16 +87,16 @@
         [ngClass]="{'selected': selectedTypes.includes('reminder')}"
         (click)="toggleType('reminder')">Reminder</ion-button>
         <ion-button fill="outline" 
-        [ngClass]="{'selected': selectedTypes.includes('campaigns')}"
-        (click)="toggleType('campaigns')">Campaigns</ion-button>]
+        [ngClass]="{'selected': selectedTypes.includes('campaign')}"
+        (click)="toggleType('campaign')">Campaigns</ion-button>]
       </div>
       <div class="filter-buttons"> 
         <ion-button fill="outline" 
-        [ngClass]="{'selected': selectedTypes.includes('achivandmotiv')}"
-        (click)="toggleType('achivandmotiv')">Achievements and motivation</ion-button>]
+        [ngClass]="{'selected': selectedTypes.includes('achievement')}"
+        (click)="toggleType('achievement')">Achievements and motivation</ion-button>]
       </div>
     </div>
-    <ion-button class="show-results">Show results (455)</ion-button>
+    <ion-button class="show-results" (click)="applyFilters()">Show results</ion-button>
   </ion-card-content>
 </ion-content>
 

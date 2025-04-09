@@ -2,6 +2,34 @@ ion-content {
   --background: #F1F1F1;
 }
 
+ion-list {
+  background: transparent;
+  padding: 16px;
+  margin: 0;
+  border: none;
+
+  ion-item {
+    --background: transparent;
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+    --border-width: 0;
+    --min-height: unset;
+    margin: 10px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    display: block;
+
+    ion-label {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+
 .background {
   display: flex;
   flex-direction: column;
@@ -59,7 +87,6 @@ ion-content {
 }
 
 .notification-header {
-  margin-top: -20px;
   display: flex;
   gap: 20px;
 }
@@ -74,6 +101,10 @@ ion-avatar {
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 5px;
+
+  .box{
+    padding-top: 4px;
+  }
 }
 
 
